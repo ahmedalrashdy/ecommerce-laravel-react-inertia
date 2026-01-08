@@ -26,4 +26,8 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+/.cursor
+/.gemini
+/_ide_helper.php
+/_ide_helper_models.php
 /tables.php

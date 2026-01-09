@@ -1,0 +1,143 @@
+@reference "@styles/app.css";
+
+.wrapper {
+    @apply flex items-center gap-1.5;
+}
+
+.desktopUserMenuContainer {
+    @apply hidden lg:block relative;
+}
+
+.userMenuButton {
+    @apply flex items-center gap-2 h-10 px-3 text-sm font-semibold text-foreground hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300;
+}
+
+.userMenuIcon {
+    @apply h-4 w-4 transition-transform duration-300;
+}
+.userMenuButton:hover .userMenuIcon {
+    @apply scale-110;
+}
+
+.userMenuChevron {
+    @apply h-3.5 w-3.5 transition-transform duration-300;
+}
+
+.userMenuChevronOpen {
+    @apply rotate-180;
+}
+
+.userMenuDropdown {
+    @apply absolute left-0 top-full mt-2 w-52 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-2xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200;
+}
+
+.userMenuDropdownInner {
+    @apply p-1.5;
+}
+
+.userMenuLink {
+    @apply flex items-center gap-3 px-3 py-2.5 text-sm text-foreground rounded-lg transition-all duration-200;
+}
+
+.userMenuLinkLogin {
+    @apply hover:bg-primary/10 hover:text-primary;
+}
+
+.userMenuLinkRegister {
+    @apply hover:bg-accent/10 hover:text-accent;
+}
+
+.userMenuLinkHelp {
+    @apply text-orange-500 hover:bg-orange-500/10;
+}
+
+.userMenuLinkLogout {
+    @apply hover:bg-destructive/10 hover:text-destructive;
+}
+
+.userMenuLinkForm {
+    @apply w-full;
+}
+
+.userMenuLinkForm button {
+    @apply w-full;
+}
+
+.userMenuLinkIconWrapper {
+    @apply flex items-center justify-center h-8 w-8 rounded-lg transition-colors bg-muted/50;
+}
+
+.userMenuLink:hover .userMenuLinkIconWrapper {
+    @apply bg-muted;
+}
+
+.userMenuLinkIconWrapperLogin {
+    @apply bg-primary/10;
+}
+.userMenuLinkLogin:hover .userMenuLinkIconWrapperLogin {
+    @apply bg-primary/20;
+}
+
+.userMenuLinkIconWrapperRegister {
+    @apply bg-accent/10;
+}
+.userMenuLinkRegister:hover .userMenuLinkIconWrapperRegister {
+    @apply bg-accent/20;
+}
+
+.userMenuLinkIconWrapperHelp {
+    @apply bg-orange-500/10;
+}
+.userMenuLinkHelp:hover .userMenuLinkIconWrapperHelp {
+    @apply bg-orange-500/20;
+}
+.userMenuLinkHelp .userMenuLinkIcon {
+    @apply text-orange-500;
+}
+
+.userMenuLinkIcon {
+    @apply h-4 w-4;
+}
+
+.userMenuLinkText {
+    @apply font-medium;
+}
+
+.mobileUserLink {
+    @apply lg:hidden flex items-center justify-center h-10 w-10 text-foreground hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300;
+}
+
+.mobileUserIcon {
+    @apply h-4 w-4;
+}
+
+.wishlistLink {
+    @apply relative flex items-center justify-center h-10 w-10 text-foreground hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300;
+}
+
+.wishlistIcon {
+    @apply h-4.5 w-4.5 transition-all duration-300;
+}
+.wishlistLink:hover .wishlistIcon {
+    @apply fill-current scale-110;
+}
+
+.wishlistBadge {
+    @apply absolute -top-0.5 -right-0.5 h-5 w-5 flex items-center justify-center text-[10px] bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full font-bold shadow-md;
+}
+
+.cartLink {
+    @apply relative flex items-center justify-center h-10 w-10 text-foreground hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300;
+}
+
+.cartIcon {
+    @apply h-4.5 w-4.5 transition-transform duration-300;
+}
+.cartLink:hover .cartIcon {
+    @apply scale-110;
+}
+
+.cartBadge {
+    @apply absolute -top-0.5 -right-0.5 h-5 w-5 flex items-center justify-center text-[10px] bg-gradient-to-br from-destructive to-badge-sale text-white rounded-full font-bold shadow-md animate-pulse;
+}
+

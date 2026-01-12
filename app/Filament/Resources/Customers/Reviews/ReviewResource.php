@@ -1,0 +1,77 @@
+<?php
+
+namespace App\Filament\Resources\Customers\Reviews;
+
+use App\Enums\NavigationGroup;
+use App\Filament\Resources\Customers\Reviews\Pages\CreateReview;
+use App\Filament\Resources\Customers\Reviews\Pages\EditReview;
+use App\Filament\Resources\Customers\Reviews\Pages\ListReviews;
+use App\Filament\Resources\Customers\Reviews\Schemas\ReviewForm;
+use App\Filament\Resources\Customers\Reviews\Tables\ReviewsTable;
+use App\Models\Review;
+use BackedEnum;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Table;
+use UnitEnum;
+
+class ReviewResource extends Resource
+{
+    protected static ?string $model = Review::class;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedStar;
+
+    protected static string|UnitEnum|null $navigationGroup = NavigationGroup::Customers;
+
+    protected static ?int $navigationSort = 5;
+
+    protected static ?string $navigationLabel = null;
+
+    protected static ?string $modelLabel = null;
+
+    protected static ?string $pluralModelLabel = null;
+
+    protected static ?string $recordTitleAttribute = 'id';
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.reviews.navigation_label');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.reviews.model_label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.reviews.plural_model_label');
+    }
+
+    public static function form(Schema $schema): Schema
+    {
+        return ReviewForm::configure($schema);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return ReviewsTable::configure($table);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListReviews::route('/'),
+            'create' => CreateReview::route('/create'),
+            'edit' => EditReview::route('/{record}/edit'),
+        ];
+    }
+}

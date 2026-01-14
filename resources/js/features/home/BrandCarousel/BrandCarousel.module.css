@@ -1,0 +1,33 @@
+@reference "@styles/app.css";
+
+.section {
+    @apply border-y border-border bg-background py-12 md:py-16;
+}
+
+.container {
+    @apply container mx-auto px-4;
+}
+
+.header {
+    @apply mb-10 text-center;
+}
+
+.title {
+    @apply mb-3 text-3xl font-bold text-foreground md:text-4xl;
+}
+
+.description {
+    @apply mx-auto max-w-2xl text-muted-foreground;
+}
+
+.brandLink {
+    @apply flex h-24 items-center justify-center opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0;
+}
+
+.brandImage {
+    @apply max-h-16 max-w-full object-contain transition-transform;
+}
+
+.brandLink:hover .brandImage {
+    transform: scale(1.1);
+}

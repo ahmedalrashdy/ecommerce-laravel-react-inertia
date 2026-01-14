@@ -1,0 +1,98 @@
+@reference "@styles/app.css";
+
+.section {
+    @apply bg-gradient-to-br from-primary/5 via-background to-primary/5 py-12 md:py-16 dark:from-primary/10 dark:via-background dark:to-primary/10;
+}
+
+.container {
+    @apply container mx-auto px-4;
+}
+
+.header {
+    @apply mb-10 text-center;
+}
+
+.title {
+    @apply mb-3 text-3xl font-bold text-foreground md:text-4xl;
+}
+
+.description {
+    @apply mx-auto max-w-2xl text-muted-foreground;
+}
+
+.swiper {
+    @apply pb-12;
+}
+
+.swiperBullet {
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+    opacity: 0.3;
+}
+
+.swiperBulletActive {
+    opacity: 1;
+    width: 28px;
+    border-radius: 5px;
+}
+
+.card {
+    @apply h-full rounded-2xl border border-border bg-card p-6 shadow-md transition-smooth hover:shadow-xl;
+}
+
+.quoteIcon {
+    @apply mb-4;
+}
+
+.quoteIconSvg {
+    @apply h-10 w-10 text-primary/20 dark:text-primary/30;
+}
+
+.rating {
+    @apply mb-4 flex items-center gap-1;
+}
+
+.star {
+    @apply h-5 w-5;
+}
+
+.starFilled {
+    @apply fill-warning text-warning;
+}
+
+.starEmpty {
+    @apply fill-muted text-muted;
+}
+
+.comment {
+    @apply mb-6 leading-relaxed text-foreground/80;
+}
+
+.userInfo {
+    @apply flex items-center gap-4 border-t border-border pt-4;
+}
+
+.avatar {
+    @apply h-12 w-12 rounded-full object-cover;
+}
+
+.userDetails {
+    @apply flex-1;
+}
+
+.userNameRow {
+    @apply flex items-center gap-2;
+}
+
+.userName {
+    @apply font-semibold text-foreground;
+}
+
+.verifiedBadge {
+    @apply rounded-full bg-success/10 px-2 py-0.5 text-xs text-success;
+}
+
+.date {
+    @apply text-sm text-muted-foreground;
+}

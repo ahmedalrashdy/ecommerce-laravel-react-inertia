@@ -1,0 +1,127 @@
+@reference "@styles/app.css";
+
+.container {
+    @apply relative;
+}
+
+.cartButton {
+    @apply hidden lg:flex relative items-center justify-center h-10 w-10 text-foreground hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300 cursor-pointer;
+}
+
+.cartIcon {
+    @apply h-4.5 w-4.5 transition-transform duration-300;
+}
+
+.cartButton:hover .cartIcon {
+    @apply scale-110;
+}
+
+.cartBadge {
+    @apply absolute -top-0.5 -right-0.5 h-5 w-5 flex items-center justify-center text-[10px] bg-gradient-to-br from-destructive to-badge-sale text-white rounded-full font-bold shadow-md animate-pulse;
+}
+
+.mobileLink {
+    @apply lg:hidden relative flex items-center justify-center h-10 w-10 text-foreground hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300;
+}
+
+.dropdown {
+    @apply absolute left-0 top-full mt-2 w-80 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-2xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200;
+}
+
+.dropdownHeader {
+    @apply p-4 border-b border-border/50;
+}
+
+.dropdownTitle {
+    @apply text-lg font-bold text-foreground;
+}
+
+.itemsCount {
+    @apply text-sm text-muted-foreground;
+}
+
+.dropdownContent {
+    @apply max-h-96 overflow-y-auto;
+}
+
+.loadingContainer {
+    @apply flex flex-col items-center justify-center p-8 gap-2 text-muted-foreground;
+}
+
+.loader {
+    @apply h-6 w-6 animate-spin;
+}
+
+.emptyContainer {
+    @apply flex flex-col items-center justify-center p-8 gap-2 text-muted-foreground;
+}
+
+.emptyIcon {
+    @apply h-12 w-12 opacity-50;
+}
+
+.emptyText {
+    @apply text-sm;
+}
+
+.itemsList {
+    @apply p-2 space-y-2;
+}
+
+.item {
+    @apply flex items-center gap-3 p-2 rounded-lg hover:bg-accent/50 transition-colors;
+}
+
+.itemImage {
+    @apply h-16 w-16 object-cover rounded-lg;
+}
+
+.itemInfo {
+    @apply flex-1 min-w-0;
+}
+
+.itemName {
+    @apply text-sm font-medium text-foreground truncate;
+}
+
+.itemPrice {
+    @apply text-xs text-muted-foreground;
+}
+
+.moreItems {
+    @apply text-xs text-center text-muted-foreground p-2;
+}
+
+.dropdownFooter {
+    @apply p-4 border-t border-border/50;
+}
+
+.viewCartButton {
+    @apply w-full flex items-center justify-center px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors;
+}
+
+.removeButton {
+    @apply flex-shrink-0 p-1.5 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-lg transition-colors;
+}
+
+.removeIcon {
+    @apply h-4 w-4;
+}
+
+.subtotalContainer {
+    @apply flex items-center justify-between px-4 py-3 bg-muted/50;
+}
+
+.subtotalLabel {
+    @apply text-sm text-muted-foreground;
+}
+
+.subtotalValue {
+    @apply text-base font-bold text-foreground;
+}
+
+/* Skeleton Styles */
+.itemImageSkeleton {
+    @apply h-16 w-16 rounded-lg flex-shrink-0;
+}
+

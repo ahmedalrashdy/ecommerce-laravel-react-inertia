@@ -1,0 +1,265 @@
+@reference "@styles/app.css";
+
+.container {
+    @apply max-w-7xl mx-auto px-4 py-6 sm:py-8;
+}
+
+/* Empty State */
+.emptyContainer {
+    @apply flex flex-col items-center justify-center py-20 text-center bg-card border border-border rounded-2xl;
+}
+
+.emptyIconWrapper {
+    @apply relative mb-6;
+}
+
+.emptyIconBg {
+    @apply absolute inset-0 bg-primary/10 rounded-full blur-xl scale-150;
+}
+
+.emptyIcon {
+    @apply relative h-20 w-20 text-primary/60;
+}
+
+.emptyTitle {
+    @apply text-2xl font-bold text-foreground mb-2;
+}
+
+.emptyText {
+    @apply text-muted-foreground mb-8 max-w-sm;
+}
+
+.shopButton {
+    @apply px-8 py-3 gap-2;
+}
+
+/* Main Content Grid */
+.content {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8;
+}
+
+/* Items Card */
+.itemsCard {
+    @apply lg:col-span-2 bg-card border border-border rounded-2xl overflow-hidden;
+}
+
+/* Card Header */
+.cardHeader {
+    @apply flex items-center justify-between gap-4 p-4 sm:p-5 border-b border-border bg-muted/30;
+}
+
+.cardHeaderStart {
+    @apply flex items-center gap-3 sm:gap-4;
+}
+
+.selectAllButton {
+    @apply flex items-center justify-center cursor-pointer p-1 hover:opacity-80 transition-opacity;
+}
+
+.checkbox {
+    @apply h-5 w-5 rounded border-2 border-primary/60 data-[state=checked]:bg-primary data-[state=checked]:border-primary transition-all;
+}
+
+.cardTitleGroup {
+    @apply flex flex-col;
+}
+
+.cardTitle {
+    @apply text-lg sm:text-xl font-bold text-foreground flex items-center gap-2;
+}
+
+.cardTitleIcon {
+    @apply h-5 w-5 text-primary;
+}
+
+.cardSubtitle {
+    @apply text-xs sm:text-sm text-muted-foreground;
+}
+
+.selectedBadge {
+    @apply text-xs sm:text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full;
+}
+
+/* Items List */
+.itemsList {
+    @apply divide-y divide-border;
+}
+
+/* Item Card */
+.item {
+    @apply relative flex items-center gap-3 sm:gap-4 p-4 sm:p-5 pr-12 sm:pr-14 transition-all duration-200;
+}
+
+.item:hover {
+    @apply bg-muted/30;
+}
+
+.itemSelected {
+    @apply bg-primary/5;
+}
+
+/* Delete Button */
+.deleteButton {
+    @apply absolute top-3 left-3 p-1.5 text-muted-foreground/60 hover:text-destructive hover:bg-destructive/10 rounded-md transition-all duration-200;
+}
+
+.deleteIcon {
+    @apply h-4 w-4;
+}
+
+/* Checkbox - Absolute Position */
+.itemCheckbox {
+    @apply absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer p-1.5 hover:bg-primary/10 rounded-md transition-all duration-200;
+}
+
+/* Item Image */
+.itemImageLink {
+    @apply flex-shrink-0;
+}
+
+.itemImage {
+    @apply w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-xl border border-border/30 hover:border-primary/30 transition-all duration-300 shadow-sm;
+}
+
+/* Item Info */
+.itemInfo {
+    @apply flex-1 min-w-0 flex flex-col gap-1.5;
+}
+
+.itemName {
+    @apply text-sm sm:text-base font-semibold text-foreground hover:text-primary transition-colors line-clamp-2 leading-snug;
+}
+
+.itemAttributes {
+    @apply flex flex-wrap items-center gap-2;
+}
+
+.itemAttributeBadge {
+    @apply gap-2 rounded-lg border-border/60 bg-background/70 text-[11px] font-semibold text-foreground;
+}
+
+.itemAttributeColor {
+    @apply h-2.5 w-2.5 rounded-full border border-border/60;
+}
+
+.itemPriceRow {
+    @apply flex items-center gap-2 flex-wrap;
+}
+
+.itemUnitPrice {
+    @apply text-sm sm:text-base font-bold text-primary;
+}
+
+.itemComparePrice {
+    @apply text-xs sm:text-sm text-muted-foreground line-through;
+}
+
+/* Total & Controls Column */
+.itemTotalColumn {
+    @apply flex flex-col items-end gap-3 flex-shrink-0;
+}
+
+.itemTotal {
+    @apply text-base sm:text-lg font-bold text-foreground whitespace-nowrap;
+}
+
+/* Quantity Controls */
+.quantityControl {
+    @apply flex items-center bg-muted/60 rounded-lg border border-border/50;
+}
+
+.quantityButton {
+    @apply h-8 w-8 sm:h-9 sm:w-9 hover:bg-background/80 rounded-md transition-colors;
+}
+
+.quantityIcon {
+    @apply h-3.5 w-3.5;
+}
+
+.quantityValue {
+    @apply w-10 sm:w-12 text-center font-semibold text-foreground text-sm sm:text-base;
+}
+
+/* Summary Section */
+.summarySection {
+    @apply lg:col-span-1;
+}
+
+.summaryCard {
+    @apply p-6 bg-card border border-border rounded-xl sticky top-4 shadow-sm;
+}
+
+.summaryTitle {
+    @apply text-xl font-bold text-foreground mb-4;
+}
+
+.summaryInfo {
+    @apply flex items-center gap-2 text-sm text-muted-foreground mb-4 p-3 bg-muted/50 rounded-lg;
+}
+
+.summaryInfoIcon {
+    @apply h-4 w-4 text-primary;
+}
+
+.summaryDivider {
+    @apply h-px bg-border my-4;
+}
+
+.summaryRow {
+    @apply flex justify-between items-center py-2 text-sm;
+}
+
+.shippingText {
+    @apply text-muted-foreground;
+}
+
+.summaryTotal {
+    @apply text-lg font-bold text-foreground pt-2;
+}
+
+.totalPrice {
+    @apply text-primary text-xl;
+}
+
+.checkoutButton {
+    @apply w-full mt-6 gap-2;
+}
+
+.checkoutBadge {
+    @apply inline-flex items-center justify-center h-5 min-w-5 px-1.5 text-xs font-bold bg-primary-foreground text-primary rounded-full;
+}
+
+.noSelectionWarning {
+    @apply text-center text-sm text-muted-foreground mt-3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .item {
+        @apply flex-wrap pb-16 pr-4;
+    }
+
+    .itemCheckbox {
+        @apply top-3 right-3 translate-y-0;
+    }
+
+    .itemTotalColumn {
+        @apply absolute bottom-4 right-4 flex-row items-center gap-4;
+    }
+
+    .itemTotal {
+        @apply text-base;
+    }
+
+    .deleteButton {
+        @apply top-auto bottom-4 left-4;
+    }
+
+    .cardHeader {
+        @apply flex-col items-start gap-3;
+    }
+
+    .selectedBadge {
+        @apply self-end;
+    }
+}

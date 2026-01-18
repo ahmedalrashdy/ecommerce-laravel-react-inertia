@@ -1,0 +1,86 @@
+@reference "@styles/app.css";
+
+.container {
+    @apply max-w-7xl mx-auto px-4 py-8;
+}
+
+.header {
+    @apply mb-8;
+}
+
+.title {
+    @apply text-3xl font-bold text-foreground mb-2;
+}
+
+.subtitle {
+    @apply text-muted-foreground;
+}
+
+.emptyContainer {
+    @apply flex flex-col items-center justify-center py-16 text-center;
+}
+
+.emptyIcon {
+    @apply h-24 w-24 text-muted-foreground mb-4 opacity-50;
+}
+
+.emptyTitle {
+    @apply text-2xl font-bold text-foreground mb-2;
+}
+
+.emptyText {
+    @apply text-muted-foreground mb-6;
+}
+
+.shopButton {
+    @apply px-6 py-3;
+}
+
+.itemsGrid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+.itemCard {
+    @apply bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow;
+}
+
+.itemImageContainer {
+    @apply relative aspect-square overflow-hidden;
+}
+
+.itemImage {
+    @apply w-full h-full object-cover;
+}
+
+.removeButton {
+    @apply absolute top-2 right-2 bg-background/80 backdrop-blur-sm text-destructive hover:text-destructive hover:bg-background/90;
+}
+
+.removeIcon {
+    @apply h-4 w-4;
+}
+
+.itemInfo {
+    @apply p-4 space-y-2;
+}
+
+.itemName {
+    @apply text-lg font-semibold text-foreground hover:text-primary transition-colors line-clamp-2;
+}
+
+.itemPrice {
+    @apply flex items-center gap-2;
+}
+
+.comparePrice {
+    @apply text-sm text-muted-foreground line-through;
+}
+
+.addToCartButton {
+    @apply w-full mt-2;
+}
+
+.addToCartIcon {
+    @apply h-4 w-4 mr-2;
+}
+

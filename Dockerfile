@@ -37,12 +37,14 @@ WORKDIR /var/www/html
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --no-scripts
 
 COPY . .
 
 RUN cp .env.example .env \
     && php artisan key:generate \
+    && composer dump-autoload --optimize \
     && php artisan package:discover
 
 COPY --from=node_dependencies /app/node_modules ./node_modules

@@ -45,7 +45,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
             >
                 <div className={styles.categoryHeader}>
                     <Link
-                        href={`/products/${category.slug}`}
+                        href={`/category/${category.slug}`}
                         className={cn(
                             styles.categoryLink,
                             level === 0 && styles.categoryLinkLevel0,

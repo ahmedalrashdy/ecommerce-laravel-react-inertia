@@ -12,7 +12,7 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
             ssr: 'resources/js/ssr.tsx',
-            refresh: false,
+            refresh: true,
         }),
         react({
             babel: {
@@ -21,7 +21,7 @@ export default defineConfig({
         }),
         tailwindcss(),
         wayfinder({
-            // formVariants: true,
+            formVariants: true,
         }),
     ],
     esbuild: {

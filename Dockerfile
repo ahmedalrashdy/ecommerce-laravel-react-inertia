@@ -7,6 +7,7 @@ FROM dunglas/frankenphp:php8.4
 
 ENV SERVER_NAME=":80"
 ENV FRANKENPHP_CONFIG="worker ./public/index.php"
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 RUN apt-get update && apt-get install -y \
     supervisor \

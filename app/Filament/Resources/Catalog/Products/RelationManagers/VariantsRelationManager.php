@@ -95,7 +95,7 @@ class VariantsRelationManager extends RelationManager
         foreach ($attributeValues as $key => $item) {
             $attributeId = $item['attribute_id'] ?? null;
 
-            if (! $attributeId) {
+            if (!$attributeId) {
                 continue;
             }
 
@@ -114,8 +114,8 @@ class VariantsRelationManager extends RelationManager
         }
 
         $attributePairs = $attributeValues
-            ->filter(fn ($item) => filled($item['attribute_id'] ?? null) && filled($item['attribute_value_id'] ?? null))
-            ->mapWithKeys(fn ($item) => [(int) $item['attribute_id'] => (int) $item['attribute_value_id']]);
+            ->filter(fn($item) => filled($item['attribute_id'] ?? null) && filled($item['attribute_value_id'] ?? null))
+            ->mapWithKeys(fn($item) => [(int) $item['attribute_id'] => (int) $item['attribute_value_id']]);
 
         if ($attributePairs->isEmpty() || $attributeValues->count() !== $attributePairs->count()) {
             return;
@@ -127,7 +127,7 @@ class VariantsRelationManager extends RelationManager
 
             foreach ($attributeValues->values() as $index => $item) {
                 $itemId = $item['id'] ?? null;
-                if (! $itemId || ! $existingAttributes->has($itemId)) {
+                if (!$itemId || !$existingAttributes->has($itemId)) {
                     continue;
                 }
 
@@ -141,7 +141,7 @@ class VariantsRelationManager extends RelationManager
 
         if ($product) {
             $variantIds = $product->variants()
-                ->when($variant, fn ($query) => $query->whereKeyNot($variant->id))
+                ->when($variant, fn($query) => $query->whereKeyNot($variant->id))
                 ->pluck('id');
 
             if ($variantIds->isNotEmpty() && $this->hasDuplicateVariantAttributes($variantIds, $attributePairs)) {
@@ -229,7 +229,7 @@ class VariantsRelationManager extends RelationManager
                         ->columnSpan(1),
                     Toggle::make('is_default')
                         ->default(false)
-                        ->disabled(fn ($state) => $state === true)
+                        ->disabled(fn($state) => $state === true)
 
                         ->label(__('filament.products.default_variant'))
                         ->helperText(function ($state) {
@@ -250,13 +250,13 @@ class VariantsRelationManager extends RelationManager
                 FileUpload::make('path')
                     ->label(__('validation.attributes.image'))
                     ->image()->directory('product-variants')
-                    ->disk('public')->visibility('public')
+                    ->visibility('public')
                     ->maxSize(5120)->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg', 'image/webp'])->required()->columnSpan(1),
                 TextInput::make('alt_text')->label(__('validation.attributes.alt_text'))->maxLength(255)->columnSpan(1),
             ])->columns(3)
             ->minItems(1)
             ->defaultItems(1)
-            ->itemLabel(fn ($state) => __('filament.products.image').' '.(($state['display_order'] ?? 0) + 1))
+            ->itemLabel(fn($state) => __('filament.products.image') . ' ' . (($state['display_order'] ?? 0) + 1))
             ->columnSpanFull()->helperText(__('filament.products.variant_images_helper'))->orderable('display_order');
     }
 
@@ -305,26 +305,26 @@ class VariantsRelationManager extends RelationManager
                         ->native(false)
                         ->rule(function (Get $get, ?ProductVariantAttribute $record) use ($ownerRecord) {
                             return function (string $attribute, $value, \Closure $fail) use ($get, $ownerRecord, $record) {
-                                if (! $ownerRecord || ! $value) {
+                                if (!$ownerRecord || !$value) {
                                     return;
                                 }
 
                                 $attributeId = $get('attribute_id');
-                                if (! $attributeId) {
+                                if (!$attributeId) {
                                     return;
                                 }
 
                                 $attributeValues = collect($get('../../attributeValues') ?? []);
                                 $attributePairs = $attributeValues
-                                    ->filter(fn ($item) => filled($item['attribute_id'] ?? null) && filled($item['attribute_value_id'] ?? null))
-                                    ->mapWithKeys(fn ($item) => [(int) $item['attribute_id'] => (int) $item['attribute_value_id']]);
+                                    ->filter(fn($item) => filled($item['attribute_id'] ?? null) && filled($item['attribute_value_id'] ?? null))
+                                    ->mapWithKeys(fn($item) => [(int) $item['attribute_id'] => (int) $item['attribute_value_id']]);
 
                                 if ($attributePairs->isEmpty() || $attributeValues->count() !== $attributePairs->count()) {
                                     return;
                                 }
 
                                 $variantIds = $ownerRecord->variants()
-                                    ->when($record, fn ($query) => $query->where('id', '!=', $record->product_variant_id))
+                                    ->when($record, fn($query) => $query->where('id', '!=', $record->product_variant_id))
                                     ->pluck('id');
 
                                 if ($variantIds->isNotEmpty() && self::hasDuplicateVariantAttributes($variantIds, $attributePairs)) {
@@ -365,12 +365,12 @@ class VariantsRelationManager extends RelationManager
 
             TextColumn::make('price')
                 ->label(__('validation.attributes.price'))
-                ->formatStateUsing(fn ($state): ?string => \App\Data\Casts\MoneyCast::format($state))
+                ->formatStateUsing(fn($state): ?string => \App\Data\Casts\MoneyCast::format($state))
                 ->sortable(),
 
             TextColumn::make('compare_at_price')
                 ->label(__('validation.attributes.compare_at_price'))
-                ->formatStateUsing(fn ($state): ?string => \App\Data\Casts\MoneyCast::format($state))
+                ->formatStateUsing(fn($state): ?string => \App\Data\Casts\MoneyCast::format($state))
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
 
@@ -379,7 +379,7 @@ class VariantsRelationManager extends RelationManager
                 ->numeric()
                 ->sortable()
                 ->badge()
-                ->color(fn ($state) => $state > 0 ? 'success' : 'danger'),
+                ->color(fn($state) => $state > 0 ? 'success' : 'danger'),
 
             TextColumn::make('is_default')
                 ->label(__('filament.products.is_default'))

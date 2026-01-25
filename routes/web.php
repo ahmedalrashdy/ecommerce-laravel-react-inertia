@@ -128,7 +128,6 @@ use Illuminate\Support\Facades\Route;
         });
     });
 
-
 Route::post('/payments/webhook/stripe', StripeWebhookController::class)
     ->middleware('throttle:60,1')
     ->name('stripe.webhook');

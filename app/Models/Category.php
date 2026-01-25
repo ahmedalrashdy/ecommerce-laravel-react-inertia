@@ -15,6 +15,13 @@ class Category extends Model
 {
     use HasFactory, HasFileDeletion, HasSlug, NodeTrait;
 
+
+    public function deletableFiles(): array
+    {
+        return [
+            'image_path' => config('filesystems.default'),
+        ];
+    }
     protected $fillable = [
         'parent_id',
         'name',
@@ -53,19 +60,13 @@ class Category extends Model
     public function scopeWithoutDescendants(Builder $query, Category $category, bool $includeCategory = false)
     {
         return $query
-            ->when(! $includeCategory, fn ($q) => $q->where('id', '!=', $category->id))
+            ->when(!$includeCategory, fn($q) => $q->where('id', '!=', $category->id))
             ->where(function (Builder $q) use ($category) {
                 $q->where('_lft', '<', $category->_lft)
                     ->orWhere('_rgt', '>', $category->_rgt);
             });
     }
 
-    public function deletableFiles(): array
-    {
-        return [
-            'image_path' => 'public',
-        ];
-    }
 
     public function getRouteKeyName()
     {

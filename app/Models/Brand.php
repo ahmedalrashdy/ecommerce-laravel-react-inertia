@@ -18,9 +18,12 @@ class Brand extends Model
     use HasFileDeletion;
     use HasSlug;
 
+
     public function deletableFiles(): array
     {
-        return ['image_path' => 'public'];
+        return [
+            'image_path' => config('filesystems.default'),
+        ];
     }
 
     public function getSlugOptions(): SlugOptions
@@ -61,7 +64,7 @@ class Brand extends Model
     public function imageURL(): Attribute
     {
         return Attribute::make(
-            get: fn ($value) => $value ? Storage::url($value) : null,
+            get: fn($value) => $value ? Storage::url($value) : null,
         );
     }
 

@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
+use App\Traits\HasFileDeletion;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -20,7 +21,15 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable implements FilamentUser
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, HasRoles, Notifiable, SoftDeletes, TwoFactorAuthenticatable;
+    use HasFactory, HasFileDeletion, HasRoles, Notifiable, SoftDeletes, TwoFactorAuthenticatable;
+
+
+    public function deletableFiles(): array
+    {
+        return [
+            'avatar' => config('filesystems.default'),
+        ];
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -67,7 +76,7 @@ class User extends Authenticatable implements FilamentUser
     {
         return Attribute::make(
             get: function ($value) {
-                if (! $value) {
+                if (!$value) {
                     return null;
                 }
 
@@ -84,7 +93,7 @@ class User extends Authenticatable implements FilamentUser
         return Str::of($this->name)
             ->explode(' ')
             ->take(2)
-            ->map(fn ($word) => Str::substr($word, 0, 1))
+            ->map(fn($word) => Str::substr($word, 0, 1))
             ->implode('');
     }
 

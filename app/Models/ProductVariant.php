@@ -18,7 +18,7 @@ class ProductVariant extends Model
     protected $casts = [
         'price' => 'string',
         'compare_at_price' => 'string',
-        "is_default"=>"boolean",
+        "is_default" => "boolean",
     ];
 
     public function product()
@@ -51,7 +51,12 @@ class ProductVariant extends Model
         return $this->morphMany(Image::class, 'imageable')
             ->orderBy('display_order');
     }
-
+    protected static function booted()
+    {
+        static::deleted(function ($model) {
+            $model->images()->delete();
+        });
+    }
     public function defaultImage()
     {
 

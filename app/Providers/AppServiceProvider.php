@@ -17,6 +17,7 @@ use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use RuntimeException;
 
@@ -51,5 +52,8 @@ class AppServiceProvider extends ServiceProvider
         Event::listen(Login::class, MergeSessionCart::class);
         Event::listen(Registered::class, MergeSessionCart::class);
 
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
     }
 }

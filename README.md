@@ -1,124 +1,230 @@
-<h1 align="center">
-  Mailpit - email testing for developers
-</h1>
+# Ecommerce Multi Variants
 
-<div align="center">
-    <a href="https://github.com/axllent/mailpit/actions/workflows/tests.yml"><img src="https://github.com/axllent/mailpit/actions/workflows/tests.yml/badge.svg" alt="CI Tests status"></a>
-    <a href="https://github.com/axllent/mailpit/actions/workflows/release-build.yml"><img src="https://github.com/axllent/mailpit/actions/workflows/release-build.yml/badge.svg" alt="CI build status"></a>
-    <a href="https://github.com/axllent/mailpit/actions/workflows/build-docker.yml"><img src="https://github.com/axllent/mailpit/actions/workflows/build-docker.yml/badge.svg" alt="CI Docker build status"></a>
-    <a href="https://github.com/axllent/mailpit/actions/workflows/codeql-analysis.yml"><img src="https://github.com/axllent/mailpit/actions/workflows/codeql-analysis.yml/badge.svg" alt="Code quality"></a>
-    <a href="https://goreportcard.com/report/github.com/axllent/mailpit"><img src="https://goreportcard.com/badge/github.com/axllent/mailpit" alt="Go Report Card"></a>
-    <br>
-    <a href="https://github.com/axllent/mailpit/releases/latest"><img src="https://img.shields.io/github/v/release/axllent/mailpit.svg" alt="Latest release"></a>
-    <a href="https://hub.docker.com/r/axllent/mailpit"><img src="https://img.shields.io/docker/pulls/axllent/mailpit.svg" alt="Docker pulls"></a>
-</div>
-<br>
-<p align="center">
-  <a href="https://mailpit.axllent.org">Website</a>  •
-  <a href="https://mailpit.axllent.org/docs/">Documentation</a>  •
-  <a href="https://mailpit.axllent.org/docs/api-v1/">API</a>
+A modern e-commerce platform built with **Laravel 12**, **Inertia.js v2 + React 19**, and a powerful admin experience powered by **Filament v4**. The core focus of this project is professional multi-variant product management, accurate inventory control, a complete order lifecycle, and a practical returns workflow.
+
+> Project status: actively in development. The current architecture is ready to scale, and the next step is to formally add discounts, promotions, and coupons.
+
+## Demo
+
+You can try the live version of the project using the link below:
+
+<p>
+  <a href="https://ecommerce-laravel-react-inertia-production.up.railway.app" target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://img.shields.io/badge/Demo-Live%20Preview-22c55e?style=for-the-badge&logo=laravel&logoColor=white"
+      alt="Live Demo"
+    />
+  </a>
 </p>
 
-<hr>
+## What Makes This Project Stand Out?
 
-**Mailpit** is a small, fast, low memory, zero-dependency, multi-platform email testing tool & API for developers.
+- Deep support for multi-variant products (attributes + values + variant generation).
+- Precise inventory management built around a Stock Movements ledger.
+- A complete order lifecycle: placement, payment, status changes, cancellations, and returns.
+- Stripe payments via Hosted Checkout with webhooks and a well-structured financial ledger.
+- A professional admin panel via Filament with roles and permissions (RBAC) using Filament Shield.
 
-It acts as an SMTP server, provides a modern web interface to view & test captured emails, and includes an API for automated integration testing.
+## Core Technologies
 
-Mailpit was originally **inspired** by MailHog which is [no longer maintained](https://github.com/mailhog/MailHog/issues/442#issuecomment-1493415258) and hasn't seen active development or security updates for a few years now.
+| Area | Technologies |
+| --- | --- |
+| Backend | PHP 8.4, Laravel 12 |
+| Admin Panel | Filament v4, Filament Shield |
+| Frontend | Inertia.js v2, React 19, TypeScript, Tailwind CSS v4 |
+| Data Layer | Eloquent ORM, Spatie Laravel Data, Spatie Query Builder |
+| Payments | Stripe (Checkout + Webhooks) |
+| Money | brick/money |
+| Local Dev | Laravel Sail |
 
-![Mailpit](https://raw.githubusercontent.com/axllent/mailpit/develop/server/ui-src/screenshot.png)
+## Domain Overview
 
+The system is designed as a practical e-commerce platform that can be run in real scenarios or used as a strong foundation for a larger product. The current emphasis is on domain quality and architecture more than surface-level polish.
 
-## Features
+### Key Capabilities Today
 
-- Runs entirely from a single [static binary](https://mailpit.axllent.org/docs/install/) or multi-architecture [Docker images](https://mailpit.axllent.org/docs/install/docker/)
-- Modern web UI with advanced [mail search](https://mailpit.axllent.org/docs/usage/search-filters/) to view emails (formatted HTML, highlighted HTML source, text, headers, raw source, and MIME attachments
-including image thumbnails), including optional [HTTPS](https://mailpit.axllent.org/docs/configuration/http/) & [authentication](https://mailpit.axllent.org/docs/configuration/http/)
-- [SMTP server](https://mailpit.axllent.org/docs/configuration/smtp/) with optional STARTTLS or SSL/TLS, authentication (including an "accept any" mode)
-- A [REST API](https://mailpit.axllent.org/docs/api-v1/) for integration testing
-- Real-time web UI updates using web sockets for new mail & optional [browser notifications](https://mailpit.axllent.org/docs/usage/notifications/) when new mail is received
-- Optional [POP3 server](https://mailpit.axllent.org/docs/configuration/pop3/) to download captured message directly into your email client
-- [HTML check](https://mailpit.axllent.org/docs/usage/html-check/) to test & score mail client compatibility with HTML emails
-- [Link check](https://mailpit.axllent.org/docs/usage/link-check/) to test message links (HTML & text) & linked images
-- [Spam check](https://mailpit.axllent.org/docs/usage/spamassassin/) to test message "spamminess" using a running SpamAssassin server
-- [Create screenshots](https://mailpit.axllent.org/docs/usage/html-screenshots/) of HTML messages via web UI
-- Mobile and tablet HTML preview toggle in desktop mode
-- [Message tagging](https://mailpit.axllent.org/docs/usage/tagging/) including manual tagging or automated tagging using filtering and "plus addressing"
-- [SMTP relaying](https://mailpit.axllent.org/docs/configuration/smtp-relay/) (message release) - relay messages via a different SMTP server including an optional allowlist of accepted recipients
-- [SMTP forwarding](https://mailpit.axllent.org/docs/configuration/smtp-forward/) - automatically forward messages via a different SMTP server to predefined email addresses
-- Fast message [storing & processing](https://mailpit.axllent.org/docs/configuration/email-storage/) - ingesting 100-200 emails per second over SMTP depending on CPU, network speed & email size,
-easily handling tens of thousands of emails, with automatic email pruning (by default keeping the most recent 500 emails)
-- [Chaos](https://mailpit.axllent.org/docs/integration/chaos/) feature to enable configurable SMTP errors to test application resilience
-- `List-Unsubscribe` syntax validation
-- Optional [webhook](https://mailpit.axllent.org/docs/integration/webhook/) for received messages
+- A strong catalog: hierarchical categories (Nested Set), brands, specifications, and multi-image support.
+- A smart variant engine: attribute selection directly controls available values and the final resolved variant.
+- A smart cart: supports guests and merges automatically after login.
+- A safer checkout: uses idempotency to prevent duplicate order creation.
+- Orders and status management: with a full historical trail for every status change.
+- Realistic returns (RMA): approval, receiving, inspection, resolution (refund/replacement/reject), and financial settlement.
+- Auditable inventory: every change is stored as an independent movement with before/after quantities.
+- Fast search suggestions (autocomplete) with smarter ranking and short-lived caching.
 
+## Key Database Tables
 
-## Installation
+### Catalog and Products
 
-The Mailpit web UI listens by default on `http://0.0.0.0:8025` and the SMTP port on `0.0.0.0:1025`.
+| Table | Purpose |
+| --- | --- |
+| `categories` | Hierarchical categories using `_lft` and `_rgt` |
+| `brands` | Brands |
+| `products` | The main product record and its statistics |
+| `product_variants` | Variants (SKU, price, quantity, compare_at_price) |
+| `attributes` | Attribute definitions (e.g., color, size) |
+| `attribute_values` | Attribute values |
+| `attribute_value_product_variant` | Variant-to-attribute-value mapping with strict integrity rules |
+| `images` | Polymorphic multi-image support |
 
-Mailpit runs as a single binary and can be installed in different ways:
+### Customers and Engagement
 
+| Table | Purpose |
+| --- | --- |
+| `users` | Users with admin and activation flags |
+| `user_addresses` | Shipping addresses with a default option |
+| `reviews` | Product reviews |
+| `wishlists` | Wishlist items at the variant level |
+| `stock_notifications` | Back-in-stock subscriptions |
 
-### Install via package managers
+### Cart and Orders
 
-- **Mac**: `brew install mailpit` (to run automatically in the background: `brew services start mailpit`)
-- **Arch Linux**: available in the AUR as `mailpit`
-- **FreeBSD**: `pkg install mailpit`
+| Table | Purpose |
+| --- | --- |
+| `carts` | A cart for a user or a guest via `session_id` |
+| `cart_items` | Cart items with per-item selection state |
+| `orders` | Order header with shipping snapshot and totals |
+| `order_items` | Order lines with a full variant snapshot at purchase time |
+| `order_histories` | Order status history (critical for transparency and auditability) |
 
+### Returns, Inventory, and Payments
 
-### Install via script (Linux & Mac)
+| Table | Purpose |
+| --- | --- |
+| `returns` | Return header (RMA) linked to the original order |
+| `return_items` | Return line items |
+| `return_item_inspections` | Inspection outcomes by condition/resolution |
+| `return_histories` | Return status history |
+| `stock_movements` | Inventory movement ledger with before/after and source references |
+| `transactions` | Financial ledger (payments/refunds) with gateway references |
 
-Linux & Mac users can install it directly to `/usr/local/bin/mailpit` with:
+## High-Level Flows
 
-```shell
-sudo sh < <(curl -sL https://raw.githubusercontent.com/axllent/mailpit/develop/install.sh)
+### 1) Variant Selection
+
+- The system aggregates attributes from all variants.
+- Each selection narrows the pool of valid variants.
+- Invalid values are automatically disabled.
+- The final variant is resolved consistently, even with partial or conflicting input.
+
+### 2) Checkout and Payment
+
+- Totals are calculated via `PricingService`.
+- The order and stock deductions are created inside a single transaction in `OrderCheckoutService`.
+- Payment is handled via Stripe Hosted Checkout.
+- The webhook is treated as the final source of truth for payment status.
+
+### 3) Cancellations and Returns
+
+- Cancellation restocks inventory only when a sale movement exists and a cancellation movement has not already been recorded.
+- Returns support approval, receiving, inspection, and a final decision (refund/replacement/reject).
+- Financial settlements are recorded clearly inside the `transactions` ledger.
+
+## Admin Panel
+
+The admin panel runs via Filament at the following path:
+
+```text
+/admin
 ```
 
-You can also change the install path to something else by setting the `INSTALL_PATH` environment, for example:
+It covers a wide range of operational needs:
 
-```shell
-INSTALL_PATH=/usr/bin sudo sh < <(curl -sL https://raw.githubusercontent.com/axllent/mailpit/develop/install.sh)
+- Catalog management: categories, brands, attributes, products, and variants.
+- Inventory management: stock movements and variant availability levels.
+- Order management: statuses, cancellations, payments, and refunds.
+- Returns management: the full return lifecycle including inspections and resolutions.
+- Customer management: users, addresses, carts, and wishlists.
+- Roles and permissions via Filament Shield.
+
+## Production Runtime
+
+In production, we rely on:
+
+- **Laravel Octane** with **FrankenPHP** for improved performance.
+- **Supervisor** to run and manage processes.
+- Pre-warming caches and assets before the server starts.
+
+You can review this directly in the following files:
+
+- `Dockerfile`
+- `.docker/supervisord.conf`
+- `.docker/entrypoint.sh`
+
+## Quick Start (Local Development)
+
+### Requirements
+
+- PHP 8.4+
+- Composer
+- Node.js 20+
+- A database (SQLite for quick trials or MySQL for production-like setups)
+
+### Fastest Setup
+
+```bash
+composer run setup
+composer run dev
 ```
 
+### Manual Setup (Short Version)
 
-### Download static binary (Windows, Linux and Mac)
+```bash
+cp .env.example .env
+php artisan key:generate
 
-Static binaries can always be found on the [releases](https://github.com/axllent/mailpit/releases/latest). The `mailpit` binary can be extracted and copied to your `$PATH`, or simply run as `./mailpit`.
+# Quick SQLite setup
+php -r "file_exists('database/database.sqlite') || touch('database/database.sqlite');"
+php artisan migrate --seed
 
+npm install
+npm run dev
+php artisan serve
+```
 
-### Docker
+## Default Admin Account (For Demo)
 
-See [Docker instructions](https://mailpit.axllent.org/docs/install/docker/) for 386, amd64 & arm64 images.
+Seeded via `DatabaseSeeder` if no admin user exists yet:
 
+- Email: `admin@gmail.com`
+- Password: `12345678`
 
-### Compile from source
+> It is strongly recommended to change these credentials in any real environment.
 
-To build Mailpit from source, see [Building from source](https://mailpit.axllent.org/docs/install/source/).
+## Important Environment Variables
 
+Key variables related to the system runtime:
 
-## Usage
+```dotenv
+APP_URL=http://localhost:8000
 
-Run `mailpit -h` to see options. More information can be seen in [the docs](https://mailpit.axllent.org/docs/configuration/runtime-options/).
+DB_CONNECTION=sqlite
+DB_DATABASE=database/database.sqlite
 
-If installed using homebrew, you may run `brew services start mailpit` to always run mailpit automatically.
+PAYMENT_GATEWAY=stripe
+PAYMENT_CURRENCY=USD
 
+STRIPE_KEY=
+STRIPE_SECRET=
+STRIPE_WEBHOOK_SECRET=
+```
 
-### Testing Mailpit
+## Engineering Notes
 
-Please refer to [the documentation](https://mailpit.axllent.org/docs/install/testing/) on how to easily test email delivery to Mailpit.
+- Inventory is modeled as a movement ledger, which provides high auditability.
+- Variant resolution is handled at the domain level, not just in the UI.
+- Payments are designed with idempotency and webhooks to reduce gray areas.
+- The architecture is ready to introduce discounts and promotions without breaking the core.
 
+## Near-Term Roadmap
 
-### Configuring sendmail
+In the next phase, we plan to add:
 
-Mailpit's SMTP server (default on port 1025), so you will likely need to configure your sending application to deliver mail via that port. 
-A common MTA (Mail Transfer Agent) that delivers system emails to an SMTP server is `sendmail`, used by many applications, including PHP. 
-Mailpit can also act as substitute for sendmail. For instructions on how to set this up, please refer to the [sendmail documentation](https://mailpit.axllent.org/docs/install/sendmail/).
+- A Discounts & Promotions engine.
+- Coupons with flexible eligibility rules.
+- Deeper improvements to search and recommendations.
+- Expanded analytics and business metrics.
 
----
+## License
 
-<p align="center">
-  For team features, multiple inboxes, and a hosted setup, try
-  <a href="https://mailtrap.io/?ref=mailpit">Mailtrap</a>, our friendly companion.
-</p>
+This project is open source under the MIT license. See `LICENSE`.

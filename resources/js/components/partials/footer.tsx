@@ -161,7 +161,7 @@ export const Footer: React.FC = () => {
                             <ul className="space-y-3">
                                 <li>
                                     <Link
-                                        href="/orders"
+                                        href="account/orders"
                                         className="transition-smooth hover:text-primary"
                                     >
                                         تتبع طلبك

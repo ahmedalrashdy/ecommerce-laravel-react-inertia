@@ -120,7 +120,6 @@ export default function Header() {
                                         />
                                     </button>
                                 </div>
-
                                 <Link
                                     href={home.url()}
                                     className={styles.logoLink}

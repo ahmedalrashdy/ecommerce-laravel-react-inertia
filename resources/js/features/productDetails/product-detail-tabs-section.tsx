@@ -25,12 +25,48 @@ interface PageProps {
     [key: string]: unknown;
 }
 
+type SpecificationItem = { key: string; value: string };
+type SpecificationsInput =
+    | SpecificationItem[]
+    | Record<string, string>
+    | null
+    | undefined;
+
+/**
+ * Normalizes specifications data to a consistent array format
+ * Supports both array format [{key: string, value: string}] and object format {key: value}
+ */
+const normalizeSpecifications = (
+    specs: SpecificationsInput,
+): SpecificationItem[] => {
+    if (!specs) {
+        return [];
+    }
+
+    // If it's already an array
+    if (Array.isArray(specs)) {
+        return specs;
+    }
+
+    // If it's an object, convert it to array format
+    if (typeof specs === 'object') {
+        return Object.entries(specs).map(([key, value]) => ({
+            key,
+            value: String(value),
+        }));
+    }
+
+    return [];
+};
+
 export const DetailsTabsSection = ({
     productDetails,
 }: {
     productDetails: App.Data.Basic.ProductDetailsData;
 }) => {
-    const specifications = productDetails.specifications ?? [];
+    const specifications = normalizeSpecifications(
+        productDetails.specifications as SpecificationsInput,
+    );
 
     return (
         <div className="mt-12">

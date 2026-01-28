@@ -79,7 +79,6 @@ class StoreDataExporter
                 'image_path' => $category->image_path,
                 'status' => $category->status?->value ?? $category->status,
                 'products_count' => $category->products_count,
-                'specifications' => $category->specifications,
                 'children' => $this->mapCategories($category->children),
             ];
 

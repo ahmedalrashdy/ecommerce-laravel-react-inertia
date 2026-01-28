@@ -133,9 +133,6 @@ class StoreDataImporter
                 $this->reportProgress('Category created', ['name' => $name]);
             }
 
-            if (array_key_exists('specifications', $categoryData)) {
-                $category->forceFill(['specifications' => $categoryData['specifications']])->save();
-            }
         } catch (Throwable $exception) {
             $this->reportError('Category import failed', [
                 'name' => $categoryData['name'] ?? null,

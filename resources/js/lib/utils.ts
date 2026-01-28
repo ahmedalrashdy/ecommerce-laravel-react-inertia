@@ -44,18 +44,50 @@ export function formatCurrency(
     return `${sign}${symbol}${groupedInteger}${fraction ? `.${fraction}` : ''}`;
 }
 
-export function storageUrl(path?: string | null): string {
-    if (!path) {
-        return '';
-    }
+const mediaBaseUrl =import.meta.env.VITE_MEDIA_BASE_URL;
 
-    if (/^(https?:)?\/\//i.test(path) || path.startsWith('data:')) {
-        return path;
-    }
+function isAbsoluteUrl(path: string): boolean {
+    return /^(https?:)?\/\//i.test(path) || path.startsWith('data:') || path.startsWith('blob:');
+}
 
+function ensureLeadingSlash(path: string): string {
+    return path.startsWith('/') ? path : `/${path}`;
+}
+
+function normalizeRelativePath(path: string): string {
     if (path.startsWith('/')) {
         return path;
     }
 
-    return `/storage/${path}`;
+    if (path.startsWith('./')) {
+        return ensureLeadingSlash(path.slice(2));
+    }
+
+    return ensureLeadingSlash(path);
+}
+
+function joinBaseUrl(baseUrl: string, path: string): string {
+    const normalizedBase = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+    const normalizedPath = ensureLeadingSlash(path);
+
+    return `${normalizedBase}${normalizedPath}`;
+}
+
+export function storageUrl(path?: string | null): string {
+    console.log(mediaBaseUrl,'what');
+    if (!path) {
+        return '';
+    }
+
+    if (isAbsoluteUrl(path)) {
+        return path;
+    }
+
+    const resolvedPath = normalizeRelativePath(path);
+
+    if (mediaBaseUrl !== '') {
+        return joinBaseUrl(mediaBaseUrl, resolvedPath);
+    }
+
+    return resolvedPath;
 }

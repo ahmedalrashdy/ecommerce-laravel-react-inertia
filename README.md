@@ -1,4 +1,4 @@
-# Ecommerce Multi Variants
+**# Ecommerce Multi Variants
 
 A modern e-commerce platform built with **Laravel 12**, **Inertia.js v2 + React 19**, and a powerful admin experience powered by **Filament v4**. The core focus of this project is professional multi-variant product management, accurate inventory control, a complete order lifecycle, and a practical returns workflow.
 
@@ -17,28 +17,41 @@ You can try the live version of the project using the link below:
   </a>
 </p>
 
+## Tech Stack
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
+  <img src="https://img.shields.io/badge/PHP-8.4-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/Inertia.js-2-9553E9?style=for-the-badge&logo=inertia&logoColor=white" alt="Inertia.js" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <br />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Filament-4-FDAE4B?style=for-the-badge&logo=filament&logoColor=black" alt="Filament" />
+  <img src="https://img.shields.io/badge/Stripe-Payments-008CDD?style=for-the-badge&logo=stripe&logoColor=white" alt="Stripe" />
+  <img src="https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+</p>
+
 ## Screenshots
 
 <p align="center">
-  <img src="github/images/1.png" alt="Screenshot 1" width="48%" />
-   <img src="github/images/9.png" alt="Screenshot 9" width="48%" />
-
+  <img src="./github/images/1.png" alt="Screenshot 1" width="48%" />
+  <img src="./github/images/9.png" alt="Screenshot 9" width="48%" />
 </p>
 <p align="center">
-<img src="github/images/3.png" alt="Screenshot 3" width="48%" />
-  <img src="github/images/12.png" alt="Screenshot 12" width="48%" />
+  <img src="./github/images/3.png" alt="Screenshot 3" width="48%" />
+  <img src="./github/images/12.png" alt="Screenshot 12" width="48%" />
 </p>
 
 <p align="center">
-  <img src="github/images/4.png" alt="Screenshot 4" width="24%" />
-  <img src="github/images/6.png" alt="Screenshot 6" width="24%" />
-  <img src="github/images/7.png" alt="Screenshot 7" width="24%" />
- 
+  <img src="./github/images/4.png" alt="Screenshot 4" width="24%" />
+  <img src="./github/images/6.png" alt="Screenshot 6" width="24%" />
+  <img src="./github/images/7.png" alt="Screenshot 7" width="24%" />
+  <img src="./github/images/10.png" alt="Screenshot 10" width="24%" />
   <br />
-  <img src="github/images/10.png" alt="Screenshot 10" width="24%" />
-  <img src="github/images/11.png" alt="Screenshot 11" width="24%" />
-  <img src="github/images/2.png" alt="Screenshot 2" width="24%" />
-  <img src="github/images/13.png" alt="Screenshot 13" width="24%" />
+  <img src="./github/images/11.png" alt="Screenshot 11" width="24%" />
+  <img src="./github/images/2.png" alt="Screenshot 2" width="24%" />
+  <img src="./github/images/13.png" alt="Screenshot 13" width="24%" />
 </p>
 
 ## What Makes This Project Stand Out?
@@ -252,3 +265,4 @@ In the next phase, we plan to add:
 ## License
 
 This project is open source under the MIT license. See `LICENSE`.
+**

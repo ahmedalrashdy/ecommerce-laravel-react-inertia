@@ -3,7 +3,7 @@ import { Link } from "@inertiajs/react"
 import { Clock, Flame, ArrowLeft, Heart, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import styles from "./FlashDeals.module.css"
+import { styles } from './FlashDeals.styles'
 
 interface Product {
     id: number
@@ -166,6 +166,8 @@ const FlashDealCard: React.FC<{ product: Product }> = ({ product }) => {
                         src={product.image}
                         alt={product.name}
                         className={styles.image}
+                           loading="lazy"
+                    decoding="async"
                     />
                 </Link>
 

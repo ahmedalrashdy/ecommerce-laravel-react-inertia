@@ -133,6 +133,8 @@ export default function CheckoutPage() {
                                                                 item.product
                                                                     .name
                                                             }
+                                                               loading="lazy"
+                                                                decoding="async"
                                                             className="h-16 w-16 rounded-md border object-cover"
                                                         />
                                                         <div className="space-y-1">

@@ -45,6 +45,8 @@ export const ImageGallery: React.FC<{ images: App.Data.Basic.ImageData[] }> = ({
                                 src={storageUrl(image.path)}
                                 alt={image.altText ?? 'thumbnail'}
                                 className="h-full w-full object-cover"
+                                   loading="lazy"
+                                   decoding="async"
                             />
                         </button>
                     ))}
@@ -60,6 +62,9 @@ export const ImageGallery: React.FC<{ images: App.Data.Basic.ImageData[] }> = ({
                             displayImages[selectedIndex]?.altText ??
                             'product-image'
                         }
+                        loading="eager"
+                        decoding="async"
+                        fetchPriority='high'
                         className="max-h-full max-w-full object-contain p-2 transition-opacity duration-300"
                     />
                 </div>

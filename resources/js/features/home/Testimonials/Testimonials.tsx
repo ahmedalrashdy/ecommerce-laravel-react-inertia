@@ -1,4 +1,5 @@
 import { TestimonialCardSkeleton } from '@/components/feedback/skeletons/TestimonialCardSkeleton';
+import { cn } from '@/lib/utils';
 import { usePage, WhenVisible } from '@inertiajs/react';
 import { Quote, Star } from 'lucide-react';
 import * as React from 'react';
@@ -6,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import styles from './Testimonials.module.css';
+import { styles } from './Testimonials.styles';
 
 export interface Testimonial {
     id: number;
@@ -120,7 +121,7 @@ const SwiperWrapper = ({
                     slidesPerView: 3,
                 },
             }}
-            className={styles.swiper}
+            className={cn(styles.swiperWrapperClass, styles.swiper)}
         >
             {children}
         </Swiper>
@@ -159,6 +160,8 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className={styles.avatar}
+                       loading="lazy"
+                    decoding="async"
                 />
                 <div className={styles.userDetails}>
                     <div className={styles.userNameRow}>

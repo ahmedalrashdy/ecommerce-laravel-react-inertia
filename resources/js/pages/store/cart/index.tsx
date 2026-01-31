@@ -17,7 +17,7 @@ import {
     Trash2,
 } from 'lucide-react';
 import * as React from 'react';
-import styles from './index.module.css';
+import { styles } from './index.styles';
 export default function CartPage() {
     const { cart } = usePage<{ cart: App.Data.Basic.CartData }>().props;
     // Loading states
@@ -223,6 +223,8 @@ function CartItemCard({
                 <img
                     src={storageUrl(item.productVariant.defaultImage?.path)}
                     alt={item.product.name}
+                    loading="lazy"
+                    decoding="async"
                     className={styles.itemImage}
                 />
             </Link>

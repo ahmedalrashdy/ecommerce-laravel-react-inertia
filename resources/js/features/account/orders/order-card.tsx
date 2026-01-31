@@ -118,6 +118,8 @@ export function OrderCard({ order }: { order: OrderSummary }) {
                                         src={storageUrl(item.image)}
                                         alt={item.name}
                                         className="h-full w-full object-cover"
+                                           loading="lazy"
+                    decoding="async"
                                     />
                                 ) : (
                                     <div className="flex h-full w-full items-center justify-center text-xs font-semibold text-muted-foreground">

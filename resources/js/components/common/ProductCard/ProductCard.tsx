@@ -16,7 +16,7 @@ import {
     Star,
 } from 'lucide-react';
 import * as React from 'react';
-import styles from './ProductCard.module.css';
+import { styles } from './ProductCard.styles';
 
 type ProductProps = {
     product: App.Data.Basic.ProductData;
@@ -48,6 +48,7 @@ const ProductLinkImage: React.FC<{
             src={storageUrl(product.defaultVariant!.defaultImage?.path)}
             alt={product.defaultVariant!.defaultImage?.altText ?? product.name}
             loading="lazy"
+            decoding="async"
             className={cn('group-hover:scale-105', imageClassName)}
         />
     </Link>
@@ -262,7 +263,7 @@ const ProductCardGridLayout: React.FC<ProductProps & BadgeProps> = ({
     handleSubscribeStockNotification,
 }) => {
     return (
-        <div className={cn(styles.gridCard, 'group')}>
+        <div className={styles.gridCard}>
             {/* Product Image Area */}
             <div className={styles.gridImageContainer}>
                 <ProductLinkImage
@@ -460,7 +461,7 @@ const ProductCardListLayout: React.FC<ProductProps & BadgeProps> = ({
     subscribeStockNotificationLoading,
 }) => {
     return (
-        <div className={cn(styles.listCard, 'group')}>
+        <div className={styles.listCard}>
             {/* Image Section */}
             <div className={styles.listImageContainer}>
                 <ProductLinkImage

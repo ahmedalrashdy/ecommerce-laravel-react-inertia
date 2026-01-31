@@ -4,7 +4,7 @@ import { ChevronDown, SlidersHorizontal, X } from 'lucide-react';
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';
-import styles from './FilterSidebar.module.css';
+import { styles } from './FilterSidebar.styles';
 
 export interface FilterSidebarProps {
     categories: App.Data.Basic.CategoryData[];

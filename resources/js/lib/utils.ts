@@ -44,7 +44,7 @@ export function formatCurrency(
     return `${sign}${symbol}${groupedInteger}${fraction ? `.${fraction}` : ''}`;
 }
 
-const mediaBaseUrl =import.meta.env.VITE_MEDIA_BASE_URL??"https://pub-1c572fe32d4d4687ada9684c0015063b.r2.dev";
+const mediaBaseUrl = import.meta.env.VITE_MEDIA_BASE_URL ?? "https://pub-1c572fe32d4d4687ada9684c0015063b.r2.dev";
 
 function isAbsoluteUrl(path: string): boolean {
     return /^(https?:)?\/\//i.test(path) || path.startsWith('data:') || path.startsWith('blob:');
@@ -74,7 +74,6 @@ function joinBaseUrl(baseUrl: string, path: string): string {
 }
 
 export function storageUrl(path?: string | null): string {
-    console.log(mediaBaseUrl,'what');
     if (!path) {
         return '';
     }

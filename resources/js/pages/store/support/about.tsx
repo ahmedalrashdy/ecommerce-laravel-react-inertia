@@ -191,6 +191,8 @@ export default function AboutPage() {
                         alt="خلفية متجر زين ماركت"
                         className="h-full w-full object-cover"
                         loading="eager"
+                        fetchPriority='high'
+                        decoding='async'
                     />
                     <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-transparent" />
                 </div>
@@ -474,6 +476,7 @@ export default function AboutPage() {
                                     alt="مستودع وتجهيز الطلبات"
                                     className="h-[360px] w-full object-cover sm:h-[440px]"
                                     loading="lazy"
+                    decoding="async"
                                 />
                             </div>
 
@@ -483,6 +486,7 @@ export default function AboutPage() {
                                     alt="فريق خدمة العملاء"
                                     className="h-[240px] w-full object-cover sm:h-[260px]"
                                     loading="lazy"
+                                    decoding="async"
                                 />
                             </div>
                         </div>
@@ -517,6 +521,7 @@ export default function AboutPage() {
                                         alt={`صورة ${m.name}`}
                                         className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-110"
                                         loading="lazy"
+                                        decoding="async"
                                     />
                                     <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                                 </div>

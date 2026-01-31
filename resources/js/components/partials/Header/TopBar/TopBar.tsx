@@ -11,7 +11,7 @@ import {
     Sun,
 } from 'lucide-react';
 import * as React from 'react';
-import styles from './TopBar.module.css';
+import { styles } from './TopBar.styles';
 
 export const TopBar: React.FC = () => {
     const { settings } = usePage<{

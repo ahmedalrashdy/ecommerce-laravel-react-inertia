@@ -4,7 +4,7 @@ import { useCartStore } from '@/store/cart.store';
 import { Link, usePage, WhenVisible } from '@inertiajs/react';
 import { ShoppingCart } from 'lucide-react';
 import * as React from 'react';
-import styles from './CartDropdown.module.css';
+import { styles } from './CartDropdown.styles';
 import useClickOutside from '@/hooks/useClickOutSide';
 
 export const CartDropdown: React.FC = () => {
@@ -64,7 +64,7 @@ const CartContent = ({
         <>
             <div className={styles.dropdownHeader}>
                 <h3 className={styles.dropdownTitle}>سلة التسوق</h3>
-                <span className={styles.count}>{displayCount} عنصر</span>
+                <span className={styles.itemsCount}>{displayCount} عنصر</span>
             </div>
 
             <div className={styles.dropdownContent}>
@@ -88,6 +88,8 @@ const CartContent = ({
                                         )}
                                         alt={item.product.name}
                                         className={styles.itemImage}
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                     <div className={styles.itemInfo}>
                                         <p className={styles.itemName}>

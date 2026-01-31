@@ -5,7 +5,7 @@ import { useWishlistStore } from '@/store/wishlist.store';
 import { Link, usePage, WhenVisible } from '@inertiajs/react';
 import { Heart } from 'lucide-react';
 import * as React from 'react';
-import styles from './WishlistDropdown.module.css';
+import { styles } from './WishlistDropdown.styles';
 import useClickOutside from '@/hooks/useClickOutSide';
 
 export const WishlistDropdown: React.FC = () => {
@@ -104,6 +104,8 @@ const WishlistContent = ({
                                         )}
                                         alt={item.product.name}
                                         className={styles.itemImage}
+                                           loading="lazy"
+                                        decoding="async"
                                     />
                                     <div className={styles.itemInfo}>
                                         <p className={styles.itemName}>

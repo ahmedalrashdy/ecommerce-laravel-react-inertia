@@ -8,11 +8,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-    --font-sans:
-        'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-        'Noto Color Emoji';
-
+    --font-sans: 'Instrument Sans', 'Cairo', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
     --radius-sm: calc(var(--radius) - 4px);
@@ -239,6 +235,17 @@
         @apply bg-background text-foreground;
     }
 }
+.headerSticky {
+    @apply sticky top-0 z-50 shadow-2xl border-b border-border/50 dark:shadow-primary/5;
+}
+
+.headerVisible {
+    @apply translate-y-0 opacity-100;
+}
+
+.headerHidden {
+    @apply -translate-y-full opacity-0;
+}
 
 /* ================================================
    Utility Classes
@@ -270,7 +277,17 @@
     -webkit-backdrop-filter: blur(12px);
 }
 
-/* 4. Shimmer Loading Effect */
+/* 4. Hero Carousel Progress Bar */
+@keyframes progress {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* 5. Shimmer Loading Effect */
 @keyframes shimmer {
     0% {
         background-position: -468px 0;
@@ -293,7 +310,7 @@
     background-size: 800px 104px;
 }
 
-/* 5. Smooth Transitions */
+/* 6. Smooth Transitions */
 @utility transition-smooth {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -303,7 +320,7 @@
     container-type: inline-size;
 }
 
-/* 7. Custom Scrollbar - Minimal & Overlay Style */
+/* 8. Custom Scrollbar - Minimal & Overlay Style */
 @utility custom-scrollbar {
     scrollbar-width: thin;
     scrollbar-color: var(--color-border) transparent;

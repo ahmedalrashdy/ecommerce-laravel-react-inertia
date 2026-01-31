@@ -3,7 +3,7 @@ import { Input } from '@/components/ui/input';
 import { useNewsletterSubscription } from '@/hooks/use-newsletter-subscription';
 import { CheckCircle2, Mail, Send } from 'lucide-react';
 import * as React from 'react';
-import styles from './Newsletter.module.css';
+import { styles } from './Newsletter.styles';
 
 export const Newsletter: React.FC = () => {
     const {

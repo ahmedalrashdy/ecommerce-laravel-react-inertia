@@ -5,6 +5,18 @@ import ReactDOMServer from 'react-dom/server';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
+import {
+    QueryClient,
+    QueryClientProvider,
+} from '@tanstack/react-query';
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            retry: 1,
+            refetchOnWindowFocus: false,
+        },
+    },
+});
 createServer((page) =>
     createInertiaApp({
         page,
@@ -16,7 +28,10 @@ createServer((page) =>
                 import.meta.glob('./pages/**/*.tsx'),
             ),
         setup: ({ App, props }) => {
-            return <App {...props} />;
+            return    (<QueryClientProvider client={queryClient}>
+            <App {...props} />
+            {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+        </QueryClientProvider>);
         },
     }),
 );

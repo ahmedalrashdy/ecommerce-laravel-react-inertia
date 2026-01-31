@@ -12,7 +12,7 @@ import {
 import { cn } from '@/lib/utils';
 import { CartDropdown } from '../CartDropdown/CartDropdown';
 import { WishlistDropdown } from '../WishlistDropdown/WishlistDropdown';
-import styles from './UserActions.module.css';
+import { styles } from './UserActions.styles';
 import { login, register, logout } from '@/routes';
 import * as ordersRoutes from '@/routes/store/account/orders';
 import { help } from '@/routes/store';
@@ -180,7 +180,7 @@ export const UserActions: React.FC = () => {
                                         >
                                             <HelpCircle
                                                 className={
-                                                    styles.userMenuLinkIcon
+                                                    styles.userMenuLinkIconHelp
                                                 }
                                             />
                                         </div>

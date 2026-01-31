@@ -1,7 +1,7 @@
 import { Link } from "@inertiajs/react"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import styles from "./FeaturedCollections.module.css"
+import { styles } from './FeaturedCollections.styles'
 
 interface Collection {
     id: number

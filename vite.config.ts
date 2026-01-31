@@ -5,8 +5,17 @@ import laravel from 'laravel-vite-plugin';
 import { defineConfig } from 'vite';
 import path from 'path';
 export default defineConfig({
-    server:{
-        port:9999,
+    server: {
+        host: '0.0.0.0',
+        watch: {
+            usePolling: true,
+        },
+        cors: true,
+        hmr: {
+            host: "192.168.8.169",
+            clientPort: 5173,
+        },
+        port: 5173,
     },
     plugins: [
         laravel({
@@ -32,4 +41,14 @@ export default defineConfig({
             '@styles': path.resolve(__dirname, 'resources/css'),
         }
     },
+    build: {
+
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes('lucide-react')) return 'icons';
+                },
+            },
+        },
+    }
 });

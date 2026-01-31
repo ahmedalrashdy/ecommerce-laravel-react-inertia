@@ -538,6 +538,8 @@ export default function ReturnsPage() {
                         alt="خلفية سياسة الإرجاع والاستبدال"
                         className="h-full w-full object-cover"
                         loading="eager"
+                        fetchPriority='high'
+                        decoding='async'
                     />
                     <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-transparent" />
                 </div>

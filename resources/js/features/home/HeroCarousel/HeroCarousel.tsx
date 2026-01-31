@@ -15,7 +15,7 @@ import {
     Zap,
 } from 'lucide-react';
 import * as React from 'react';
-import styles from './HeroCarousel.module.css';
+import { styles } from './HeroCarousel.styles';
 
 const BadgeIcon: React.FC<{ icon: string }> = ({ icon }) => {
     switch (icon) {
@@ -117,6 +117,9 @@ export default function HeroCarousel() {
                                 ? styles.slideImageZoomed
                                 : styles.slideImageNormal,
                         )}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        fetchPriority={index === 0 ? "high" : "auto"}
+                        decoding="async"
                     />
                 </div>
             ))}
@@ -237,6 +240,8 @@ export default function HeroCarousel() {
                                 <img
                                     src={item.image}
                                     alt=""
+                                    loading='lazy'
+                                    decoding='async'
                                     className={styles.thumbnailImage}
                                 />
                                 {/* Dark overlay on inactive thumbnails */}

@@ -6,7 +6,7 @@ import { home } from '@/routes/store';
 import { login } from '@/routes';
 import { Link, usePage } from '@inertiajs/react';
 import { Heart, Home, ShoppingCart, User } from 'lucide-react';
-import styles from './MobileBottomNav.module.css';
+import { styles } from './MobileBottomNav.styles';
 import { useCartStore } from '@/store/cart.store';
 import { useWishlistStore } from '@/store/wishlist.store';
 import { SharedData } from '@/types';

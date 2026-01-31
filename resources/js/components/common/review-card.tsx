@@ -74,7 +74,11 @@ export const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                 <div className="flex gap-2 mt-4 overflow-x-auto scrollbar-hide">
                     {review.images.map((img, i) => (
                         <div key={i} className="relative flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border border-border group/img cursor-pointer">
-                            <img src={storageUrl(img)} alt="" className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-300" />
+                            <img src={storageUrl(img)} 
+                            alt=""
+                            loading="lazy"
+                            decoding="async"
+                             className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-300" />
                             <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover/img:bg-black/40 transition-colors">
                                 <ZoomIn className="h-5 w-5 text-white opacity-0 group-hover/img:opacity-100 transition-opacity" />
                             </div>

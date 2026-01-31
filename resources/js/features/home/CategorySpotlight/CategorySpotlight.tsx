@@ -4,14 +4,13 @@ import { cn } from '@/lib/utils';
 import { usePage } from '@inertiajs/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import * as React from 'react';
-import styles from './CategorySpotlight.module.css';
+import { styles } from './CategorySpotlight.styles';
 
 export const CategorySpotlight: React.FC = () => {
     const { mainCategories: categories } = usePage<{
         mainCategories: App.Data.Basic.CategoryData[];
     }>().props;
     const scrollContainerRef = React.useRef<HTMLDivElement>(null);
-    console.log(categories);
     // في RTL: نبدأ من اليمين، لذا لا يمكننا الذهاب يميناً (False) ولكن يمكننا الذهاب يساراً (True)
     const [canScrollRight, setCanScrollRight] = React.useState(false);
     const [canScrollLeft, setCanScrollLeft] = React.useState(true);

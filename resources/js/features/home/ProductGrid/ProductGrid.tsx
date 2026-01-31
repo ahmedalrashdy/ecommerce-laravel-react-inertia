@@ -5,7 +5,7 @@ import products from '@/routes/store/products';
 import { Link, usePage } from '@inertiajs/react';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import * as React from 'react';
-import styles from './ProductGrid.module.css';
+import { styles } from './ProductGrid.styles';
 
 interface ProductGridProps {
     title: string;

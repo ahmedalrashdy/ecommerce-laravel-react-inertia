@@ -6,7 +6,7 @@ import { index as productsIndex } from '@/routes/store/products';
 import { suggestions as searchSuggestions } from '@/actions/App/Http/Controllers/Store/Search/SearchController';
 import axios from 'axios';
 import useClickOutside from '@/hooks/useClickOutSide';
-import styles from './SearchBar.module.css';
+import { styles } from './SearchBar.styles';
 
 interface SearchSuggestion {
     id: number;
@@ -457,6 +457,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                                                     alt={suggestion.name}
                                                     className={styles.suggestionImage}
                                                     loading="lazy"
+                                                    decoding="async"
                                                 />
                                             ) : (
                                                 <div className={styles.suggestionImagePlaceholder}>

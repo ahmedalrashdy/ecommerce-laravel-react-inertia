@@ -3,7 +3,7 @@ import { show } from '@/routes/store/category';
 import { Link, usePage } from '@inertiajs/react';
 import { ChevronDown, ChevronLeft, Grid3x3 } from 'lucide-react';
 import * as React from 'react';
-import styles from './MegaNavigation.module.css';
+import { styles } from './MegaNavigation.styles';
 
 interface MegaNavigationProps {
     categories: App.Data.Basic.CategoryData[];

@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import { Autoplay, FreeMode } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import styles from './BrandCarousel.module.css';
+import { styles } from './BrandCarousel.styles';
 
 export const BrandCarousel: React.FC = () => {
     const { featuredBrands } = usePage<{
@@ -51,7 +51,8 @@ export const BrandCarousel: React.FC = () => {
                     className="brand-swiper"
                 >
                     {featuredBrands.map((brand, index) => (
-                        <SwiperSlide key={`${brand.id}-${index}`}>
+                        <SwiperSlide 
+                         key={`${brand.id}-${index}`}>
                             <Link
                                 href={brandShow.url(brand.slug)}
                                 className={styles.brandLink}
@@ -62,6 +63,8 @@ export const BrandCarousel: React.FC = () => {
                                     })}
                                     alt={brand.name}
                                     className={styles.brandImage}
+                                       loading="lazy"
+                                    decoding="async"
                                 />
                             </Link>
                         </SwiperSlide>

@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import StoreLayout from '@/layouts/StoreLayout';
 import { Head, Link, usePage } from '@inertiajs/react';
 import { Heart } from 'lucide-react';
-import styles from './index.module.css';
+import { styles } from './index.styles';
 
 export default function WishlistPage() {
     const { products } = usePage<{

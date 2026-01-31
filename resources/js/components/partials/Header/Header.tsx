@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import { Link, usePage } from '@inertiajs/react';
 import { Menu, ShoppingCart } from 'lucide-react';
 import * as React from 'react';
-import styles from './Header.module.css';
+import { styles } from './Header.styles';
 import { home } from '@/routes/store';
 import { MegaNavigation } from './MegaNavigation';
 import { MobileBottomNav } from './MobileBottomNav';
@@ -38,20 +38,20 @@ export default function Header() {
 
         const updateScrollState = () => {
             const currentScrollY = window.scrollY;
-            const isSticky = header.classList.contains(styles.headerSticky);
-            const isHidden = header.classList.contains(styles.headerHidden);
+            const isSticky = header.classList.contains('headerSticky');
+            const isHidden = header.classList.contains('headerHidden');
 
             if (currentScrollY <= 0) {
                 if (isSticky) {
-                    header.classList.remove(styles.headerSticky);
+                    header.classList.remove('headerSticky');
                 }
                 if (isHidden) {
-                    header.classList.remove(styles.headerHidden);
-                    header.classList.add(styles.headerVisible);
+                    header.classList.remove('headerHidden');
+                    header.classList.add('headerVisible');
                 }
             } else {
                 if (!isSticky) {
-                    header.classList.add(styles.headerSticky);
+                    header.classList.add('headerSticky');
                 }
 
                 if (
@@ -59,13 +59,13 @@ export default function Header() {
                     currentScrollY > 100
                 ) {
                     if (!isHidden) {
-                        header.classList.remove(styles.headerVisible);
-                        header.classList.add(styles.headerHidden);
+                        header.classList.remove('headerVisible');
+                        header.classList.add('headerHidden');
                     }
                 } else if (currentScrollY < lastScrollY.current) {
                     if (isHidden) {
-                        header.classList.remove(styles.headerHidden);
-                        header.classList.add(styles.headerVisible);
+                        header.classList.remove('headerHidden');
+                        header.classList.add('headerVisible');
                     }
                 }
             }
@@ -100,7 +100,7 @@ export default function Header() {
         <>
             <header
                 ref={headerRef}
-                className={cn(styles.header, styles.headerVisible)}
+                className={cn(styles.header, 'headerVisible')}
             >
                 <TopBar />
 

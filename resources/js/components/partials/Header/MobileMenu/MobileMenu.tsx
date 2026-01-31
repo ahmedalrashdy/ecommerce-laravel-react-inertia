@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import { Link } from '@inertiajs/react';
 import { ChevronDown, X } from 'lucide-react';
 import * as React from 'react';
-import styles from './MobileMenu.module.css';
+import { styles } from './MobileMenu.styles';
 
 interface MobileMenuProps {
     isOpen: boolean;

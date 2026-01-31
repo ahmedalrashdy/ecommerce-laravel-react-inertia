@@ -1,0 +1,762 @@
+{
+    "locale": "ar",
+    "brands": [
+      {
+        "name": "ايكيا",
+        "description": "علامة عالمية تقدم أثاثاً عملياً بتصاميم عصرية وحلول تخزين ذكية بأسعار مناسبة.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "IKEA store exterior sign",
+          "alt": "واجهة متجر ايكيا"
+        }
+      },
+      {
+        "name": "هوم سنتر",
+        "description": "متجر إقليمي متكامل للأثاث والديكور يوفر خيارات متنوعة للمنزل بمستويات سعرية مختلفة.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "home furniture store showroom entrance",
+          "alt": "مدخل معرض أثاث منزلي"
+        }
+      },
+      {
+        "name": "أشلي",
+        "description": "علامة أثاث معروفة بتشكيلة غرف المعيشة والنوم بتصاميم كلاسيكية وعصرية.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "Ashley Furniture showroom living room set",
+          "alt": "طقم غرفة معيشة داخل معرض أثاث"
+        }
+      },
+      {
+        "name": "بوتري بارن",
+        "description": "أثاث وديكور فاخر بلمسات أنيقة وجودة مواد مرتفعة للمنازل العصرية.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "modern premium living room furniture decor",
+          "alt": "ديكور غرفة معيشة فاخرة"
+        }
+      },
+      {
+        "name": "ويست إلم",
+        "description": "تصاميم حديثة للأثاث والإكسسوارات المنزلية مع تركيز على البساطة وجودة التشطيب.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "mid century modern furniture showroom",
+          "alt": "معرض أثاث حديث الطراز"
+        }
+      },
+      {
+        "name": "لا-زي-بوي",
+        "description": "متخصصون في الأرائك وكراسي الاسترخاء بتركيز على الراحة والمتانة.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "recliner chair living room cozy",
+          "alt": "كرسي استرخاء في غرفة معيشة"
+        }
+      },
+      {
+        "name": "مورا",
+        "description": "علامة للمراتب وملحقات النوم تركز على دعم الجسم وجودة المواد.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "mattress showroom bed display",
+          "alt": "عرض مراتب في صالة"
+        }
+      },
+      {
+        "name": "سليب نمبر",
+        "description": "حلول نوم قابلة للتخصيص مع خيارات تحكم بالصلابة وتقنيات راحة.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "adjustable bed modern bedroom",
+          "alt": "سرير قابل للتعديل في غرفة نوم حديثة"
+        }
+      },
+      {
+        "name": "براون جوردان",
+        "description": "أثاث خارجي فاخر للشرفات والحدائق بمواد مقاومة للعوامل الجوية.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "outdoor patio furniture set luxury",
+          "alt": "طقم أثاث خارجي فاخر"
+        }
+      },
+      {
+        "name": "كايروفي",
+        "description": "إكسسوارات وتنظيم منزلي (صناديق، سلال، حلول تخزين) لتسهيل ترتيب المساحات.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "home storage organizers baskets shelves",
+          "alt": "حلول تنظيم وتخزين منزلي"
+        }
+      }
+    ],
+    "root_category": {
+      "name": "المنزل والأثاث",
+      "description": "كل ما يلزم تجهيز المنزل من أثاث وديكور وأدوات مطبخ وتخزين وإضاءة ولوازم خارجية.",
+      "status": 1,
+      "image": {
+        "pexels_query": "modern home interior furniture decor living room",
+        "alt": "ديكور منزلي حديث مع أثاث"
+      },
+      "children": [
+        {
+          "name": "غرف المعيشة",
+          "description": "أثاث عملي ومريح لغرفة الجلوس يشمل الأرائك والطاولات ووحدات التلفاز.",
+          "status": 1,
+          "image": {
+            "pexels_query": "modern living room sofa coffee table tv unit",
+            "alt": "غرفة معيشة حديثة مع أريكة وطاولة"
+          },
+          "children": [
+            {
+              "name": "أرائك",
+              "description": "أرائك متعددة الأحجام والخامات لتناسب المساحات المختلفة.",
+              "status": 1,
+              "image": {
+                "pexels_query": "modern sofa in living room neutral colors",
+                "alt": "أريكة حديثة في غرفة معيشة"
+              },
+              "products": [
+                {
+                  "name": "أريكة زاوية موديل Nord (3-4 مقاعد)",
+                  "description": "أريكة زاوية مريحة بقماش متين، مناسبة للعائلات وغرف المعيشة المتوسطة.",
+                  "brand": "ايكيا",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "الخامة": "قماش بوليستر",
+                    "المقاعد": "3-4",
+                    "الهيكل": "خشب + معدن",
+                    "الضمان": "سنة"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "الخامة", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "SOFA-NORD-A",
+                      "price": 799.0,
+                      "compare_at_price": 949.0,
+                      "quantity": 30,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "260 سم" },
+                        "الخامة": { "value": "قماش" },
+                        "اللون": { "value": "رمادي فاتح", "color_code": "#BDBDBD" }
+                      },
+                      "images": [
+                        { "pexels_query": "grey sectional sofa modern living room", "alt": "أريكة زاوية رمادي فاتح في غرفة معيشة" },
+                        { "pexels_query": "sectional sofa fabric texture close up", "alt": "تفاصيل خامة قماش الأريكة" },
+                        { "pexels_query": "sectional sofa side profile living room", "alt": "جانب الأريكة الزاوية" }
+                      ]
+                    },
+                    {
+                      "sku": "SOFA-NORD-B",
+                      "price": 899.0,
+                      "compare_at_price": 1049.0,
+                      "quantity": 25,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "290 سم" },
+                        "الخامة": { "value": "قماش" },
+                        "اللون": { "value": "بيج", "color_code": "#D9C7B6" }
+                      },
+                      "images": [
+                        { "pexels_query": "beige sectional sofa modern living room", "alt": "أريكة زاوية بيج في غرفة معيشة" },
+                        { "pexels_query": "beige sofa cushions close up", "alt": "تفاصيل وسائد أريكة بيج" },
+                        { "pexels_query": "beige sectional sofa side view", "alt": "جانب الأريكة الزاوية بيج" }
+                      ]
+                    },
+                    {
+                      "sku": "SOFA-NORD-C",
+                      "price": 999.0,
+                      "compare_at_price": 1149.0,
+                      "quantity": 18,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "290 سم" },
+                        "الخامة": { "value": "مخمل" },
+                        "اللون": { "value": "أخضر زيتوني", "color_code": "#556B2F" }
+                      },
+                      "images": [
+                        { "pexels_query": "olive green velvet sectional sofa living room", "alt": "أريكة مخمل أخضر زيتوني في غرفة معيشة" },
+                        { "pexels_query": "velvet sofa fabric close up", "alt": "تفاصيل خامة مخمل للأريكة" },
+                        { "pexels_query": "velvet sectional sofa side profile", "alt": "جانب الأريكة المخمل" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "كنبة كلاسيكية موديل Chester (3 مقاعد)",
+                  "description": "تصميم كلاسيكي بظهر مُزرّر ولمسات فاخرة يناسب الديكور الرسمي.",
+                  "brand": "بوتري بارن",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الخامة": "جلد صناعي/قماش حسب الاختيار",
+                    "المقاعد": "3",
+                    "الهيكل": "خشب صلب",
+                    "الوسائد": "إسفنج عالي الكثافة"
+                  },
+                  "attributes": [
+                    { "name": "الخامة", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "الطول", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "SOFA-CHES-A",
+                      "price": 1099.0,
+                      "compare_at_price": 1299.0,
+                      "quantity": 14,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الخامة": { "value": "جلد صناعي" },
+                        "اللون": { "value": "بني", "color_code": "#6F4E37" },
+                        "الطول": { "value": "220 سم" }
+                      },
+                      "images": [
+                        { "pexels_query": "chesterfield sofa brown leather living room", "alt": "كنبة تشيستر بني جلد في غرفة معيشة" },
+                        { "pexels_query": "chesterfield sofa tufted back close up", "alt": "تفاصيل الظهر المزرّر لتشيستر" },
+                        { "pexels_query": "chesterfield sofa armrest close up", "alt": "تفاصيل مسند الذراع لتشيستر" }
+                      ]
+                    },
+                    {
+                      "sku": "SOFA-CHES-B",
+                      "price": 1199.0,
+                      "compare_at_price": 1399.0,
+                      "quantity": 12,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الخامة": { "value": "قماش" },
+                        "اللون": { "value": "كحلي", "color_code": "#1B2A41" },
+                        "الطول": { "value": "220 سم" }
+                      },
+                      "images": [
+                        { "pexels_query": "navy chesterfield sofa living room", "alt": "كنبة تشيستر قماش كحلي" },
+                        { "pexels_query": "navy tufted sofa fabric close up", "alt": "تفاصيل خامة قماش كحلي" },
+                        { "pexels_query": "navy chesterfield sofa side view", "alt": "جانب كنبة تشيستر كحلي" }
+                      ]
+                    },
+                    {
+                      "sku": "SOFA-CHES-C",
+                      "price": 1299.0,
+                      "compare_at_price": 1499.0,
+                      "quantity": 10,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الخامة": { "value": "مخمل" },
+                        "اللون": { "value": "عنابي", "color_code": "#800020" },
+                        "الطول": { "value": "240 سم" }
+                      },
+                      "images": [
+                        { "pexels_query": "burgundy velvet chesterfield sofa living room", "alt": "كنبة تشيستر مخمل عنابي" },
+                        { "pexels_query": "burgundy velvet sofa close up", "alt": "تفاصيل مخمل عنابي" },
+                        { "pexels_query": "velvet chesterfield sofa side profile", "alt": "جانب كنبة تشيستر مخمل" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "أريكة سرير موديل Flex (2-3 مقاعد)",
+                  "description": "أريكة تتحول لسرير للضيوف، مناسبة للشقق والمساحات الصغيرة.",
+                  "brand": "هوم سنتر",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الوظيفة": "أريكة + سرير",
+                    "المقاعد": "2-3",
+                    "التخزين": "صندوق تخزين اختياري",
+                    "الخامة": "قماش متين"
+                  },
+                  "attributes": [
+                    { "name": "الآلية", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "المقاس", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "SOFA-FLEX-A",
+                      "price": 649.0,
+                      "compare_at_price": 799.0,
+                      "quantity": 22,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الآلية": { "value": "سحب" },
+                        "اللون": { "value": "رمادي داكن", "color_code": "#4A4A4A" },
+                        "المقاس": { "value": "200 سم" }
+                      },
+                      "images": [
+                        { "pexels_query": "sofa bed modern grey living room", "alt": "أريكة سرير رمادي في غرفة معيشة" },
+                        { "pexels_query": "sofa bed pulled out guest bed", "alt": "أريكة سرير بعد الفتح" },
+                        { "pexels_query": "sofa bed storage compartment", "alt": "تفاصيل تخزين أريكة سرير" }
+                      ]
+                    },
+                    {
+                      "sku": "SOFA-FLEX-B",
+                      "price": 699.0,
+                      "compare_at_price": 849.0,
+                      "quantity": 18,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الآلية": { "value": "طي" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                        "المقاس": { "value": "210 سم" }
+                      },
+                      "images": [
+                        { "pexels_query": "blue sofa bed modern apartment", "alt": "أريكة سرير زرقاء في شقة" },
+                        { "pexels_query": "blue sofa bed cushions close up", "alt": "تفاصيل وسائد الأريكة الزرقاء" },
+                        { "pexels_query": "sofa bed side view modern", "alt": "منظر جانبي لأريكة سرير" }
+                      ]
+                    },
+                    {
+                      "sku": "SOFA-FLEX-C",
+                      "price": 749.0,
+                      "compare_at_price": 899.0,
+                      "quantity": 15,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الآلية": { "value": "سحب" },
+                        "اللون": { "value": "بيج", "color_code": "#D9C7B6" },
+                        "المقاس": { "value": "210 سم" }
+                      },
+                      "images": [
+                        { "pexels_query": "beige sofa bed minimal living room", "alt": "أريكة سرير بيج في غرفة معيشة" },
+                        { "pexels_query": "beige sofa bed fabric texture close up", "alt": "تفاصيل خامة أريكة سرير بيج" },
+                        { "pexels_query": "beige sofa bed open side profile", "alt": "جانب الأريكة السرير بعد الفتح" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "طاولات قهوة",
+              "description": "طاولات قهوة بتصاميم مختلفة مع خيارات تخزين للمجلات والإكسسوارات.",
+              "status": 1,
+              "image": {
+                "pexels_query": "coffee table modern living room top view",
+                "alt": "طاولة قهوة في غرفة معيشة حديثة"
+              },
+              "products": [
+                {
+                  "name": "طاولة قهوة موديل Loft (خشب + معدن)",
+                  "description": "طاولة قهوة متينة بسطح خشبي وإطار معدني تناسب الأسلوب الصناعي.",
+                  "brand": "ويست إلم",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "الخامة": "خشب + معدن",
+                    "الأبعاد": "120×60 سم",
+                    "الارتفاع": "45 سم",
+                    "التخزين": "رف سفلي"
+                  },
+                  "attributes": [
+                    { "name": "الخامة", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "المقاس", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "CT-LOFT-A",
+                      "price": 249.0,
+                      "compare_at_price": 319.0,
+                      "quantity": 40,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الخامة": { "value": "خشب + معدن" },
+                        "اللون": { "value": "بني/أسود", "color_code": "#2B2B2B" },
+                        "المقاس": { "value": "120×60" }
+                      },
+                      "images": [
+                        { "pexels_query": "industrial coffee table wood metal living room", "alt": "طاولة قهوة صناعية خشب ومعدن" },
+                        { "pexels_query": "coffee table wood grain close up", "alt": "تفاصيل نقشة الخشب" },
+                        { "pexels_query": "coffee table lower shelf close up", "alt": "تفاصيل الرف السفلي" }
+                      ]
+                    },
+                    {
+                      "sku": "CT-LOFT-B",
+                      "price": 279.0,
+                      "compare_at_price": 349.0,
+                      "quantity": 35,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الخامة": { "value": "خشب + معدن" },
+                        "اللون": { "value": "خشبي فاتح/أبيض", "color_code": "#F5F5F5" },
+                        "المقاس": { "value": "120×60" }
+                      },
+                      "images": [
+                        { "pexels_query": "light wood coffee table white frame living room", "alt": "طاولة قهوة خشب فاتح بإطار أبيض" },
+                        { "pexels_query": "light wood coffee table close up", "alt": "تفاصيل خشب فاتح" },
+                        { "pexels_query": "coffee table modern minimal side view", "alt": "جانب طاولة قهوة عصرية" }
+                      ]
+                    },
+                    {
+                      "sku": "CT-LOFT-C",
+                      "price": 299.0,
+                      "compare_at_price": 369.0,
+                      "quantity": 28,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الخامة": { "value": "خشب + معدن" },
+                        "اللون": { "value": "جوزي/أسود", "color_code": "#3A2F2A" },
+                        "المقاس": { "value": "130×70" }
+                      },
+                      "images": [
+                        { "pexels_query": "walnut coffee table black metal frame living room", "alt": "طاولة قهوة جوزي بإطار أسود" },
+                        { "pexels_query": "walnut wood coffee table close up", "alt": "تفاصيل خشب جوزي" },
+                        { "pexels_query": "coffee table angled view modern living room", "alt": "طاولة قهوة بزاوية في غرفة معيشة" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "طاولة قهوة موديل Round Nest (طقم طاولتين)",
+                  "description": "طقم طاولتين دائريتين متداخلتين لتوفير المساحة وسهولة الاستخدام.",
+                  "brand": "هوم سنتر",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الخامة": "خشب مضغوط + قشرة",
+                    "العدد": "2",
+                    "الأبعاد": "80/60 سم",
+                    "الاستخدام": "متداخل"
+                  },
+                  "attributes": [
+                    { "name": "العدد", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "الخامة", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "CT-NEST-A",
+                      "price": 189.0,
+                      "compare_at_price": 239.0,
+                      "quantity": 45,
+                      "is_default": true,
+                      "attribute_values": {
+                        "العدد": { "value": "2" },
+                        "اللون": { "value": "أسود", "color_code": "#1C1C1C" },
+                        "الخامة": { "value": "خشب مضغوط" }
+                      },
+                      "images": [
+                        { "pexels_query": "round nesting coffee tables black modern living room", "alt": "طقم طاولات قهوة متداخلة سوداء" },
+                        { "pexels_query": "nesting tables close up detail", "alt": "تفاصيل الطاولات المتداخلة" },
+                        { "pexels_query": "nesting tables side profile", "alt": "جانب طاولات متداخلة" }
+                      ]
+                    },
+                    {
+                      "sku": "CT-NEST-B",
+                      "price": 199.0,
+                      "compare_at_price": 249.0,
+                      "quantity": 40,
+                      "is_default": false,
+                      "attribute_values": {
+                        "العدد": { "value": "2" },
+                        "اللون": { "value": "أبيض", "color_code": "#FFFFFF" },
+                        "الخامة": { "value": "خشب مضغوط" }
+                      },
+                      "images": [
+                        { "pexels_query": "white round nesting coffee tables minimal living room", "alt": "طقم طاولات قهوة متداخلة بيضاء" },
+                        { "pexels_query": "white nesting table surface close up", "alt": "تفاصيل سطح الطاولة البيضاء" },
+                        { "pexels_query": "nesting tables modern interior", "alt": "طاولات متداخلة في ديكور حديث" }
+                      ]
+                    },
+                    {
+                      "sku": "CT-NEST-C",
+                      "price": 219.0,
+                      "compare_at_price": 269.0,
+                      "quantity": 32,
+                      "is_default": false,
+                      "attribute_values": {
+                        "العدد": { "value": "2" },
+                        "اللون": { "value": "خشبي طبيعي", "color_code": "#C8A165" },
+                        "الخامة": { "value": "قشرة خشب" }
+                      },
+                      "images": [
+                        { "pexels_query": "natural wood round nesting coffee tables", "alt": "طقم طاولات قهوة خشبي طبيعي" },
+                        { "pexels_query": "wood nesting tables close up grain", "alt": "تفاصيل خشب الطاولات" },
+                        { "pexels_query": "nesting coffee tables angled view", "alt": "طاولات قهوة متداخلة بزاوية" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "غرف النوم",
+          "description": "أسرة ومراتب وخزائن وملحقات نوم لراحة أفضل وتنظيم عملي.",
+          "status": 1,
+          "image": {
+            "pexels_query": "modern bedroom bed wardrobe minimal decor",
+            "alt": "غرفة نوم حديثة"
+          },
+          "children": [
+            {
+              "name": "مراتب",
+              "description": "مراتب بدرجات صلابة مختلفة لتحسين جودة النوم ودعم الجسم.",
+              "status": 1,
+              "image": {
+                "pexels_query": "mattress on bed white sheets modern bedroom",
+                "alt": "مرتبة على سرير في غرفة نوم"
+              },
+              "products": [
+                {
+                  "name": "مرتبة Comfort Hybrid (هجين)",
+                  "description": "مرتبة هجينة تجمع بين النوابض والذاكرة لدعم أفضل وتقليل الاهتزاز.",
+                  "brand": "مورا",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "النوع": "هجين (نوابض + فوم)",
+                    "الارتفاع": "28 سم",
+                    "الصلابة": "متوسطة",
+                    "التهوية": "قنوات تهوية"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "الصلابة", "type": 1 },
+                    { "name": "الغطاء", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "MAT-HYB-A",
+                      "price": 499.0,
+                      "compare_at_price": 599.0,
+                      "quantity": 60,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "160×200" },
+                        "الصلابة": { "value": "متوسطة" },
+                        "الغطاء": { "value": "مضاد للحساسية" }
+                      },
+                      "images": [
+                        { "pexels_query": "hybrid mattress on bed modern bedroom", "alt": "مرتبة هجين على سرير" },
+                        { "pexels_query": "mattress layers cross section foam springs", "alt": "طبقات مرتبة نوابض وفوم" },
+                        { "pexels_query": "mattress quilted cover close up", "alt": "تفاصيل غطاء المرتبة" }
+                      ]
+                    },
+                    {
+                      "sku": "MAT-HYB-B",
+                      "price": 549.0,
+                      "compare_at_price": 649.0,
+                      "quantity": 50,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "180×200" },
+                        "الصلابة": { "value": "متوسطة" },
+                        "الغطاء": { "value": "قابل للإزالة والغسل" }
+                      },
+                      "images": [
+                        { "pexels_query": "queen king mattress on bed bright bedroom", "alt": "مرتبة مقاس كبير على سرير" },
+                        { "pexels_query": "removable mattress cover zipper close up", "alt": "تفاصيل سحّاب غطاء المرتبة" },
+                        { "pexels_query": "mattress edge support close up", "alt": "تفاصيل دعم حواف المرتبة" }
+                      ]
+                    },
+                    {
+                      "sku": "MAT-HYB-C",
+                      "price": 599.0,
+                      "compare_at_price": 699.0,
+                      "quantity": 40,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "200×200" },
+                        "الصلابة": { "value": "متوسطة-قاسية" },
+                        "الغطاء": { "value": "مضاد للبكتيريا" }
+                      },
+                      "images": [
+                        { "pexels_query": "king mattress large bed luxury bedroom", "alt": "مرتبة كبيرة في غرفة نوم" },
+                        { "pexels_query": "mattress firmness test hand press close up", "alt": "اختبار صلابة المرتبة" },
+                        { "pexels_query": "mattress ventilation fabric close up", "alt": "تفاصيل تهوية قماش المرتبة" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "مرتبة Memory Foam موديل Cloud",
+                  "description": "مرتبة فوم ذاكرة لتخفيف الضغط وتوزيع الوزن بشكل أفضل.",
+                  "brand": "سليب نمبر",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "النوع": "فوم ذاكرة",
+                    "الارتفاع": "25 سم",
+                    "الصلابة": "ناعمة-متوسطة",
+                    "الدعم": "تخفيف نقاط الضغط"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "الصلابة", "type": 1 },
+                    { "name": "الارتفاع", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "MAT-CLOUD-A",
+                      "price": 429.0,
+                      "compare_at_price": 529.0,
+                      "quantity": 55,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "120×200" },
+                        "الصلابة": { "value": "ناعمة-متوسطة" },
+                        "الارتفاع": { "value": "25 سم" }
+                      },
+                      "images": [
+                        { "pexels_query": "memory foam mattress on bed white sheets", "alt": "مرتبة فوم ذاكرة على سرير" },
+                        { "pexels_query": "memory foam mattress layers close up", "alt": "تفاصيل طبقات فوم الذاكرة" },
+                        { "pexels_query": "mattress foam texture close up", "alt": "تفاصيل خامة الفوم" }
+                      ]
+                    },
+                    {
+                      "sku": "MAT-CLOUD-B",
+                      "price": 479.0,
+                      "compare_at_price": 579.0,
+                      "quantity": 45,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "160×200" },
+                        "الصلابة": { "value": "متوسطة" },
+                        "الارتفاع": { "value": "25 سم" }
+                      },
+                      "images": [
+                        { "pexels_query": "memory foam mattress queen size modern bedroom", "alt": "مرتبة فوم ذاكرة مقاس كبير" },
+                        { "pexels_query": "mattress corner close up stitching", "alt": "تفاصيل خياطة زاوية المرتبة" },
+                        { "pexels_query": "bedroom minimal with mattress on bed", "alt": "غرفة نوم بسيطة مع مرتبة" }
+                      ]
+                    },
+                    {
+                      "sku": "MAT-CLOUD-C",
+                      "price": 529.0,
+                      "compare_at_price": 629.0,
+                      "quantity": 35,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "180×200" },
+                        "الصلابة": { "value": "متوسطة" },
+                        "الارتفاع": { "value": "28 سم" }
+                      },
+                      "images": [
+                        { "pexels_query": "king size memory foam mattress on bed", "alt": "مرتبة فوم ذاكرة مقاس كينغ" },
+                        { "pexels_query": "mattress height measurement close up", "alt": "قياس ارتفاع المرتبة" },
+                        { "pexels_query": "mattress top quilting close up", "alt": "تفاصيل تبطين سطح المرتبة" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "المطبخ وأدوات الطعام",
+          "description": "مستلزمات المطبخ من أواني وأدوات تقديم وتخزين لتنظيم يومي أفضل.",
+          "status": 1,
+          "image": {
+            "pexels_query": "modern kitchen countertop cookware utensils",
+            "alt": "سطح مطبخ حديث مع أدوات"
+          },
+          "children": [
+            {
+              "name": "أطقم أواني الطهي",
+              "description": "أطقم قدور ومقالي بخامات متعددة للاستخدام اليومي.",
+              "status": 1,
+              "image": {
+                "pexels_query": "cookware set pots pans on kitchen counter",
+                "alt": "طقم أواني طهي على سطح مطبخ"
+              },
+              "products": [
+                {
+                  "name": "طقم أواني ستانلس موديل Chef (10 قطع)",
+                  "description": "طقم متكامل للطبخ اليومي بستانلس ستيل مقاوم للصدأ وتوزيع حرارة جيد.",
+                  "brand": "هوم سنتر",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "الخامة": "ستانلس ستيل",
+                    "القطع": "10",
+                    "الغطاء": "زجاج مقوّى",
+                    "التوافق": "غاز/كهرباء"
+                  },
+                  "attributes": [
+                    { "name": "الخامة", "type": 1 },
+                    { "name": "عدد القطع", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "CK-SET-A",
+                      "price": 159.0,
+                      "compare_at_price": 199.0,
+                      "quantity": 80,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الخامة": { "value": "ستانلس ستيل" },
+                        "عدد القطع": { "value": "10" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" }
+                      },
+                      "images": [
+                        { "pexels_query": "stainless steel cookware set with glass lids", "alt": "طقم أواني ستانلس مع أغطية زجاج" },
+                        { "pexels_query": "stainless steel pot close up", "alt": "تفاصيل قدر ستانلس" },
+                        { "pexels_query": "cookware set stacked on counter", "alt": "ترتيب طقم أواني على سطح" }
+                      ]
+                    },
+                    {
+                      "sku": "CK-SET-B",
+                      "price": 179.0,
+                      "compare_at_price": 219.0,
+                      "quantity": 70,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الخامة": { "value": "ستانلس ستيل" },
+                        "عدد القطع": { "value": "12" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" }
+                      },
+                      "images": [
+                        { "pexels_query": "cookware set stainless steel 12 pieces", "alt": "طقم أواني ستانلس 12 قطعة" },
+                        { "pexels_query": "glass lid steam vent close up", "alt": "تفاصيل فتحة تهوية غطاء زجاج" },
+                        { "pexels_query": "pots pans organized kitchen drawer", "alt": "أواني مرتبة في درج مطبخ" }
+                      ]
+                    },
+                    {
+                      "sku": "CK-SET-C",
+                      "price": 199.0,
+                      "compare_at_price": 239.0,
+                      "quantity": 55,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الخامة": { "value": "ستانلس ستيل ثقيل" },
+                        "عدد القطع": { "value": "10" },
+                        "اللون": { "value": "رمادي معدني", "color_code": "#7A7A7A" }
+                      },
+                      "images": [
+                        { "pexels_query": "heavy stainless steel cookware set", "alt": "طقم أواني ستانلس ثقيل" },
+                        { "pexels_query": "stainless steel handle rivets close up", "alt": "تفاصيل مسكات الأواني" },
+                        { "pexels_query": "cookware set on induction stove", "alt": "أواني على موقد كهربائي" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

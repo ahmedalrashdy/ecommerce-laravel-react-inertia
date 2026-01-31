@@ -1,0 +1,641 @@
+{
+  "locale": "ar",
+  "brands": [
+    {
+      "name": "سواروفسكي",
+      "description": "إكسسوارات كريستال فاخرة بتصاميم أنيقة للمناسبات والاستخدام اليومي.",
+      "status": 1,
+      "featured": true,
+      "image": {
+        "pexels_query": "crystal jewelry necklace bracelet luxury",
+        "alt": "مجوهرات كريستال فاخرة"
+      }
+    },
+    {
+      "name": "باندورا",
+      "description": "أساور وخرزات قابلة للتخصيص بقطع رمزية وهدايا مميزة.",
+      "status": 1,
+      "featured": true,
+      "image": {
+        "pexels_query": "charm bracelet jewelry close up",
+        "alt": "سوار خرزات (تشارمز) لقطة مقرّبة"
+      }
+    },
+    {
+      "name": "كوتش",
+      "description": "إكسسوارات جلدية مثل المحافظ وحاملات البطاقات بإحساس فاخر وعمر طويل.",
+      "status": 1,
+      "featured": true,
+      "image": {
+        "pexels_query": "leather wallet card holder luxury",
+        "alt": "محفظة جلدية وحامل بطاقات"
+      }
+    },
+    {
+      "name": "كاسيو",
+      "description": "ساعات عملية وموثوقة بتصاميم متنوعة من الكلاسيكي إلى الرياضي.",
+      "status": 1,
+      "featured": false,
+      "image": {
+        "pexels_query": "wristwatch on wrist casual style",
+        "alt": "ساعة يد على المعصم"
+      }
+    },
+    {
+      "name": "سيكو",
+      "description": "ساعات يابانية بجودة تصنيع عالية وتوازن ممتاز بين الأداء والسعر.",
+      "status": 1,
+      "featured": false,
+      "image": {
+        "pexels_query": "classic wristwatch stainless steel close up",
+        "alt": "ساعة كلاسيكية ستانلس لقطة مقرّبة"
+      }
+    },
+    {
+      "name": "راي-بان",
+      "description": "نظارات شمسية أيقونية بإطارات مميزة وحماية جيدة من أشعة الشمس.",
+      "status": 1,
+      "featured": true,
+      "image": {
+        "pexels_query": "sunglasses on table lifestyle",
+        "alt": "نظارة شمس على طاولة"
+      }
+    },
+    {
+      "name": "بولاروايد",
+      "description": "نظارات شمسية مستقطبة تقلل الوهج وتناسب القيادة والاستخدام الخارجي.",
+      "status": 1,
+      "featured": false,
+      "image": {
+        "pexels_query": "polarized sunglasses outdoor bright day",
+        "alt": "نظارة شمس مستقطبة في يوم مشمس"
+      }
+    },
+    {
+      "name": "ذا نورث فيس",
+      "description": "إكسسوارات عملية مثل الحقائب والقبعات تناسب الاستخدام اليومي والرحلات.",
+      "status": 1,
+      "featured": false,
+      "image": {
+        "pexels_query": "backpack outdoor lifestyle on bench",
+        "alt": "حقيبة ظهر للاستخدام اليومي"
+      }
+    },
+    {
+      "name": "إكسيوم",
+      "description": "أحزمة وإكسسوارات جلدية يومية بتصاميم بسيطة تناسب اللبس الرسمي والكاجوال.",
+      "status": 1,
+      "featured": false,
+      "image": {
+        "pexels_query": "leather belt close up buckle",
+        "alt": "حزام جلد لقطة مقرّبة"
+      }
+    },
+    {
+      "name": "مينيمال",
+      "description": "إكسسوارات معدنية بسيطة (خواتم/سلاسل) بتصميم نظيف مناسب للاستخدام اليومي.",
+      "status": 1,
+      "featured": true,
+      "image": {
+        "pexels_query": "minimal jewelry ring necklace flat lay",
+        "alt": "إكسسوارات بسيطة خواتم وسلاسل"
+      }
+    }
+  ],
+  "root_category": {
+    "name": "الإكسسوارات",
+    "description": "إكسسوارات تكمل الإطلالة وتشمل المجوهرات والساعات والنظارات والمحافظ والأحزمة والحقائب الصغيرة.",
+    "status": 1,
+    "image": {
+      "pexels_query": "fashion accessories flat lay watch sunglasses wallet jewelry",
+      "alt": "مجموعة إكسسوارات (ساعة، نظارة، محفظة، مجوهرات)"
+    },
+    "children": [
+      {
+        "name": "مجوهرات",
+        "description": "أساور وقلائد وخواتم وأقراط بتصاميم متعددة من اليومي إلى المناسبات.",
+        "status": 1,
+        "image": {
+          "pexels_query": "jewelry set necklace bracelet ring on velvet",
+          "alt": "مجموعة مجوهرات على قماش مخملي"
+        },
+        "children": [
+          {
+            "name": "أساور",
+            "description": "أساور كريستال أو تشارمز أو معدنية بتفاصيل أنيقة.",
+            "status": 1,
+            "image": {
+              "pexels_query": "bracelet on wrist jewelry close up",
+              "alt": "سوار على المعصم لقطة مقرّبة"
+            },
+            "products": [
+              {
+                "name": "سوار كريستال موديل Crystal Line",
+                "description": "سوار أنيق بكريستالات لامعة يناسب المناسبات واللبس اليومي.",
+                "brand": "سواروفسكي",
+                "status": 1,
+                "featured": true,
+                "specifications": {
+                  "الخامة": "معدن مطلي",
+                  "التفاصيل": "كريستال",
+                  "الإغلاق": "قفل آمن",
+                  "المقاس": "قابل للضبط"
+                },
+                "attributes": [
+                  { "name": "المقاس", "type": 1 },
+                  { "name": "اللون", "type": 2 },
+                  { "name": "الخامة", "type": 1 }
+                ],
+                "variants": [
+                  {
+                    "sku": "BR-CRYS-A",
+                    "price": 79.0,
+                    "compare_at_price": 99.0,
+                    "quantity": 40,
+                    "is_default": true,
+                    "attribute_values": {
+                      "المقاس": { "value": "صغير/متوسط" },
+                      "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                      "الخامة": { "value": "معدن مطلي" }
+                    },
+                    "images": [
+                      { "pexels_query": "silver crystal bracelet close up", "alt": "سوار كريستال فضي لقطة مقرّبة" },
+                      { "pexels_query": "crystal bracelet on velvet box", "alt": "سوار كريستال على علبة مخملية" },
+                      { "pexels_query": "bracelet clasp close up jewelry", "alt": "تفاصيل قفل السوار" }
+                    ]
+                  },
+                  {
+                    "sku": "BR-CRYS-B",
+                    "price": 79.0,
+                    "compare_at_price": 99.0,
+                    "quantity": 35,
+                    "is_default": false,
+                    "attribute_values": {
+                      "المقاس": { "value": "متوسط/كبير" },
+                      "اللون": { "value": "ذهبي", "color_code": "#D4AF37" },
+                      "الخامة": { "value": "معدن مطلي" }
+                    },
+                    "images": [
+                      { "pexels_query": "gold crystal bracelet close up", "alt": "سوار كريستال ذهبي لقطة مقرّبة" },
+                      { "pexels_query": "gold bracelet jewelry on hand", "alt": "سوار ذهبي على اليد" },
+                      { "pexels_query": "gold bracelet clasp macro", "alt": "تفاصيل قفل سوار ذهبي" }
+                    ]
+                  },
+                  {
+                    "sku": "BR-CRYS-C",
+                    "price": 89.0,
+                    "compare_at_price": 109.0,
+                    "quantity": 28,
+                    "is_default": false,
+                    "attribute_values": {
+                      "المقاس": { "value": "قابل للضبط" },
+                      "اللون": { "value": "روز جولد", "color_code": "#B76E79" },
+                      "الخامة": { "value": "معدن مطلي" }
+                    },
+                    "images": [
+                      { "pexels_query": "rose gold crystal bracelet jewelry close up", "alt": "سوار كريستال روز جولد" },
+                      { "pexels_query": "rose gold bracelet on velvet", "alt": "سوار روز جولد على مخمل" },
+                      { "pexels_query": "bracelet sparkle crystal macro", "alt": "تفاصيل لمعان الكريستال" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "سوار تشارمز موديل Moments",
+                "description": "سوار قابل للتخصيص بإضافة خرزات ورموز حسب المناسبة.",
+                "brand": "باندورا",
+                "status": 1,
+                "featured": false,
+                "specifications": {
+                  "الخامة": "فضة 925",
+                  "النوع": "تشارمز",
+                  "الإغلاق": "قفل كرة",
+                  "التخصيص": "يدعم الإضافات"
+                },
+                "attributes": [
+                  { "name": "المقاس", "type": 1 },
+                  { "name": "اللون", "type": 2 },
+                  { "name": "الخامة", "type": 1 }
+                ],
+                "variants": [
+                  {
+                    "sku": "BR-CHAR-A",
+                    "price": 59.0,
+                    "compare_at_price": 75.0,
+                    "quantity": 55,
+                    "is_default": true,
+                    "attribute_values": {
+                      "المقاس": { "value": "17 سم" },
+                      "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                      "الخامة": { "value": "فضة 925" }
+                    },
+                    "images": [
+                      { "pexels_query": "silver charm bracelet close up jewelry", "alt": "سوار تشارمز فضي لقطة مقرّبة" },
+                      { "pexels_query": "charm bracelet clasp close up", "alt": "تفاصيل قفل سوار التشارمز" },
+                      { "pexels_query": "charm bracelet with beads on table", "alt": "سوار تشارمز مع خرزات على طاولة" }
+                    ]
+                  },
+                  {
+                    "sku": "BR-CHAR-B",
+                    "price": 59.0,
+                    "compare_at_price": 75.0,
+                    "quantity": 50,
+                    "is_default": false,
+                    "attribute_values": {
+                      "المقاس": { "value": "19 سم" },
+                      "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                      "الخامة": { "value": "فضة 925" }
+                    },
+                    "images": [
+                      { "pexels_query": "charm bracelet on wrist silver", "alt": "سوار تشارمز فضي على المعصم" },
+                      { "pexels_query": "silver bracelet chain close up", "alt": "تفاصيل سلسلة سوار فضي" },
+                      { "pexels_query": "charm beads assortment jewelry", "alt": "تشكيلة خرزات تشارمز" }
+                    ]
+                  },
+                  {
+                    "sku": "BR-CHAR-C",
+                    "price": 69.0,
+                    "compare_at_price": 85.0,
+                    "quantity": 40,
+                    "is_default": false,
+                    "attribute_values": {
+                      "المقاس": { "value": "21 سم" },
+                      "اللون": { "value": "روز جولد", "color_code": "#B76E79" },
+                      "الخامة": { "value": "معدن مطلي" }
+                    },
+                    "images": [
+                      { "pexels_query": "rose gold charm bracelet close up", "alt": "سوار تشارمز روز جولد" },
+                      { "pexels_query": "rose gold bracelet chain macro", "alt": "تفاصيل سلسلة روز جولد" },
+                      { "pexels_query": "charm bracelet gift box", "alt": "سوار تشارمز داخل علبة هدية" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "قلائد",
+            "description": "سلاسل وقلائد بسيطة أو فاخرة لإطلالة يومية أو مناسبة.",
+            "status": 1,
+            "image": {
+              "pexels_query": "necklace pendant jewelry close up",
+              "alt": "قلادة مع تعليقة لقطة مقرّبة"
+            },
+            "products": [
+              {
+                "name": "قلادة Minimal Pendant",
+                "description": "قلادة بسيطة بتعليقة صغيرة تناسب اللبس اليومي والهدايا.",
+                "brand": "مينيمال",
+                "status": 1,
+                "featured": true,
+                "specifications": {
+                  "الخامة": "ستانلس ستيل",
+                  "الطول": "45 سم",
+                  "التعليقة": "شكل دائري",
+                  "الوزن": "خفيف"
+                },
+                "attributes": [
+                  { "name": "الطول", "type": 1 },
+                  { "name": "اللون", "type": 2 },
+                  { "name": "الخامة", "type": 1 }
+                ],
+                "variants": [
+                  {
+                    "sku": "NK-MIN-A",
+                    "price": 24.0,
+                    "compare_at_price": 34.0,
+                    "quantity": 80,
+                    "is_default": true,
+                    "attribute_values": {
+                      "الطول": { "value": "45 سم" },
+                      "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                      "الخامة": { "value": "ستانلس ستيل" }
+                    },
+                    "images": [
+                      { "pexels_query": "silver pendant necklace minimal jewelry", "alt": "قلادة فضية بسيطة" },
+                      { "pexels_query": "necklace pendant close up on fabric", "alt": "تفاصيل التعليقة على قماش" },
+                      { "pexels_query": "minimal necklace on model neck", "alt": "قلادة بسيطة على العنق" }
+                    ]
+                  },
+                  {
+                    "sku": "NK-MIN-B",
+                    "price": 24.0,
+                    "compare_at_price": 34.0,
+                    "quantity": 70,
+                    "is_default": false,
+                    "attribute_values": {
+                      "الطول": { "value": "45 سم" },
+                      "اللون": { "value": "ذهبي", "color_code": "#D4AF37" },
+                      "الخامة": { "value": "ستانلس ستيل مطلي" }
+                    },
+                    "images": [
+                      { "pexels_query": "gold pendant necklace minimal jewelry", "alt": "قلادة ذهبية بسيطة" },
+                      { "pexels_query": "gold necklace chain close up", "alt": "تفاصيل سلسلة ذهبية" },
+                      { "pexels_query": "gold minimal necklace on neck close up", "alt": "قلادة ذهبية بسيطة لقطة مقرّبة" }
+                    ]
+                  },
+                  {
+                    "sku": "NK-MIN-C",
+                    "price": 29.0,
+                    "compare_at_price": 39.0,
+                    "quantity": 55,
+                    "is_default": false,
+                    "attribute_values": {
+                      "الطول": { "value": "50 سم" },
+                      "اللون": { "value": "روز جولد", "color_code": "#B76E79" },
+                      "الخامة": { "value": "ستانلس ستيل مطلي" }
+                    },
+                    "images": [
+                      { "pexels_query": "rose gold pendant necklace minimal", "alt": "قلادة روز جولد بسيطة" },
+                      { "pexels_query": "rose gold necklace pendant macro", "alt": "تفاصيل تعليقة روز جولد" },
+                      { "pexels_query": "minimal necklace flat lay rose gold", "alt": "قلادة روز جولد بتصوير مسطح" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ساعات",
+        "description": "ساعات يد بتصاميم كلاسيكية ورياضية للاستخدام اليومي.",
+        "status": 1,
+        "image": {
+          "pexels_query": "wristwatch on wrist close up lifestyle",
+          "alt": "ساعة يد لقطة مقرّبة"
+        },
+        "children": [
+          {
+            "name": "ساعات يومية",
+            "description": "ساعات عملية مناسبة للمدرسة والمكتب والاستخدام اليومي.",
+            "status": 1,
+            "image": {
+              "pexels_query": "simple wristwatch minimal style on desk",
+              "alt": "ساعة بسيطة بتصميم مينيمال"
+            },
+            "products": [
+              {
+                "name": "ساعة Classic Daily",
+                "description": "ساعة يومية بواجهة واضحة وخامة متينة تناسب الاستخدام المتكرر.",
+                "brand": "كاسيو",
+                "status": 1,
+                "featured": true,
+                "specifications": {
+                  "نوع الحركة": "كوارتز",
+                  "مقاومة الماء": "معتدلة",
+                  "الخامة": "ستانلس/راتنج حسب الإصدار",
+                  "الواجهة": "تناظرية"
+                },
+                "attributes": [
+                  { "name": "نوع الحركة", "type": 1 },
+                  { "name": "السوار", "type": 1 },
+                  { "name": "اللون", "type": 2 }
+                ],
+                "variants": [
+                  {
+                    "sku": "WT-CAS-A",
+                    "price": 39.0,
+                    "compare_at_price": 49.0,
+                    "quantity": 65,
+                    "is_default": true,
+                    "attribute_values": {
+                      "نوع الحركة": { "value": "كوارتز" },
+                      "السوار": { "value": "راتنج" },
+                      "اللون": { "value": "أسود", "color_code": "#111111" }
+                    },
+                    "images": [
+                      { "pexels_query": "black minimalist wristwatch on wrist", "alt": "ساعة سوداء بسيطة على المعصم" },
+                      { "pexels_query": "watch dial close up black", "alt": "تفاصيل واجهة الساعة" },
+                      { "pexels_query": "black watch on desk notebook", "alt": "ساعة سوداء على مكتب مع دفتر" }
+                    ]
+                  },
+                  {
+                    "sku": "WT-CAS-B",
+                    "price": 45.0,
+                    "compare_at_price": 55.0,
+                    "quantity": 55,
+                    "is_default": false,
+                    "attribute_values": {
+                      "نوع الحركة": { "value": "كوارتز" },
+                      "السوار": { "value": "جلد" },
+                      "اللون": { "value": "بني", "color_code": "#6F4E37" }
+                    },
+                    "images": [
+                      { "pexels_query": "brown leather strap watch classic style", "alt": "ساعة بسوار جلد بني" },
+                      { "pexels_query": "leather watch strap close up", "alt": "تفاصيل سوار جلد" },
+                      { "pexels_query": "classic watch with leather strap on desk", "alt": "ساعة كلاسيكية على مكتب" }
+                    ]
+                  },
+                  {
+                    "sku": "WT-CAS-C",
+                    "price": 49.0,
+                    "compare_at_price": 59.0,
+                    "quantity": 48,
+                    "is_default": false,
+                    "attribute_values": {
+                      "نوع الحركة": { "value": "كوارتز" },
+                      "السوار": { "value": "ستانلس ستيل" },
+                      "اللون": { "value": "فضي", "color_code": "#C0C0C0" }
+                    },
+                    "images": [
+                      { "pexels_query": "silver stainless steel watch close up", "alt": "ساعة ستانلس فضية" },
+                      { "pexels_query": "watch bracelet stainless close up", "alt": "تفاصيل سوار ستانلس" },
+                      { "pexels_query": "silver watch on wrist lifestyle", "alt": "ساعة فضية على المعصم" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "نظارات",
+        "description": "نظارات شمسية وإكسسوارات حماية للعين بإطارات متعددة.",
+        "status": 1,
+        "image": {
+          "pexels_query": "sunglasses close up on table summer",
+          "alt": "نظارة شمس لقطة مقرّبة"
+        },
+        "children": [
+          {
+            "name": "نظارات شمسية",
+            "description": "نظارات للحماية من الشمس مع تصاميم كلاسيكية وعصرية.",
+            "status": 1,
+            "image": {
+              "pexels_query": "sunglasses on beach lifestyle",
+              "alt": "نظارة شمس في أجواء صيفية"
+            },
+            "products": [
+              {
+                "name": "نظارة شمس Urban Classic",
+                "description": "نظارة شمس بإطار كلاسيكي وعدسات تحمي من الوهج للاستخدام اليومي.",
+                "brand": "راي-بان",
+                "status": 1,
+                "featured": true,
+                "specifications": {
+                  "نوع العدسة": "حماية UV",
+                  "الإطار": "أسيتات/معدن حسب الإصدار",
+                  "النمط": "كلاسيكي",
+                  "الاستخدام": "يومي/قيادة"
+                },
+                "attributes": [
+                  { "name": "نوع العدسة", "type": 1 },
+                  { "name": "شكل الإطار", "type": 1 },
+                  { "name": "اللون", "type": 2 }
+                ],
+                "variants": [
+                  {
+                    "sku": "SG-URB-A",
+                    "price": 99.0,
+                    "compare_at_price": 129.0,
+                    "quantity": 38,
+                    "is_default": true,
+                    "attribute_values": {
+                      "نوع العدسة": { "value": "حماية UV" },
+                      "شكل الإطار": { "value": "Wayfarer" },
+                      "اللون": { "value": "أسود", "color_code": "#111111" }
+                    },
+                    "images": [
+                      { "pexels_query": "black wayfarer sunglasses on table", "alt": "نظارة وايفيرر سوداء" },
+                      { "pexels_query": "sunglasses lens reflection close up", "alt": "تفاصيل عدسة النظارة" },
+                      { "pexels_query": "sunglasses case and glasses on desk", "alt": "نظارة مع علبة على مكتب" }
+                    ]
+                  },
+                  {
+                    "sku": "SG-URB-B",
+                    "price": 109.0,
+                    "compare_at_price": 139.0,
+                    "quantity": 32,
+                    "is_default": false,
+                    "attribute_values": {
+                      "نوع العدسة": { "value": "مستقطبة" },
+                      "شكل الإطار": { "value": "Aviator" },
+                      "اللون": { "value": "ذهبي", "color_code": "#D4AF37" }
+                    },
+                    "images": [
+                      { "pexels_query": "aviator sunglasses gold frame close up", "alt": "نظارة أفياتور بإطار ذهبي" },
+                      { "pexels_query": "polarized aviator sunglasses outdoor", "alt": "نظارة أفياتور مستقطبة" },
+                      { "pexels_query": "aviator sunglasses on hand close up", "alt": "تفاصيل نظارة أفياتور على اليد" }
+                    ]
+                  },
+                  {
+                    "sku": "SG-URB-C",
+                    "price": 89.0,
+                    "compare_at_price": 119.0,
+                    "quantity": 40,
+                    "is_default": false,
+                    "attribute_values": {
+                      "نوع العدسة": { "value": "مستقطبة" },
+                      "شكل الإطار": { "value": "مستطيل" },
+                      "اللون": { "value": "شفاف", "color_code": "#E5E7EB" }
+                    },
+                    "images": [
+                      { "pexels_query": "clear frame sunglasses modern style", "alt": "نظارة بإطار شفاف" },
+                      { "pexels_query": "sunglasses clear frame close up", "alt": "تفاصيل إطار شفاف" },
+                      { "pexels_query": "clear frame sunglasses on desk minimal", "alt": "نظارة إطار شفاف على مكتب" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "محافظ وأحزمة",
+        "description": "محافظ وحاملات بطاقات وأحزمة جلدية لإكمال الإطلالة اليومية والرسمية.",
+        "status": 1,
+        "image": {
+          "pexels_query": "wallet belt leather accessories flat lay",
+          "alt": "محفظة وحزام جلد ضمن إكسسوارات"
+        },
+        "children": [
+          {
+            "name": "محافظ وحاملات بطاقات",
+            "description": "محافظ عملية لحفظ النقود والبطاقات مع خامات جلدية عالية الجودة.",
+            "status": 1,
+            "image": {
+              "pexels_query": "leather wallet card holder close up",
+              "alt": "محفظة جلد وحامل بطاقات لقطة مقرّبة"
+            },
+            "products": [
+              {
+                "name": "محفظة جلد Slim Wallet",
+                "description": "محفظة نحيفة لحمل البطاقات والنقود بتصميم أنيق مناسب للجيب.",
+                "brand": "كوتش",
+                "status": 1,
+                "featured": true,
+                "specifications": {
+                  "الخامة": "جلد",
+                  "السعة": "6-8 بطاقات",
+                  "الجيب النقدي": "نعم",
+                  "الإغلاق": "بدون قفل"
+                },
+                "attributes": [
+                  { "name": "الخامة", "type": 1 },
+                  { "name": "اللون", "type": 2 },
+                  { "name": "السعة", "type": 1 }
+                ],
+                "variants": [
+                  {
+                    "sku": "WL-SLM-A",
+                    "price": 49.0,
+                    "compare_at_price": 69.0,
+                    "quantity": 60,
+                    "is_default": true,
+                    "attribute_values": {
+                      "الخامة": { "value": "جلد" },
+                      "اللون": { "value": "أسود", "color_code": "#111111" },
+                      "السعة": { "value": "8 بطاقات" }
+                    },
+                    "images": [
+                      { "pexels_query": "black leather slim wallet close up", "alt": "محفظة جلد سوداء نحيفة" },
+                      { "pexels_query": "wallet card slots close up", "alt": "تفاصيل فتحات البطاقات" },
+                      { "pexels_query": "slim wallet in hand lifestyle", "alt": "محفظة نحيفة في اليد" }
+                    ]
+                  },
+                  {
+                    "sku": "WL-SLM-B",
+                    "price": 49.0,
+                    "compare_at_price": 69.0,
+                    "quantity": 55,
+                    "is_default": false,
+                    "attribute_values": {
+                      "الخامة": { "value": "جلد" },
+                      "اللون": { "value": "بني", "color_code": "#6F4E37" },
+                      "السعة": { "value": "8 بطاقات" }
+                    },
+                    "images": [
+                      { "pexels_query": "brown leather slim wallet close up", "alt": "محفظة جلد بني نحيفة" },
+                      { "pexels_query": "brown wallet texture close up", "alt": "تفاصيل خامة الجلد البني" },
+                      { "pexels_query": "wallet on desk keys sunglasses flat lay", "alt": "محفظة مع مفاتيح ونظارة بتصوير مسطح" }
+                    ]
+                  },
+                  {
+                    "sku": "WL-SLM-C",
+                    "price": 55.0,
+                    "compare_at_price": 75.0,
+                    "quantity": 48,
+                    "is_default": false,
+                    "attribute_values": {
+                      "الخامة": { "value": "جلد" },
+                      "اللون": { "value": "كحلي", "color_code": "#1B2A41" },
+                      "السعة": { "value": "10 بطاقات" }
+                    },
+                    "images": [
+                      { "pexels_query": "navy leather wallet minimal close up", "alt": "محفظة جلد كحلي" },
+                      { "pexels_query": "wallet edge stitching close up", "alt": "تفاصيل الخياطة على الحواف" },
+                      { "pexels_query": "wallet with cards partially visible", "alt": "محفظة مع بطاقات ظاهرة جزئياً" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

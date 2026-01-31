@@ -1,0 +1,620 @@
+{
+    "locale": "ar",
+    "brands": [
+      {
+        "name": "ستيدلر",
+        "description": "علامة ألمانية موثوقة لأقلام الرصاص والأدوات الهندسية والقرطاسية المدرسية.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "Staedtler pencil set stationery flat lay",
+          "alt": "أقلام وقرطاسية ستيدلر"
+        }
+      },
+      {
+        "name": "فابر كاستل",
+        "description": "علامة شهيرة لأقلام التلوين والرسم والقرطاسية بجودة عالية للاستخدام المدرسي والفني.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "colored pencils set art supplies",
+          "alt": "مجموعة أقلام تلوين"
+        }
+      },
+      {
+        "name": "بايلوت",
+        "description": "أقلام حبر وجِل عملية للمدرسة والمكتب مع سلاسة كتابة ممتازة.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "gel pens on desk writing",
+          "alt": "أقلام جِل على مكتب"
+        }
+      },
+      {
+        "name": "بيك",
+        "description": "قرطاسية يومية اقتصادية وعملية خصوصاً أقلام الحبر الجاف.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "ballpoint pens on notebook",
+          "alt": "أقلام حبر جاف على دفتر"
+        }
+      },
+      {
+        "name": "مابلين",
+        "description": "مستلزمات مكتب متنوعة من ملفات وأوراق وطابعات وملحقات تنظيم.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "office supplies store aisle stationery",
+          "alt": "ممر مستلزمات مكتب وقرطاسية"
+        }
+      },
+      {
+        "name": "إتش بي",
+        "description": "طابعات ولوازم طباعة للمكتب والمدرسة مع حلول مسح ضوئي واتصال لاسلكي.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "printer on office desk home office",
+          "alt": "طابعة على مكتب"
+        }
+      },
+      {
+        "name": "كانون",
+        "description": "طابعات منزلية ومكتبية موثوقة مع جودة طباعة جيدة للواجبات والوثائق.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "home office printer printing paper",
+          "alt": "طابعة تطبع أوراق"
+        }
+      },
+      {
+        "name": "ليتز",
+        "description": "حلول تنظيم المكتب مثل ملفات وأدراج وأكسسوارات ترتيب بجودة عالية.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "office filing folders desk organizer",
+          "alt": "ملفات تنظيم على مكتب"
+        }
+      },
+      {
+        "name": "مولسكين",
+        "description": "دفاتر مميزة للكتابة والتخطيط اليومي والدراسة بتصميم أنيق.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "notebook planner on desk moleskine style",
+          "alt": "دفتر مخطط على مكتب"
+        }
+      },
+      {
+        "name": "كريتيفا",
+        "description": "لوازم فنية وحرفية للطلاب والهوايات مثل الألوان والفرش والورق.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "art supplies brushes paint palette on table",
+          "alt": "لوازم رسم وألوان على طاولة"
+        }
+      }
+    ],
+    "root_category": {
+      "name": "المكتب والمدرسة",
+      "description": "قرطاسية ومستلزمات دراسة ومكتب تشمل أدوات كتابة ودفاتر وتنظيم وطباعة وحقائب.",
+      "status": 1,
+      "image": {
+        "pexels_query": "school and office supplies on desk flat lay",
+        "alt": "مستلزمات مدرسة ومكتب على مكتب"
+      },
+      "children": [
+        {
+          "name": "الكتابة والقرطاسية",
+          "description": "أدوات كتابة يومية للمدرسة والمكتب من أقلام ودفاتر وممحاة ومبراة.",
+          "status": 1,
+          "image": {
+            "pexels_query": "pens pencils notebooks stationery on desk",
+            "alt": "أقلام ودفاتر وقرطاسية على مكتب"
+          },
+          "children": [
+            {
+              "name": "أقلام جِل وحبر",
+              "description": "أقلام للكتابة السلسة وتدوين الملاحظات مع خيارات ألوان متعددة.",
+              "status": 1,
+              "image": {
+                "pexels_query": "gel pen writing in notebook close up",
+                "alt": "قلم جِل يكتب في دفتر"
+              },
+              "products": [
+                {
+                  "name": "طقم أقلام جِل Smooth (6 أقلام)",
+                  "description": "طقم أقلام جِل للمدرسة والمكتب بحبر ثابت وتجفيف سريع.",
+                  "brand": "بايلوت",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "العدد": "6",
+                    "نوع الحبر": "جِل",
+                    "سُمك الخط": "0.7 مم",
+                    "الألوان": "متعددة"
+                  },
+                  "attributes": [
+                    { "name": "سُمك الخط", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "العدد", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "PEN-GEL-A",
+                      "price": 9.99,
+                      "compare_at_price": 12.99,
+                      "quantity": 120,
+                      "is_default": true,
+                      "attribute_values": {
+                        "سُمك الخط": { "value": "0.7 مم" },
+                        "اللون": { "value": "متعدد الألوان", "color_code": "#1E4ED8" },
+                        "العدد": { "value": "6" }
+                      },
+                      "images": [
+                        { "pexels_query": "color gel pens set on desk", "alt": "طقم أقلام جِل ملونة على مكتب" },
+                        { "pexels_query": "gel pen tip close up", "alt": "تفاصيل سن قلم جِل" },
+                        { "pexels_query": "gel pens in pencil case", "alt": "أقلام جِل داخل مقلمة" }
+                      ]
+                    },
+                    {
+                      "sku": "PEN-GEL-B",
+                      "price": 7.99,
+                      "compare_at_price": 10.99,
+                      "quantity": 140,
+                      "is_default": false,
+                      "attribute_values": {
+                        "سُمك الخط": { "value": "0.5 مم" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                        "العدد": { "value": "4" }
+                      },
+                      "images": [
+                        { "pexels_query": "blue gel pens on notebook", "alt": "أقلام جِل زرقاء على دفتر" },
+                        { "pexels_query": "writing notes with gel pen blue ink", "alt": "كتابة ملاحظات بحبر أزرق" },
+                        { "pexels_query": "blue gel pen close up", "alt": "قلم جِل أزرق لقطة مقرّبة" }
+                      ]
+                    },
+                    {
+                      "sku": "PEN-GEL-C",
+                      "price": 8.99,
+                      "compare_at_price": 11.99,
+                      "quantity": 110,
+                      "is_default": false,
+                      "attribute_values": {
+                        "سُمك الخط": { "value": "1.0 مم" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" },
+                        "العدد": { "value": "4" }
+                      },
+                      "images": [
+                        { "pexels_query": "black gel pens on desk", "alt": "أقلام جِل سوداء على مكتب" },
+                        { "pexels_query": "black ink gel pen writing close up", "alt": "تفاصيل كتابة بحبر أسود" },
+                        { "pexels_query": "black gel pen tip macro", "alt": "لقطة ماكرو لسن قلم جِل" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "قلم حبر جاف Classic (10 أقلام)",
+                  "description": "أقلام حبر جاف عملية للاستخدام اليومي بسعر اقتصادي.",
+                  "brand": "بيك",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "العدد": "10",
+                    "نوع الحبر": "جاف",
+                    "سُمك الخط": "1.0 مم",
+                    "الاستخدام": "مدرسة/مكتب"
+                  },
+                  "attributes": [
+                    { "name": "سُمك الخط", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "العدد", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "PEN-BP-A",
+                      "price": 5.99,
+                      "compare_at_price": 7.99,
+                      "quantity": 200,
+                      "is_default": true,
+                      "attribute_values": {
+                        "سُمك الخط": { "value": "1.0 مم" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                        "العدد": { "value": "10" }
+                      },
+                      "images": [
+                        { "pexels_query": "ballpoint pen set blue ink on desk", "alt": "طقم أقلام حبر جاف أزرق" },
+                        { "pexels_query": "ballpoint pen writing notebook", "alt": "قلم حبر جاف يكتب في دفتر" },
+                        { "pexels_query": "ballpoint pen tips close up", "alt": "تفاصيل سنون أقلام حبر جاف" }
+                      ]
+                    },
+                    {
+                      "sku": "PEN-BP-B",
+                      "price": 5.99,
+                      "compare_at_price": 7.99,
+                      "quantity": 180,
+                      "is_default": false,
+                      "attribute_values": {
+                        "سُمك الخط": { "value": "1.0 مم" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" },
+                        "العدد": { "value": "10" }
+                      },
+                      "images": [
+                        { "pexels_query": "black ballpoint pens set", "alt": "طقم أقلام حبر جاف أسود" },
+                        { "pexels_query": "black ballpoint pen on notebook", "alt": "قلم حبر جاف أسود على دفتر" },
+                        { "pexels_query": "ballpoint pen close up black", "alt": "تفاصيل قلم حبر جاف أسود" }
+                      ]
+                    },
+                    {
+                      "sku": "PEN-BP-C",
+                      "price": 6.99,
+                      "compare_at_price": 8.99,
+                      "quantity": 160,
+                      "is_default": false,
+                      "attribute_values": {
+                        "سُمك الخط": { "value": "0.7 مم" },
+                        "اللون": { "value": "متعدد الألوان", "color_code": "#22C55E" },
+                        "العدد": { "value": "10" }
+                      },
+                      "images": [
+                        { "pexels_query": "assorted ballpoint pens colorful set", "alt": "طقم أقلام حبر جاف ملونة" },
+                        { "pexels_query": "color pens in pencil holder", "alt": "أقلام ملونة في حامل" },
+                        { "pexels_query": "ballpoint pen writing colorful notes", "alt": "تدوين ملاحظات بألوان مختلفة" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "دفاتر ومخططات",
+              "description": "دفاتر للدراسة وتدوين الملاحظات ومخططات لتنظيم المهام.",
+              "status": 1,
+              "image": {
+                "pexels_query": "notebooks planners stationery flat lay",
+                "alt": "دفاتر ومخططات على طاولة"
+              },
+              "products": [
+                {
+                  "name": "دفتر Study Pro (200 صفحة)",
+                  "description": "دفتر عملي للمدرسة والجامعة بورق سميك مناسب للأقلام المختلفة.",
+                  "brand": "مابلين",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "عدد الصفحات": "200",
+                    "نوع الورق": "سميك",
+                    "المقاس": "A4",
+                    "التجليد": "سلك"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "التجليد", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "NB-A4-A",
+                      "price": 6.49,
+                      "compare_at_price": 8.49,
+                      "quantity": 150,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "A4" },
+                        "التجليد": { "value": "سلك" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" }
+                      },
+                      "images": [
+                        { "pexels_query": "spiral notebook a4 on desk blue cover", "alt": "دفتر A4 سلك غلاف أزرق" },
+                        { "pexels_query": "notebook lined pages close up", "alt": "تفاصيل صفحات دفتر مسطرة" },
+                        { "pexels_query": "student writing notes in spiral notebook", "alt": "طالب يكتب في دفتر سلك" }
+                      ]
+                    },
+                    {
+                      "sku": "NB-A4-B",
+                      "price": 6.49,
+                      "compare_at_price": 8.49,
+                      "quantity": 130,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "A4" },
+                        "التجليد": { "value": "سلك" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" }
+                      },
+                      "images": [
+                        { "pexels_query": "black cover spiral notebook on desk", "alt": "دفتر سلك غلاف أسود" },
+                        { "pexels_query": "black notebook cover texture close up", "alt": "تفاصيل خامة غلاف أسود" },
+                        { "pexels_query": "notebook and pen on minimalist desk", "alt": "دفتر وقلم على مكتب بسيط" }
+                      ]
+                    },
+                    {
+                      "sku": "NB-A4-C",
+                      "price": 7.49,
+                      "compare_at_price": 9.49,
+                      "quantity": 120,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "A5" },
+                        "التجليد": { "value": "سلك" },
+                        "اللون": { "value": "أخضر", "color_code": "#22C55E" }
+                      },
+                      "images": [
+                        { "pexels_query": "a5 spiral notebook green cover", "alt": "دفتر A5 سلك غلاف أخضر" },
+                        { "pexels_query": "small notebook in hand a5", "alt": "دفتر صغير A5 في اليد" },
+                        { "pexels_query": "planner notebook on desk with sticky notes", "alt": "دفتر مع ملاحظات لاصقة" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "دفتر ملاحظات Premium (مخطط أسبوعي)",
+                  "description": "مخطط أسبوعي لتنظيم الدراسة والمهام اليومية بتصميم أنيق.",
+                  "brand": "مولسكين",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "النوع": "مخطط أسبوعي",
+                    "المقاس": "A5",
+                    "الغلاف": "صلب",
+                    "الشريط": "فاصل صفحات"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "نوع المخطط", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "PLN-A5-A",
+                      "price": 14.99,
+                      "compare_at_price": 18.99,
+                      "quantity": 70,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "A5" },
+                        "نوع المخطط": { "value": "أسبوعي" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" }
+                      },
+                      "images": [
+                        { "pexels_query": "weekly planner notebook black cover on desk", "alt": "مخطط أسبوعي غلاف أسود" },
+                        { "pexels_query": "planner open weekly layout close up", "alt": "تفاصيل صفحة مخطط أسبوعي" },
+                        { "pexels_query": "planner with pen and coffee on desk", "alt": "مخطط مع قلم وقهوة على مكتب" }
+                      ]
+                    },
+                    {
+                      "sku": "PLN-A5-B",
+                      "price": 14.99,
+                      "compare_at_price": 18.99,
+                      "quantity": 60,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "A5" },
+                        "نوع المخطط": { "value": "أسبوعي" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" }
+                      },
+                      "images": [
+                        { "pexels_query": "blue planner notebook on desk minimal", "alt": "مخطط غلاف أزرق" },
+                        { "pexels_query": "planner elastic band close up", "alt": "تفاصيل رباط المخطط" },
+                        { "pexels_query": "student planning schedule in notebook", "alt": "طالب ينظم جدوله في دفتر" }
+                      ]
+                    },
+                    {
+                      "sku": "PLN-A5-C",
+                      "price": 15.99,
+                      "compare_at_price": 19.99,
+                      "quantity": 55,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "A5" },
+                        "نوع المخطط": { "value": "أسبوعي + أهداف" },
+                        "اللون": { "value": "عنابي", "color_code": "#800020" }
+                      },
+                      "images": [
+                        { "pexels_query": "burgundy planner notebook on desk", "alt": "مخطط غلاف عنابي" },
+                        { "pexels_query": "planner goal setting page close up", "alt": "صفحة أهداف داخل المخطط" },
+                        { "pexels_query": "planner bookmark ribbon close up", "alt": "تفاصيل شريط فاصل الصفحات" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "التنظيم والملفات",
+          "description": "ملفات وحافظات وأدوات ترتيب للمكتب والمدرسة لحفظ الأوراق والواجبات.",
+          "status": 1,
+          "image": {
+            "pexels_query": "folders binders office organization desk",
+            "alt": "ملفات تنظيم على مكتب"
+          },
+          "children": [
+            {
+              "name": "ملفات وحافظات",
+              "description": "حافظات مستندات وملفات شفافة لتقسيم المواد وترتيب الأوراق.",
+              "status": 1,
+              "image": {
+                "pexels_query": "document folders binders on desk",
+                "alt": "حافظات ملفات ومستندات"
+              },
+              "products": [
+                {
+                  "name": "حافظة ملفات A4 Pro (20 جيب)",
+                  "description": "حافظة شفافة لحفظ أوراق الدراسة والمستندات بشكل مرتب.",
+                  "brand": "ليتز",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "المقاس": "A4",
+                    "عدد الجيوب": "20",
+                    "الخامة": "بلاستيك متين",
+                    "الإغلاق": "مطاط/كبّاس"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "عدد الجيوب", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "FL-A4-A",
+                      "price": 4.99,
+                      "compare_at_price": 6.99,
+                      "quantity": 180,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "A4" },
+                        "عدد الجيوب": { "value": "20" },
+                        "اللون": { "value": "شفاف", "color_code": "#E5E7EB" }
+                      },
+                      "images": [
+                        { "pexels_query": "transparent document folder a4 on desk", "alt": "حافظة ملفات شفافة A4 على مكتب" },
+                        { "pexels_query": "folder pockets close up", "alt": "تفاصيل جيوب الحافظة" },
+                        { "pexels_query": "documents organized in folder", "alt": "مستندات مرتبة داخل الحافظة" }
+                      ]
+                    },
+                    {
+                      "sku": "FL-A4-B",
+                      "price": 4.99,
+                      "compare_at_price": 6.99,
+                      "quantity": 160,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "A4" },
+                        "عدد الجيوب": { "value": "30" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" }
+                      },
+                      "images": [
+                        { "pexels_query": "blue document folder binder a4", "alt": "حافظة ملفات A4 زرقاء" },
+                        { "pexels_query": "folder spine label close up", "alt": "تفاصيل ظهر الحافظة" },
+                        { "pexels_query": "student organizing papers in folder", "alt": "طالب يرتب أوراقه في حافظة" }
+                      ]
+                    },
+                    {
+                      "sku": "FL-A4-C",
+                      "price": 5.49,
+                      "compare_at_price": 7.49,
+                      "quantity": 140,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "A4" },
+                        "عدد الجيوب": { "value": "40" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" }
+                      },
+                      "images": [
+                        { "pexels_query": "black document folder a4 on desk", "alt": "حافظة ملفات A4 سوداء" },
+                        { "pexels_query": "folder pockets black close up", "alt": "تفاصيل جيوب الحافظة السوداء" },
+                        { "pexels_query": "office documents folder on shelf", "alt": "حافظة ملفات على رف" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "الطباعة والملحقات",
+          "description": "طابعات وأحبار وورق طباعة للاستخدام الدراسي والمكتبي.",
+          "status": 1,
+          "image": {
+            "pexels_query": "printer paper stack home office setup",
+            "alt": "طابعة وأوراق في مكتب منزلي"
+          },
+          "children": [
+            {
+              "name": "طابعات منزلية",
+              "description": "طابعات متعددة الوظائف للطباعة والمسح الضوئي للواجبات والوثائق.",
+              "status": 1,
+              "image": {
+                "pexels_query": "compact home printer on desk",
+                "alt": "طابعة منزلية صغيرة على مكتب"
+              },
+              "products": [
+                {
+                  "name": "طابعة متعددة الوظائف SmartPrint (واي فاي)",
+                  "description": "طابعة منزلية للطباعة والمسح الضوئي مع اتصال لاسلكي مناسبة للطلاب.",
+                  "brand": "إتش بي",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "الوظائف": "طباعة + مسح ضوئي + نسخ",
+                    "الاتصال": "Wi-Fi",
+                    "الألوان": "ملون",
+                    "المقاس": "مدمجة"
+                  },
+                  "attributes": [
+                    { "name": "الاتصال", "type": 1 },
+                    { "name": "الطباعة", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "PR-HP-A",
+                      "price": 89.0,
+                      "compare_at_price": 109.0,
+                      "quantity": 45,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الاتصال": { "value": "Wi-Fi" },
+                        "الطباعة": { "value": "ملون" },
+                        "اللون": { "value": "أبيض", "color_code": "#FFFFFF" }
+                      },
+                      "images": [
+                        { "pexels_query": "white compact printer on desk home office", "alt": "طابعة بيضاء مدمجة على مكتب" },
+                        { "pexels_query": "printer printing homework paper", "alt": "طابعة تطبع أوراق واجب" },
+                        { "pexels_query": "printer control panel close up", "alt": "تفاصيل لوحة التحكم" }
+                      ]
+                    },
+                    {
+                      "sku": "PR-HP-B",
+                      "price": 99.0,
+                      "compare_at_price": 119.0,
+                      "quantity": 40,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الاتصال": { "value": "Wi-Fi + USB" },
+                        "الطباعة": { "value": "ملون" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" }
+                      },
+                      "images": [
+                        { "pexels_query": "black compact printer on desk", "alt": "طابعة سوداء مدمجة على مكتب" },
+                        { "pexels_query": "usb cable connected to printer close up", "alt": "تفاصيل توصيل USB بالطابعة" },
+                        { "pexels_query": "printer paper tray close up", "alt": "تفاصيل درج الورق" }
+                      ]
+                    },
+                    {
+                      "sku": "PR-HP-C",
+                      "price": 119.0,
+                      "compare_at_price": 139.0,
+                      "quantity": 28,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الاتصال": { "value": "Wi-Fi" },
+                        "الطباعة": { "value": "أبيض وأسود" },
+                        "اللون": { "value": "رمادي", "color_code": "#9CA3AF" }
+                      },
+                      "images": [
+                        { "pexels_query": "grey laser printer compact office", "alt": "طابعة رمادية مدمجة للمكتب" },
+                        { "pexels_query": "printer output black and white document", "alt": "إخراج مستند أبيض وأسود" },
+                        { "pexels_query": "printer top scanner lid close up", "alt": "تفاصيل غطاء الماسح" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

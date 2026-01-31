@@ -1,0 +1,118 @@
+{
+  "locale": "ar",
+  "brands": [
+    {
+      "name": "آبل",
+      "description": "علامة رائدة في الإلكترونيات الاستهلاكية.",
+      "status": 1,
+      "featured": true,
+      "image": {
+        "pexels_query": "Apple store logo sign exterior",
+        "alt": "شعار آبل على واجهة متجر"
+      }
+    }
+  ],
+  "root_category": {
+    "name": "الإلكترونيات المصغّرة",
+    "description": "مجموعة تجريبية مختصرة للاختبار.",
+    "status": 1,
+    "image": {
+      "pexels_query": "modern electronics store interior shelves",
+      "alt": "متجر إلكترونيات حديث من الداخل"
+    },
+    "children": [
+      {
+        "name": "الهواتف المصغّرة",
+        "description": "فئة فرعية للاختبار.",
+        "status": 1,
+        "image": {
+          "pexels_query": "smartphone on desk",
+          "alt": "هاتف ذكي على مكتب"
+        },
+        "children": [
+          {
+            "name": "هواتف تجريبية",
+            "description": "فئة مستوى 2 للاختبار.",
+            "status": 1,
+            "image": {
+              "pexels_query": "flagship smartphone on table",
+              "alt": "هاتف رائد على طاولة"
+            },
+            "products": [
+              {
+                "name": "هاتف تجريبي برو",
+                "description": "منتج تجريبي لفحص الاستيراد.",
+                "brand": "آبل",
+                "status": 1,
+                "featured": false,
+                "specifications": {
+                  "الشاشة": "6.1 بوصة",
+                  "الكاميرا": "ثلاثية",
+                  "البطارية": "يوم كامل"
+                },
+                "attributes": [
+                  { "name": "التخزين", "type": 1 },
+                  { "name": "اللون", "type": 2 },
+                  { "name": "الاتصال", "type": 1 }
+                ],
+                "variants": [
+                  {
+                    "sku": "TESTPHONE-A",
+                    "price": 999.00,
+                    "compare_at_price": 1099.00,
+                    "quantity": 5,
+                    "is_default": true,
+                    "attribute_values": {
+                      "التخزين": { "value": "128 جيجابايت" },
+                      "اللون": { "value": "أسود", "color_code": "#000000" },
+                      "الاتصال": { "value": "5G" }
+                    },
+                    "images": [
+                      { "pexels_query": "black smartphone front and back", "alt": "هاتف أسود من الأمام والخلف" },
+                      { "pexels_query": "black smartphone camera close up", "alt": "كاميرا هاتف أسود عن قرب" },
+                      { "pexels_query": "black smartphone in hand", "alt": "هاتف أسود في اليد" }
+                    ]
+                  },
+                  {
+                    "sku": "TESTPHONE-B",
+                    "price": 1099.00,
+                    "compare_at_price": 1199.00,
+                    "quantity": 5,
+                    "is_default": false,
+                    "attribute_values": {
+                      "التخزين": { "value": "256 جيجابايت" },
+                      "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                      "الاتصال": { "value": "5G" }
+                    },
+                    "images": [
+                      { "pexels_query": "silver smartphone front and back", "alt": "هاتف فضي من الأمام والخلف" },
+                      { "pexels_query": "silver smartphone camera close up", "alt": "كاميرا هاتف فضي عن قرب" },
+                      { "pexels_query": "silver smartphone in hand", "alt": "هاتف فضي في اليد" }
+                    ]
+                  },
+                  {
+                    "sku": "TESTPHONE-C",
+                    "price": 1199.00,
+                    "compare_at_price": 1299.00,
+                    "quantity": 5,
+                    "is_default": false,
+                    "attribute_values": {
+                      "التخزين": { "value": "512 جيجابايت" },
+                      "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                      "الاتصال": { "value": "5G" }
+                    },
+                    "images": [
+                      { "pexels_query": "blue smartphone front and back", "alt": "هاتف أزرق من الأمام والخلف" },
+                      { "pexels_query": "blue smartphone camera close up", "alt": "كاميرا هاتف أزرق عن قرب" },
+                      { "pexels_query": "blue smartphone in hand", "alt": "هاتف أزرق في اليد" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,713 @@
+{
+    "locale": "ar",
+    "brands": [
+      {
+        "name": "فيليبس هيو",
+        "description": "إضاءة ذكية عالية الجودة بقدرات ألوان ومشاهد ديناميكية لتحويل أجواء المنزل بشكل لافت.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "smart LED lights colorful living room Philips Hue style",
+          "alt": "إضاءة ذكية ملونة في غرفة معيشة"
+        }
+      },
+      {
+        "name": "نانوليف",
+        "description": "ألواح إضاءة جدارية بتصاميم هندسية وتأثيرات متحركة ملفتة للأنظار.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "geometric wall light panels RGB modern room",
+          "alt": "ألواح إضاءة جدارية هندسية ملونة"
+        }
+      },
+      {
+        "name": "لايف إكس",
+        "description": "شرائط ولمبات ذكية قوية بالألوان مع مشاهد ضوئية جذابة للمساحات الحديثة.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "LED strip lights under shelf RGB ambiance",
+          "alt": "شريط LED بإضاءة محيطية ملونة"
+        }
+      },
+      {
+        "name": "جي أو ڤي",
+        "description": "إضاءة محيطية وشرائط LED بميزات مؤثرات مناسبة للغرف والألعاب وإبراز الديكور.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "RGB ambient lighting behind TV LED strip",
+          "alt": "إضاءة خلف التلفاز بريط LED"
+        }
+      },
+      {
+        "name": "إيليا",
+        "description": "تصاميم ثريات وعلّاقات فاخرة بلمسات فنية لتكون قطعة ديكور قبل أن تكون إضاءة.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "luxury chandelier modern interior artistic lighting",
+          "alt": "ثريا فنية فاخرة في ديكور حديث"
+        }
+      },
+      {
+        "name": "ميدن لايت",
+        "description": "مصابيح أرضية وطاولات بإضاءة دافئة مع أساليب تصميم مميزة للزوايا.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "modern floor lamp sculptural design living room",
+          "alt": "مصباح أرضي بتصميم نحتي"
+        }
+      },
+      {
+        "name": "بولد ديزاين",
+        "description": "إضاءات ديكورية جريئة مثل نيون جداري وقطع فنية مضيئة للفت الانتباه.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "neon wall sign aesthetic room lighting",
+          "alt": "إضاءة نيون جدارية"
+        }
+      },
+      {
+        "name": "فلووت",
+        "description": "إضاءات معلّقة شفافة/زجاجية تعكس الضوء بشكل ساحر وتضيف فخامة للمكان.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "glass pendant lights modern kitchen island",
+          "alt": "إضاءات معلّقة زجاجية فوق جزيرة مطبخ"
+        }
+      },
+      {
+        "name": "أورا",
+        "description": "مصابيح طاولات بانتشار ضوء ناعم ومشاهد ألوان لإضاءة مزاجية جذابة.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "ambient table lamp soft glow modern bedroom",
+          "alt": "مصباح طاولة بإضاءة ناعمة"
+        }
+      },
+      {
+        "name": "أرتي لوكس",
+        "description": "إضاءات جدارية وقطع فنية مضيئة (سكونس) بتفاصيل معدنية ولمسات راقية.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "luxury wall sconce modern hallway lighting",
+          "alt": "إضاءة جدارية فاخرة في ممر"
+        }
+      }
+    ],
+    "root_category": {
+      "name": "الإضاءة المنزلية",
+      "description": "إضاءات ديكورية ملفتة للأنظار لإبراز جمال المكان: ثريات فنية، إضاءات جدارية، لوحات RGB، ومصابيح تصميمية.",
+      "status": 1,
+      "image": {
+        "pexels_query": "statement lighting interior design dramatic modern living room",
+        "alt": "إضاءة ديكورية لافتة في غرفة معيشة حديثة"
+      },
+      "children": [
+        {
+          "name": "إضاءة مميزة (Statement)",
+          "description": "قطع إضاءة تكون محور الديكور وتلفت النظر مباشرة عند دخول الغرفة.",
+          "status": 1,
+          "image": {
+            "pexels_query": "dramatic chandelier statement lighting modern interior",
+            "alt": "ثريا فنية ملفتة كقطعة ديكور"
+          },
+          "children": [
+            {
+              "name": "ثريات فنية",
+              "description": "ثريات ذات تصاميم غير تقليدية تمنح المكان فخامة وتأثيراً بصرياً قوياً.",
+              "status": 1,
+              "image": {
+                "pexels_query": "artistic chandelier sculptural pendant light luxury",
+                "alt": "ثريا بتصميم نحتي فني"
+              },
+              "products": [
+                {
+                  "name": "ثريا Aurora Spiral (حلزونية)",
+                  "description": "ثريا حلزونية بتأثير بصري قوي تشبه منحوتة مضيئة وتحوّل السقف إلى نقطة جذب.",
+                  "brand": "إيليا",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "الأسلوب": "نحتي/حديث",
+                    "نوع الإضاءة": "LED",
+                    "التحكم": "تعتيم",
+                    "المادة": "معدن + أكريليك"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "لون الإضاءة", "type": 2 },
+                    { "name": "التحكم", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "CH-AURSP-A",
+                      "price": 299.0,
+                      "compare_at_price": 369.0,
+                      "quantity": 18,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "قطر 60 سم" },
+                        "لون الإضاءة": { "value": "أبيض دافئ", "color_code": "#F6E7C1" },
+                        "التحكم": { "value": "تعتيم" }
+                      },
+                      "images": [
+                        { "pexels_query": "spiral chandelier LED modern ceiling", "alt": "ثريا حلزونية LED على السقف" },
+                        { "pexels_query": "spiral chandelier close up acrylic diffuser", "alt": "تفاصيل ناشر ضوء أكريليك للثريا" },
+                        { "pexels_query": "spiral pendant light over dining table", "alt": "ثريا حلزونية فوق طاولة طعام" }
+                      ]
+                    },
+                    {
+                      "sku": "CH-AURSP-B",
+                      "price": 349.0,
+                      "compare_at_price": 429.0,
+                      "quantity": 12,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "قطر 80 سم" },
+                        "لون الإضاءة": { "value": "أبيض محايد", "color_code": "#F5F5F5" },
+                        "التحكم": { "value": "تعتيم" }
+                      },
+                      "images": [
+                        { "pexels_query": "large spiral chandelier modern interior", "alt": "ثريا حلزونية كبيرة في ديكور حديث" },
+                        { "pexels_query": "spiral chandelier hanging height adjustment", "alt": "تفاصيل تعليق الثريا وإمكانية ضبط الارتفاع" },
+                        { "pexels_query": "spiral chandelier dramatic lighting night", "alt": "ثريا حلزونية بإضاءة درامية ليلاً" }
+                      ]
+                    },
+                    {
+                      "sku": "CH-AURSP-C",
+                      "price": 399.0,
+                      "compare_at_price": 489.0,
+                      "quantity": 9,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "قطر 90 سم" },
+                        "لون الإضاءة": { "value": "روز دافئ", "color_code": "#FAD1D1" },
+                        "التحكم": { "value": "تعتيم + ريموت" }
+                      },
+                      "images": [
+                        { "pexels_query": "spiral chandelier warm pink light modern", "alt": "ثريا حلزونية بإضاءة روز دافئة" },
+                        { "pexels_query": "spiral chandelier remote control close up", "alt": "تفاصيل التحكم بالريموت" },
+                        { "pexels_query": "statement chandelier living room center piece", "alt": "ثريا كقطعة مركزية في غرفة معيشة" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "ثريا Crystal Cascade (شلال كريستال)",
+                  "description": "ثريا كريستال متدرجة تشبه الشلال وتمنح انعكاسات ضوئية تخطف الأنظار.",
+                  "brand": "أرتي لوكس",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "الأسلوب": "فاخر",
+                    "نوع الإضاءة": "LED",
+                    "المادة": "معدن + كريستال",
+                    "التثبيت": "سقف"
+                  },
+                  "attributes": [
+                    { "name": "الطول", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "عدد الطبقات", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "CH-CRYS-A",
+                      "price": 379.0,
+                      "compare_at_price": 449.0,
+                      "quantity": 14,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الطول": { "value": "70 سم" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                        "عدد الطبقات": { "value": "2" }
+                      },
+                      "images": [
+                        { "pexels_query": "crystal chandelier cascade silver modern foyer", "alt": "ثريا كريستال شلال فضي" },
+                        { "pexels_query": "crystal chandelier prisms close up sparkle", "alt": "تفاصيل الكريستال والانعكاسات" },
+                        { "pexels_query": "crystal chandelier over staircase dramatic", "alt": "ثريا كريستال فوق درج" }
+                      ]
+                    },
+                    {
+                      "sku": "CH-CRYS-B",
+                      "price": 429.0,
+                      "compare_at_price": 509.0,
+                      "quantity": 10,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الطول": { "value": "90 سم" },
+                        "اللون": { "value": "ذهبي", "color_code": "#D4AF37" },
+                        "عدد الطبقات": { "value": "3" }
+                      },
+                      "images": [
+                        { "pexels_query": "gold crystal chandelier cascade luxury interior", "alt": "ثريا كريستال شلال ذهبية" },
+                        { "pexels_query": "gold chandelier crystal close up", "alt": "تفاصيل معدن ذهبي مع كريستال" },
+                        { "pexels_query": "chandelier reflection on wall elegant lighting", "alt": "انعكاس ضوء الثريا على الجدار" }
+                      ]
+                    },
+                    {
+                      "sku": "CH-CRYS-C",
+                      "price": 489.0,
+                      "compare_at_price": 579.0,
+                      "quantity": 7,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الطول": { "value": "110 سم" },
+                        "اللون": { "value": "أسود/ذهبي", "color_code": "#111111" },
+                        "عدد الطبقات": { "value": "4" }
+                      },
+                      "images": [
+                        { "pexels_query": "black gold crystal chandelier modern luxury", "alt": "ثريا كريستال أسود مع ذهبي" },
+                        { "pexels_query": "modern chandelier black frame crystal close up", "alt": "تفاصيل الإطار الأسود والكريستال" },
+                        { "pexels_query": "dramatic foyer chandelier black gold", "alt": "ثريا درامية في مدخل" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "مصابيح أرضية تصميمية",
+              "description": "مصابيح أرضية كقطع فنية للزوايا تُظهر جمال المساحة بإضاءة مزاجية.",
+              "status": 1,
+              "image": {
+                "pexels_query": "sculptural floor lamp modern living room corner",
+                "alt": "مصباح أرضي بتصميم فني في زاوية"
+              },
+              "products": [
+                {
+                  "name": "مصباح أرضي Arc Glow (قوس)",
+                  "description": "مصباح قوسي طويل يخلق حضوراً قوياً فوق الجلسات ويضيف لمسة فخامة فورية.",
+                  "brand": "ميدن لايت",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "الأسلوب": "حديث/فاخر",
+                    "الارتفاع": "190 سم",
+                    "نوع الإضاءة": "LED",
+                    "القاعدة": "رخام/معدن"
+                  },
+                  "attributes": [
+                    { "name": "القاعدة", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "لون الإضاءة", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "FL-ARC-A",
+                      "price": 169.0,
+                      "compare_at_price": 219.0,
+                      "quantity": 26,
+                      "is_default": true,
+                      "attribute_values": {
+                        "القاعدة": { "value": "رخام أبيض" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                        "لون الإضاءة": { "value": "أبيض دافئ", "color_code": "#F6E7C1" }
+                      },
+                      "images": [
+                        { "pexels_query": "arc floor lamp marble base modern living room", "alt": "مصباح أرضي قوسي بقاعدة رخام" },
+                        { "pexels_query": "floor lamp arc shade close up", "alt": "تفاصيل قبعة المصباح القوسي" },
+                        { "pexels_query": "arc lamp over sofa dramatic lighting", "alt": "مصباح قوسي فوق الأريكة" }
+                      ]
+                    },
+                    {
+                      "sku": "FL-ARC-B",
+                      "price": 179.0,
+                      "compare_at_price": 229.0,
+                      "quantity": 20,
+                      "is_default": false,
+                      "attribute_values": {
+                        "القاعدة": { "value": "رخام أسود" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" },
+                        "لون الإضاءة": { "value": "أبيض محايد", "color_code": "#F5F5F5" }
+                      },
+                      "images": [
+                        { "pexels_query": "black arc floor lamp marble base modern interior", "alt": "مصباح قوسي أسود بقاعدة رخام أسود" },
+                        { "pexels_query": "black floor lamp arc profile close up", "alt": "المنظر الجانبي للمصباح القوسي الأسود" },
+                        { "pexels_query": "modern living room black arc lamp corner", "alt": "مصباح قوسي أسود في زاوية غرفة معيشة" }
+                      ]
+                    },
+                    {
+                      "sku": "FL-ARC-C",
+                      "price": 189.0,
+                      "compare_at_price": 239.0,
+                      "quantity": 16,
+                      "is_default": false,
+                      "attribute_values": {
+                        "القاعدة": { "value": "معدن ثقيل" },
+                        "اللون": { "value": "ذهبي", "color_code": "#D4AF37" },
+                        "لون الإضاءة": { "value": "دافئ جداً", "color_code": "#FFD9A1" }
+                      },
+                      "images": [
+                        { "pexels_query": "gold arc floor lamp luxury living room", "alt": "مصباح أرضي قوسي ذهبي" },
+                        { "pexels_query": "gold floor lamp details close up", "alt": "تفاصيل معدن ذهبي" },
+                        { "pexels_query": "floor lamp warm glow cozy corner", "alt": "مصباح بإضاءة دافئة في زاوية مريحة" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "إضاءة جدارية ونيون",
+          "description": "إضاءة تلفت النظر على الجدار: سكونس فاخرة ولوحات نيون وتصاميم معمارية.",
+          "status": 1,
+          "image": {
+            "pexels_query": "wall lighting sconce neon modern room aesthetic",
+            "alt": "إضاءة جدارية ونيون في غرفة حديثة"
+          },
+          "children": [
+            {
+              "name": "نيون ديكوري",
+              "description": "لوحات نيون جدارية لإضافة طابع عصري قوي ومحتوى بصري يجذب الانتباه.",
+              "status": 1,
+              "image": {
+                "pexels_query": "neon wall light sign aesthetic bedroom",
+                "alt": "لوحة نيون جدارية في غرفة"
+              },
+              "products": [
+                {
+                  "name": "لوحة نيون Glow Quote (عبارة مضيئة)",
+                  "description": "لوحة نيون بوهج قوي لتكون نقطة جذب في الغرفة أو خلفية تصوير.",
+                  "brand": "بولد ديزاين",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "النوع": "نيون LED",
+                    "التثبيت": "حائط",
+                    "الطاقة": "USB",
+                    "التحكم": "مفتاح/تعتيم"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "التغذية", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "NEON-A",
+                      "price": 59.0,
+                      "compare_at_price": 79.0,
+                      "quantity": 70,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "60×25 سم" },
+                        "اللون": { "value": "وردي", "color_code": "#FF4D8D" },
+                        "التغذية": { "value": "USB" }
+                      },
+                      "images": [
+                        { "pexels_query": "pink neon sign on wall aesthetic room", "alt": "لوحة نيون وردية على الجدار" },
+                        { "pexels_query": "neon sign close up glow", "alt": "تفاصيل وهج النيون" },
+                        { "pexels_query": "neon wall light behind desk setup", "alt": "لوحة نيون خلف مكتب" }
+                      ]
+                    },
+                    {
+                      "sku": "NEON-B",
+                      "price": 59.0,
+                      "compare_at_price": 79.0,
+                      "quantity": 65,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "60×25 سم" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                        "التغذية": { "value": "USB" }
+                      },
+                      "images": [
+                        { "pexels_query": "blue neon sign wall modern room", "alt": "لوحة نيون زرقاء على الجدار" },
+                        { "pexels_query": "blue neon glow close up", "alt": "تفاصيل وهج نيون أزرق" },
+                        { "pexels_query": "neon sign in gaming room setup", "alt": "لوحة نيون في غرفة ألعاب" }
+                      ]
+                    },
+                    {
+                      "sku": "NEON-C",
+                      "price": 69.0,
+                      "compare_at_price": 89.0,
+                      "quantity": 55,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "80×30 سم" },
+                        "اللون": { "value": "أبيض دافئ", "color_code": "#F6E7C1" },
+                        "التغذية": { "value": "USB + محول" }
+                      },
+                      "images": [
+                        { "pexels_query": "warm white neon sign wall decor", "alt": "لوحة نيون أبيض دافئ" },
+                        { "pexels_query": "neon sign power usb cable close up", "alt": "تفاصيل سلك USB للنيون" },
+                        { "pexels_query": "neon wall decor in cozy living room", "alt": "نيون ديكوري في غرفة معيشة" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "سكونس فاخرة",
+              "description": "إضاءات جدارية بتصميم معدني/زجاجي تضيف عمقاً بصرياً وفخامة للممرات والصالات.",
+              "status": 1,
+              "image": {
+                "pexels_query": "luxury wall sconces modern hallway warm light",
+                "alt": "سكونس فاخرة في ممر بإضاءة دافئة"
+              },
+              "products": [
+                {
+                  "name": "سكونس Halo Ring (حلقة مضيئة)",
+                  "description": "سكونس حلقي يخلق تأثير هالة على الجدار ويعطي شكلًا فنيًا جذابًا.",
+                  "brand": "أرتي لوكس",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "النوع": "جدار",
+                    "الإضاءة": "LED",
+                    "التأثير": "هالة/انعكاس",
+                    "المادة": "معدن + ناشر ضوء"
+                  },
+                  "attributes": [
+                    { "name": "القطر", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "لون الإضاءة", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "SC-HALO-A",
+                      "price": 49.0,
+                      "compare_at_price": 69.0,
+                      "quantity": 85,
+                      "is_default": true,
+                      "attribute_values": {
+                        "القطر": { "value": "30 سم" },
+                        "اللون": { "value": "ذهبي", "color_code": "#D4AF37" },
+                        "لون الإضاءة": { "value": "أبيض دافئ", "color_code": "#F6E7C1" }
+                      },
+                      "images": [
+                        { "pexels_query": "gold ring wall sconce warm light modern", "alt": "سكونس حلقي ذهبي بإضاءة دافئة" },
+                        { "pexels_query": "wall sconce halo effect on wall close up", "alt": "تفاصيل تأثير الهالة على الجدار" },
+                        { "pexels_query": "ring wall light in hallway minimal design", "alt": "سكونس حلقي في ممر" }
+                      ]
+                    },
+                    {
+                      "sku": "SC-HALO-B",
+                      "price": 49.0,
+                      "compare_at_price": 69.0,
+                      "quantity": 80,
+                      "is_default": false,
+                      "attribute_values": {
+                        "القطر": { "value": "30 سم" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" },
+                        "لون الإضاءة": { "value": "أبيض محايد", "color_code": "#F5F5F5" }
+                      },
+                      "images": [
+                        { "pexels_query": "black ring wall sconce modern interior", "alt": "سكونس حلقي أسود" },
+                        { "pexels_query": "black wall sconce close up metal finish", "alt": "تفاصيل تشطيب المعدن الأسود" },
+                        { "pexels_query": "ring sconce on wall living room accent", "alt": "سكونس حلقي كتفصيلة في غرفة معيشة" }
+                      ]
+                    },
+                    {
+                      "sku": "SC-HALO-C",
+                      "price": 59.0,
+                      "compare_at_price": 79.0,
+                      "quantity": 60,
+                      "is_default": false,
+                      "attribute_values": {
+                        "القطر": { "value": "40 سم" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                        "لون الإضاءة": { "value": "دافئ جداً", "color_code": "#FFD9A1" }
+                      },
+                      "images": [
+                        { "pexels_query": "silver ring wall sconce warm glow modern", "alt": "سكونس حلقي فضي بإضاءة دافئة جداً" },
+                        { "pexels_query": "ring sconce diffuser close up", "alt": "تفاصيل ناشر الضوء" },
+                        { "pexels_query": "large ring wall light statement piece", "alt": "سكونس حلقي كبير كقطعة لافتة" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "إضاءة ذكية ومحيطية RGB",
+          "description": "إضاءة تغير أجواء المكان فوراً: ألواح جدارية، شرائط LED، وإضاءة خلفية للتلفاز والجدران.",
+          "status": 1,
+          "image": {
+            "pexels_query": "RGB ambient lighting modern room behind TV wall",
+            "alt": "إضاءة محيطية RGB خلف التلفاز"
+          },
+          "children": [
+            {
+              "name": "ألواح إضاءة جدارية",
+              "description": "ألواح هندسية بألوان متغيرة وحركات ضوئية تصبح خلفية مذهلة للغرفة.",
+              "status": 1,
+              "image": {
+                "pexels_query": "RGB wall light panels geometric triangles hexagons",
+                "alt": "ألواح إضاءة جدارية هندسية"
+              },
+              "products": [
+                {
+                  "name": "ألواح Hexa Panels (مجموعة 9 قطع)",
+                  "description": "ألواح سداسية RGB بمشاهد متحركة لتشكيل تصميم جدار فني يجذب النظر.",
+                  "brand": "نانوليف",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "عدد القطع": "9",
+                    "التحكم": "تطبيق + موسيقى",
+                    "الألوان": "RGB",
+                    "التركيب": "لاصق جداري"
+                  },
+                  "attributes": [
+                    { "name": "عدد القطع", "type": 1 },
+                    { "name": "التحكم", "type": 1 },
+                    { "name": "نمط الإضاءة", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "PANEL-HEX-A",
+                      "price": 129.0,
+                      "compare_at_price": 159.0,
+                      "quantity": 35,
+                      "is_default": true,
+                      "attribute_values": {
+                        "عدد القطع": { "value": "9" },
+                        "التحكم": { "value": "تطبيق" },
+                        "نمط الإضاءة": { "value": "مشاهد متحركة" }
+                      },
+                      "images": [
+                        { "pexels_query": "hexagon RGB wall light panels setup", "alt": "ألواح سداسية RGB مركبة على الجدار" },
+                        { "pexels_query": "RGB wall panels close up texture", "alt": "تفاصيل سطح ألواح الإضاءة" },
+                        { "pexels_query": "gaming room wall panels RGB aesthetic", "alt": "ألواح RGB كخلفية في غرفة" }
+                      ]
+                    },
+                    {
+                      "sku": "PANEL-HEX-B",
+                      "price": 149.0,
+                      "compare_at_price": 179.0,
+                      "quantity": 28,
+                      "is_default": false,
+                      "attribute_values": {
+                        "عدد القطع": { "value": "12" },
+                        "التحكم": { "value": "تطبيق + موسيقى" },
+                        "نمط الإضاءة": { "value": "تفاعل مع الصوت" }
+                      },
+                      "images": [
+                        { "pexels_query": "RGB wall panels reacting to music", "alt": "ألواح RGB تتفاعل مع الموسيقى" },
+                        { "pexels_query": "wall light panels arranged pattern modern", "alt": "ترتيب ألواح بشكل نمط" },
+                        { "pexels_query": "RGB panels behind desk setup", "alt": "ألواح RGB خلف مكتب" }
+                      ]
+                    },
+                    {
+                      "sku": "PANEL-HEX-C",
+                      "price": 169.0,
+                      "compare_at_price": 199.0,
+                      "quantity": 20,
+                      "is_default": false,
+                      "attribute_values": {
+                        "عدد القطع": { "value": "15" },
+                        "التحكم": { "value": "تطبيق + مساعد صوتي" },
+                        "نمط الإضاءة": { "value": "مشاهد سينمائية" }
+                      },
+                      "images": [
+                        { "pexels_query": "large RGB wall panels setup cinematic lighting", "alt": "ألواح RGB كبيرة بإضاءة سينمائية" },
+                        { "pexels_query": "smart wall panels voice assistant control", "alt": "تحكم بالألواح عبر مساعد صوتي" },
+                        { "pexels_query": "RGB panels living room feature wall", "alt": "ألواح RGB كجدار مميز في غرفة معيشة" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "شرائط وإضاءة خلفية",
+              "description": "شرائط LED لإبراز الجدران والرفوف وخلف التلفاز لإحساس فخم ومثير للانتباه.",
+              "status": 1,
+              "image": {
+                "pexels_query": "LED strip lights under cabinet ambient lighting",
+                "alt": "شريط LED تحت رف/خزانة بإضاءة محيطية"
+              },
+              "products": [
+                {
+                  "name": "شريط RGB BackGlow (5 متر)",
+                  "description": "شريط LED قوي لإضاءة خلفية مذهلة (خلف التلفاز/السرير/الرفوف) مع مشاهد جاهزة.",
+                  "brand": "جي أو ڤي",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "الطول": "5 متر",
+                    "الألوان": "RGB",
+                    "التحكم": "تطبيق + ريموت",
+                    "التركيب": "لاصق"
+                  },
+                  "attributes": [
+                    { "name": "الطول", "type": 1 },
+                    { "name": "التحكم", "type": 1 },
+                    { "name": "نمط الإضاءة", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "STRIP-RGB-A",
+                      "price": 29.0,
+                      "compare_at_price": 39.0,
+                      "quantity": 120,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الطول": { "value": "5 متر" },
+                        "التحكم": { "value": "تطبيق + ريموت" },
+                        "نمط الإضاءة": { "value": "مشاهد جاهزة" }
+                      },
+                      "images": [
+                        { "pexels_query": "RGB LED strip lights behind TV vivid", "alt": "شريط RGB خلف التلفاز" },
+                        { "pexels_query": "LED strip lights under shelf ambient", "alt": "شريط LED تحت رف بإضاءة محيطية" },
+                        { "pexels_query": "RGB strip light controller remote close up", "alt": "تفاصيل ريموت التحكم" }
+                      ]
+                    },
+                    {
+                      "sku": "STRIP-RGB-B",
+                      "price": 35.0,
+                      "compare_at_price": 45.0,
+                      "quantity": 95,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الطول": { "value": "10 متر" },
+                        "التحكم": { "value": "تطبيق" },
+                        "نمط الإضاءة": { "value": "تفاعل مع الموسيقى" }
+                      },
+                      "images": [
+                        { "pexels_query": "long RGB LED strip lights room perimeter", "alt": "شريط RGB طويل حول الغرفة" },
+                        { "pexels_query": "LED strip lights music sync colorful room", "alt": "شريط LED متزامن مع الموسيقى" },
+                        { "pexels_query": "LED strip lights adhesive backing close up", "alt": "تفاصيل اللاصق الخلفي" }
+                      ]
+                    },
+                    {
+                      "sku": "STRIP-RGB-C",
+                      "price": 39.0,
+                      "compare_at_price": 49.0,
+                      "quantity": 80,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الطول": { "value": "5 متر" },
+                        "التحكم": { "value": "تطبيق + مساعد صوتي" },
+                        "نمط الإضاءة": { "value": "مشاهد سينمائية" }
+                      },
+                      "images": [
+                        { "pexels_query": "RGB LED strip lights cinematic home theater", "alt": "شريط RGB لإضاءة سينمائية" },
+                        { "pexels_query": "smart LED strip voice assistant control", "alt": "تحكم بالشريط عبر مساعد صوتي" },
+                        { "pexels_query": "LED strip lights behind headboard bedroom", "alt": "شريط LED خلف لوح السرير" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,619 @@
+{
+    "locale": "ar",
+    "brands": [
+      {
+        "name": "زارا",
+        "description": "أزياء عصرية سريعة التجدد بتصاميم لافتة تناسب الإطلالات اليومية والمناسبات.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "modern fashion store clothing racks minimalist",
+          "alt": "متجر أزياء حديث مع علاقات ملابس"
+        }
+      },
+      {
+        "name": "إتش آند إم",
+        "description": "خيارات متنوعة بأسعار مناسبة مع تشكيلات موسمية واسعة للنساء والرجال.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "clothing store racks casual outfits",
+          "alt": "علاقات ملابس كاجوال داخل متجر"
+        }
+      },
+      {
+        "name": "نايكي",
+        "description": "ملابس رياضية عالية الطلب بتصاميم قوية وراحة للحركة والتمارين.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "sportswear hoodie joggers sneakers flat lay",
+          "alt": "ملابس رياضية بتصوير مسطح"
+        }
+      },
+      {
+        "name": "أديداس",
+        "description": "أزياء رياضية وستريت ستايل بأيقونات معروفة تناسب الإطلالة اليومية.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "streetwear tracksuit fashion urban style",
+          "alt": "ستريت ستايل ببدلة رياضية"
+        }
+      },
+      {
+        "name": "ليفايس",
+        "description": "جينز كلاسيكي بجودة عالية وتفاصيل مميزة لستايل دائم.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "denim jeans folded stack close up",
+          "alt": "جينز مطوي بتفاصيل قماش الدنيم"
+        }
+      },
+      {
+        "name": "يونكلو",
+        "description": "أساسيات أنيقة بخامات مريحة ومناسبة للاستخدام اليومي.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "minimal basic t shirts folded neutral colors",
+          "alt": "تيشيرتات أساسية مطوية بألوان محايدة"
+        }
+      },
+      {
+        "name": "بولو رالف لورين",
+        "description": "ستايل كلاسيكي راقٍ بقصّات أنيقة يلفت النظر في المناسبات.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "polo shirt classic style outfit men",
+          "alt": "قميص بولو بطابع كلاسيكي"
+        }
+      },
+      {
+        "name": "مانجو",
+        "description": "أزياء نسائية عصرية بلمسات أنيقة تناسب العمل والخروج.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "women fashion boutique dress on rack elegant",
+          "alt": "فساتين أنيقة في بوتيك نسائي"
+        }
+      },
+      {
+        "name": "ماسيمو دوتي",
+        "description": "أزياء شبه رسمية بتفاصيل راقية وخامات مرتبة لإطلالة فخمة.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "smart casual outfit blazer trousers on hanger",
+          "alt": "بليزر وبنطال على علاقة"
+        }
+      },
+      {
+        "name": "أندر آرمور",
+        "description": "ملابس أداء للتمارين بتقنيات تنفّس وراحة لأسلوب حياة نشط.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "training clothes gym outfit flat lay",
+          "alt": "طقم تدريب رياضي بتصوير مسطح"
+        }
+      }
+    ],
+    "root_category": {
+      "name": "الملابس",
+      "description": "ملابس للنساء والرجال والأطفال تشمل الكاجوال والرسمي والرياضي وقطع لافتة للإطلالات المميزة.",
+      "status": 1,
+      "image": {
+        "pexels_query": "fashion wardrobe clothing rack colorful outfits",
+        "alt": "علاقة ملابس بتشكيلة إطلالات متنوعة"
+      },
+      "children": [
+        {
+          "name": "نساء",
+          "description": "تشكيلة نسائية من فساتين وعبايات وبلوزات وبناطيل وقطع لافتة للمناسبات.",
+          "status": 1,
+          "image": {
+            "pexels_query": "women fashion outfits hanging on rack dresses blouses",
+            "alt": "ملابس نسائية على علاقة"
+          },
+          "children": [
+            {
+              "name": "فساتين لافتة",
+              "description": "فساتين بإطلالات مميزة (ساتان/لمعة/قصّات جذابة) للفت النظر.",
+              "status": 1,
+              "image": {
+                "pexels_query": "elegant evening dress on hanger satin sparkle",
+                "alt": "فستان سهرة أنيق على علاقة"
+              },
+              "products": [
+                {
+                  "name": "فستان Satin Shine (ميدي)",
+                  "description": "فستان ساتان بلمعة راقية يلفت النظر مناسب للسهرات والمناسبات.",
+                  "brand": "مانجو",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "الخامة": "ساتان",
+                    "الطول": "ميدي",
+                    "القصة": "انسيابية",
+                    "العناية": "غسيل لطيف"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "الخامة", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "WD-SS-A",
+                      "price": 69.0,
+                      "compare_at_price": 89.0,
+                      "quantity": 40,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "S" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" },
+                        "الخامة": { "value": "ساتان" }
+                      },
+                      "images": [
+                        { "pexels_query": "black satin midi dress on hanger elegant", "alt": "فستان ساتان أسود ميدي على علاقة" },
+                        { "pexels_query": "satin fabric close up sheen texture", "alt": "تفاصيل قماش ساتان لامع" },
+                        { "pexels_query": "evening dress satin styling on mannequin", "alt": "تنسيق فستان ساتان على مانيكان" }
+                      ]
+                    },
+                    {
+                      "sku": "WD-SS-B",
+                      "price": 69.0,
+                      "compare_at_price": 89.0,
+                      "quantity": 38,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "M" },
+                        "اللون": { "value": "عنابي", "color_code": "#800020" },
+                        "الخامة": { "value": "ساتان" }
+                      },
+                      "images": [
+                        { "pexels_query": "burgundy satin dress on hanger elegant", "alt": "فستان ساتان عنابي على علاقة" },
+                        { "pexels_query": "burgundy satin fabric close up", "alt": "تفاصيل خامة ساتان عنابي" },
+                        { "pexels_query": "satin dress evening look accessories", "alt": "إطلالة فستان ساتان مع إكسسوارات" }
+                      ]
+                    },
+                    {
+                      "sku": "WD-SS-C",
+                      "price": 69.0,
+                      "compare_at_price": 89.0,
+                      "quantity": 35,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "L" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                        "الخامة": { "value": "ساتان" }
+                      },
+                      "images": [
+                        { "pexels_query": "silver satin dress evening chic on hanger", "alt": "فستان ساتان فضي على علاقة" },
+                        { "pexels_query": "silver satin sheen close up fabric", "alt": "تفاصيل لمعان الساتان الفضي" },
+                        { "pexels_query": "silver satin dress styled for party", "alt": "تنسيق فستان ساتان فضي لحفلة" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "فستان Sparkle Night (قصير)",
+                  "description": "فستان بلمعة ناعمة لليالي والسهرات يعطي حضور قوي في الصور.",
+                  "brand": "زارا",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الخامة": "قماش لامع",
+                    "الطول": "قصير",
+                    "القصة": "محددة",
+                    "المناسبة": "سهرة"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "الطول", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "WD-SP-A",
+                      "price": 59.0,
+                      "compare_at_price": 79.0,
+                      "quantity": 45,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "S" },
+                        "اللون": { "value": "ذهبي", "color_code": "#D4AF37" },
+                        "الطول": { "value": "قصير" }
+                      },
+                      "images": [
+                        { "pexels_query": "gold sparkle mini dress on hanger party", "alt": "فستان قصير ذهبي لامع على علاقة" },
+                        { "pexels_query": "sparkly fabric glitter close up", "alt": "تفاصيل قماش لامع" },
+                        { "pexels_query": "mini party dress styling heels accessories", "alt": "تنسيق فستان حفلات قصير" }
+                      ]
+                    },
+                    {
+                      "sku": "WD-SP-B",
+                      "price": 59.0,
+                      "compare_at_price": 79.0,
+                      "quantity": 42,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "M" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" },
+                        "الطول": { "value": "قصير" }
+                      },
+                      "images": [
+                        { "pexels_query": "black glitter mini dress on hanger night out", "alt": "فستان قصير أسود لامع" },
+                        { "pexels_query": "black glitter fabric close up", "alt": "تفاصيل قماش لامع أسود" },
+                        { "pexels_query": "black party dress on mannequin", "alt": "فستان سهرة أسود على مانيكان" }
+                      ]
+                    },
+                    {
+                      "sku": "WD-SP-C",
+                      "price": 59.0,
+                      "compare_at_price": 79.0,
+                      "quantity": 36,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "L" },
+                        "اللون": { "value": "وردي", "color_code": "#FF4D8D" },
+                        "الطول": { "value": "قصير" }
+                      },
+                      "images": [
+                        { "pexels_query": "pink glitter mini dress on hanger party", "alt": "فستان قصير وردي لامع" },
+                        { "pexels_query": "pink sparkle fabric close up", "alt": "تفاصيل قماش لامع وردي" },
+                        { "pexels_query": "pink party dress styling accessories", "alt": "تنسيق فستان وردي للحفلات" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "أطقم ستريت ستايل",
+              "description": "هودي + بنطال/تنورة بإطلالة جريئة ملفتة للصور والخروج.",
+              "status": 1,
+              "image": {
+                "pexels_query": "streetwear outfit hoodie cargo pants urban style",
+                "alt": "إطلالة ستريت ستايل هودي وبنطال كارغو"
+              },
+              "products": [
+                {
+                  "name": "طقم Street Bold (هودي + بنطال كارغو)",
+                  "description": "طقم ستريت ستايل عملي ومريح بإطلالة قوية تلفت الانتباه.",
+                  "brand": "إتش آند إم",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "القطع": "هودي + كارغو",
+                    "القصة": "واسعة",
+                    "الستايل": "ستريت",
+                    "الخامة": "قطن/مزيج"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "القصة", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "ST-BLD-A",
+                      "price": 49.0,
+                      "compare_at_price": 65.0,
+                      "quantity": 60,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "S" },
+                        "اللون": { "value": "رمادي", "color_code": "#9CA3AF" },
+                        "القصة": { "value": "واسعة" }
+                      },
+                      "images": [
+                        { "pexels_query": "grey hoodie cargo pants streetwear outfit", "alt": "طقم هودي رمادي مع كارغو" },
+                        { "pexels_query": "cargo pants pockets close up", "alt": "تفاصيل جيوب بنطال كارغو" },
+                        { "pexels_query": "streetwear outfit on hanger set", "alt": "طقم ستريت ستايل على علاقة" }
+                      ]
+                    },
+                    {
+                      "sku": "ST-BLD-B",
+                      "price": 49.0,
+                      "compare_at_price": 65.0,
+                      "quantity": 55,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "M" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" },
+                        "القصة": { "value": "واسعة" }
+                      },
+                      "images": [
+                        { "pexels_query": "black hoodie cargo pants street style outfit", "alt": "طقم هودي أسود مع كارغو" },
+                        { "pexels_query": "hoodie fabric black close up", "alt": "تفاصيل قماش هودي أسود" },
+                        { "pexels_query": "streetwear outfit black on mannequin", "alt": "طقم ستريت ستايل أسود على مانيكان" }
+                      ]
+                    },
+                    {
+                      "sku": "ST-BLD-C",
+                      "price": 49.0,
+                      "compare_at_price": 65.0,
+                      "quantity": 50,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "L" },
+                        "اللون": { "value": "أخضر", "color_code": "#22C55E" },
+                        "القصة": { "value": "واسعة" }
+                      },
+                      "images": [
+                        { "pexels_query": "green hoodie cargo pants streetwear outfit", "alt": "طقم هودي أخضر مع كارغو" },
+                        { "pexels_query": "streetwear green outfit flat lay", "alt": "طقم أخضر بتصوير مسطح" },
+                        { "pexels_query": "urban street style green hoodie", "alt": "إطلالة حضرية بهودي أخضر" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "رجال",
+          "description": "قمصان وبناطيل وجاكيتات وأطقم شبه رسمية وستريت ستايل.",
+          "status": 1,
+          "image": {
+            "pexels_query": "menswear clothing rack shirts jackets smart casual",
+            "alt": "ملابس رجالية على علاقات (قمصان وجاكيتات)"
+          },
+          "children": [
+            {
+              "name": "جاكيتات لافتة",
+              "description": "جاكيتات جلد/دينم/بومبر لإطلالة قوية تلفت الانتباه.",
+              "status": 1,
+              "image": {
+                "pexels_query": "mens bomber jacket leather jacket on hanger",
+                "alt": "جاكيت رجالي على علاقة"
+              },
+              "products": [
+                {
+                  "name": "جاكيت Bomber Edge",
+                  "description": "جاكيت بومبر بتصميم عصري لإطلالة ستريت قوية ومناسبة للخروج.",
+                  "brand": "زارا",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "النوع": "بومبر",
+                    "الخامة": "مزيج",
+                    "الستايل": "ستريت",
+                    "الموسم": "خريف/شتاء"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "الخامة", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "MJ-BMB-A",
+                      "price": 79.0,
+                      "compare_at_price": 99.0,
+                      "quantity": 35,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "M" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" },
+                        "الخامة": { "value": "مزيج" }
+                      },
+                      "images": [
+                        { "pexels_query": "black bomber jacket on hanger studio", "alt": "جاكيت بومبر أسود على علاقة" },
+                        { "pexels_query": "bomber jacket zipper close up", "alt": "تفاصيل سحاب جاكيت بومبر" },
+                        { "pexels_query": "mens bomber jacket outfit street style", "alt": "تنسيق جاكيت بومبر ستريت ستايل" }
+                      ]
+                    },
+                    {
+                      "sku": "MJ-BMB-B",
+                      "price": 79.0,
+                      "compare_at_price": 99.0,
+                      "quantity": 30,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "L" },
+                        "اللون": { "value": "كحلي", "color_code": "#1B2A41" },
+                        "الخامة": { "value": "مزيج" }
+                      },
+                      "images": [
+                        { "pexels_query": "navy bomber jacket on hanger", "alt": "جاكيت بومبر كحلي" },
+                        { "pexels_query": "bomber jacket collar close up", "alt": "تفاصيل ياقة بومبر" },
+                        { "pexels_query": "navy bomber jacket casual outfit", "alt": "إطلالة كاجوال بجاكيت كحلي" }
+                      ]
+                    },
+                    {
+                      "sku": "MJ-BMB-C",
+                      "price": 89.0,
+                      "compare_at_price": 109.0,
+                      "quantity": 26,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "XL" },
+                        "اللون": { "value": "زيتي", "color_code": "#556B2F" },
+                        "الخامة": { "value": "مزيج" }
+                      },
+                      "images": [
+                        { "pexels_query": "olive bomber jacket streetwear on hanger", "alt": "جاكيت بومبر زيتي" },
+                        { "pexels_query": "olive jacket fabric close up", "alt": "تفاصيل خامة جاكيت زيتي" },
+                        { "pexels_query": "olive bomber jacket street style look", "alt": "تنسيق ستريت بجاكيت زيتي" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "جينز 501 ستايل (قصّة مستقيمة)",
+                  "description": "جينز مستقيم كلاسيكي يثبت حضوره في أي إطلالة.",
+                  "brand": "ليفايس",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "القصة": "مستقيمة",
+                    "الخامة": "دنيم",
+                    "الستايل": "كاجوال",
+                    "الخصر": "متوسط"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "القصة", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "JN-501-A",
+                      "price": 69.0,
+                      "compare_at_price": 89.0,
+                      "quantity": 70,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "32" },
+                        "اللون": { "value": "أزرق دنيم", "color_code": "#1E4ED8" },
+                        "القصة": { "value": "مستقيمة" }
+                      },
+                      "images": [
+                        { "pexels_query": "classic blue jeans folded denim texture", "alt": "جينز أزرق كلاسيكي" },
+                        { "pexels_query": "denim jeans stitching close up", "alt": "تفاصيل خياطة الدنيم" },
+                        { "pexels_query": "mens jeans outfit casual sneakers", "alt": "تنسيق جينز رجالي كاجوال" }
+                      ]
+                    },
+                    {
+                      "sku": "JN-501-B",
+                      "price": 69.0,
+                      "compare_at_price": 89.0,
+                      "quantity": 60,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "34" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" },
+                        "القصة": { "value": "مستقيمة" }
+                      },
+                      "images": [
+                        { "pexels_query": "black jeans folded minimal", "alt": "جينز أسود مطوي" },
+                        { "pexels_query": "black denim texture close up", "alt": "تفاصيل قماش دنيم أسود" },
+                        { "pexels_query": "black jeans outfit street style", "alt": "تنسيق جينز أسود ستريت" }
+                      ]
+                    },
+                    {
+                      "sku": "JN-501-C",
+                      "price": 74.0,
+                      "compare_at_price": 94.0,
+                      "quantity": 55,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "36" },
+                        "اللون": { "value": "رمادي", "color_code": "#9CA3AF" },
+                        "القصة": { "value": "مستقيمة" }
+                      },
+                      "images": [
+                        { "pexels_query": "grey jeans folded denim close up", "alt": "جينز رمادي مطوي" },
+                        { "pexels_query": "grey denim jeans close up texture", "alt": "تفاصيل خامة دنيم رمادي" },
+                        { "pexels_query": "grey jeans outfit smart casual", "alt": "تنسيق جينز رمادي شبه رسمي" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "رياضة",
+          "description": "ملابس تدريب وجري ويوغا بإطلالات قوية ومريحة للحركة.",
+          "status": 1,
+          "image": {
+            "pexels_query": "sportswear outfit gym training clothes on hanger",
+            "alt": "ملابس رياضية للتدريب"
+          },
+          "children": [
+            {
+              "name": "أطقم تدريب لافتة",
+              "description": "أطقم رياضية بألوان قوية وخامات مريحة لإطلالة جذابة في النادي.",
+              "status": 1,
+              "image": {
+                "pexels_query": "gym outfit set leggings sports bra hoodie flat lay",
+                "alt": "طقم رياضي بتصوير مسطح"
+              },
+              "products": [
+                {
+                  "name": "طقم Training Power (تيشيرت + بنطال)",
+                  "description": "طقم تدريب بخامة تنفّس وإطلالة نظيفة تناسب التمارين اليومية.",
+                  "brand": "نايكي",
+                  "status": 1,
+                  "featured": true,
+                  "specifications": {
+                    "الخامة": "تنفّس",
+                    "القطع": "تيشيرت + بنطال",
+                    "الاستخدام": "تدريب/جري",
+                    "القصة": "رياضية"
+                  },
+                  "attributes": [
+                    { "name": "المقاس", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "القصة", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "SP-TP-A",
+                      "price": 55.0,
+                      "compare_at_price": 69.0,
+                      "quantity": 75,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المقاس": { "value": "M" },
+                        "اللون": { "value": "أسود", "color_code": "#111111" },
+                        "القصة": { "value": "رياضية" }
+                      },
+                      "images": [
+                        { "pexels_query": "black training outfit set gym clothes flat lay", "alt": "طقم تدريب أسود بتصوير مسطح" },
+                        { "pexels_query": "sports fabric breathable texture close up", "alt": "تفاصيل خامة تنفّس رياضية" },
+                        { "pexels_query": "man wearing training outfit running", "alt": "شخص يرتدي طقم تدريب أثناء الجري" }
+                      ]
+                    },
+                    {
+                      "sku": "SP-TP-B",
+                      "price": 55.0,
+                      "compare_at_price": 69.0,
+                      "quantity": 68,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "L" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                        "القصة": { "value": "رياضية" }
+                      },
+                      "images": [
+                        { "pexels_query": "blue gym outfit training clothes flat lay", "alt": "طقم تدريب أزرق" },
+                        { "pexels_query": "blue sports shirt close up texture", "alt": "تفاصيل تيشيرت رياضي أزرق" },
+                        { "pexels_query": "athlete training outfit blue gym", "alt": "إطلالة تدريب باللون الأزرق" }
+                      ]
+                    },
+                    {
+                      "sku": "SP-TP-C",
+                      "price": 55.0,
+                      "compare_at_price": 69.0,
+                      "quantity": 62,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المقاس": { "value": "XL" },
+                        "اللون": { "value": "أحمر", "color_code": "#EF4444" },
+                        "القصة": { "value": "رياضية" }
+                      },
+                      "images": [
+                        { "pexels_query": "red training outfit gym clothes flat lay", "alt": "طقم تدريب أحمر" },
+                        { "pexels_query": "red sportswear fabric close up", "alt": "تفاصيل خامة رياضية حمراء" },
+                        { "pexels_query": "runner wearing red training outfit", "alt": "عدّاء يرتدي طقم تدريب أحمر" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }  

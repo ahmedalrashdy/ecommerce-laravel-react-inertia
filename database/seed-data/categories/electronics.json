@@ -1,0 +1,1226 @@
+{
+    "locale": "ar",
+    "brands": [
+      {
+        "name": "آبل",
+        "description": "علامة رائدة في الإلكترونيات الاستهلاكية بتصميم فاخر وتجربة استخدام مستقرة.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "Apple store logo sign exterior",
+          "alt": "شعار آبل على واجهة متجر"
+        }
+      },
+      {
+        "name": "سامسونج",
+        "description": "شركة عالمية تقدم هواتف وأجهزة منزلية وصوتيات عالية الجودة.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "Samsung store logo sign",
+          "alt": "شعار سامسونج"
+        }
+      },
+      {
+        "name": "سوني",
+        "description": "علامة يابانية معروفة بالصوتيات والتصوير والألعاب.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "Sony logo storefront",
+          "alt": "شعار سوني"
+        }
+      },
+      {
+        "name": "دِل",
+        "description": "علامة موثوقة في أجهزة الكمبيوتر المحمولة والمكتبية الموجهة للأعمال.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "Dell logo on laptop lid",
+          "alt": "شعار دِل على جهاز لابتوب"
+        }
+      },
+      {
+        "name": "لينوفو",
+        "description": "علامة متخصصة بأجهزة الحواسيب المكتبية والمحمولة للأعمال والاستخدام اليومي.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "Lenovo logo on laptop lid",
+          "alt": "شعار لينوفو على جهاز لابتوب"
+        }
+      },
+      {
+        "name": "كانون",
+        "description": "علامة تصوير احترافية معروفة بالكاميرات والعدسات.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "Canon camera logo",
+          "alt": "شعار كانون على كاميرا"
+        }
+      },
+      {
+        "name": "بوز",
+        "description": "شركة متخصصة في سماعات وصوتيات بجودة عالية.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "Bose logo on headphones",
+          "alt": "شعار بوز على سماعات"
+        }
+      },
+      {
+        "name": "دي جي آي",
+        "description": "شركة رائدة في الطائرات بدون طيار والكاميرات المحمولة.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "DJI drone flying in sky",
+          "alt": "درون دي جي آي في السماء"
+        }
+      },
+      {
+        "name": "نينتندو",
+        "description": "علامة ألعاب شهيرة بمنصات مناسبة للعائلة.",
+        "status": 1,
+        "featured": true,
+        "image": {
+          "pexels_query": "Nintendo Switch console on table",
+          "alt": "جهاز نينتندو سويتش على طاولة"
+        }
+      },
+      {
+        "name": "فيتبت",
+        "description": "علامة متخصصة في أجهزة تتبع اللياقة والصحة.",
+        "status": 1,
+        "featured": false,
+        "image": {
+          "pexels_query": "Fitbit fitness tracker on wrist",
+          "alt": "سوار فيتبت على المعصم"
+        }
+      }
+    ],
+    "root_category": {
+      "name": "الإلكترونيات",
+      "description": "أجهزة وتقنيات حديثة للاستخدام اليومي تشمل الحواسيب والهواتف والصوتيات والتصوير والألعاب.",
+      "status": 1,
+      "image": {
+        "pexels_query": "modern electronics store",
+        "alt": "متجر إلكترونيات حديث من الداخل"
+      },
+      "children": [
+        {
+          "name": "الحواسيب والأجهزة اللوحية",
+          "description": "أجهزة للعمل والدراسة والإبداع من لابتوبات ومكتبي وأجهزة لوحية.",
+          "status": 1,
+          "image": {
+            "pexels_query": "laptops and tablets on desk workspace",
+            "alt": "لابتوبات وأجهزة لوحية على مكتب عمل"
+          },
+          "children": [
+            {
+              "name": "حواسيب محمولة خفيفة",
+              "description": "لابتوبات نحيفة وخفيفة ببطارية طويلة.",
+              "status": 1,
+              "image": {
+                "pexels_query": "ultrabook laptop open on desk thin",
+                "alt": "لابتوب خفيف مفتوح على مكتب"
+              },
+              "products": [
+                {
+                  "name": "آبل ماك بوك إير M3 (13 بوصة)",
+                  "description": "لابتوب نحيف وأنيق للاستخدام اليومي مع أداء ممتاز للمهام الإنتاجية.",
+                  "brand": "آبل",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "13.6 بوصة Liquid Retina",
+                    "المعالج": "Apple M3",
+                    "البطارية": "حتى 18 ساعة",
+                    "الوزن": "حوالي 1.24 كجم"
+                  },
+                  "attributes": [
+                    { "name": "الرام", "type": 1 },
+                    { "name": "التخزين", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "MBA13M3-A",
+                      "price": 999.00,
+                      "compare_at_price": 1149.00,
+                      "quantity": 40,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الرام": { "value": "8 جيجابايت" },
+                        "التخزين": { "value": "256 جيجابايت" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" }
+                      },
+                      "images": [
+                        { "pexels_query": "MacBook Air M3 13 silver laptop open on desk", "alt": "ماك بوك إير M3 فضي مفتوح على مكتب" },
+                        { "pexels_query": "MacBook Air M3 silver keyboard close up", "alt": "تفاصيل لوحة مفاتيح ماك بوك إير M3 فضي" },
+                        { "pexels_query": "MacBook Air M3 silver laptop side profile", "alt": "جانب ماك بوك إير M3 فضي" }
+                      ]
+                    },
+                    {
+                      "sku": "MBA13M3-B",
+                      "price": 1199.00,
+                      "compare_at_price": 1349.00,
+                      "quantity": 40,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الرام": { "value": "16 جيجابايت" },
+                        "التخزين": { "value": "512 جيجابايت" },
+                        "اللون": { "value": "رمادي فضائي", "color_code": "#4B4B4B" }
+                      },
+                      "images": [
+                        { "pexels_query": "MacBook Air M3 13 space gray laptop open on desk", "alt": "ماك بوك إير M3 رمادي فضائي مفتوح على مكتب" },
+                        { "pexels_query": "MacBook Air M3 space gray keyboard close up", "alt": "تفاصيل لوحة مفاتيح ماك بوك إير M3 رمادي فضائي" },
+                        { "pexels_query": "MacBook Air M3 space gray laptop side profile", "alt": "جانب ماك بوك إير M3 رمادي فضائي" }
+                      ]
+                    },
+                    {
+                      "sku": "MBA13M3-C",
+                      "price": 1399.00,
+                      "compare_at_price": 1549.00,
+                      "quantity": 40,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الرام": { "value": "32 جيجابايت" },
+                        "التخزين": { "value": "1 تيرابايت" },
+                        "اللون": { "value": "ميدنايت", "color_code": "#1C1C1C" }
+                      },
+                      "images": [
+                        { "pexels_query": "MacBook Air M3 13 midnight laptop open on desk", "alt": "ماك بوك إير M3 لون ميدنايت مفتوح على مكتب" },
+                        { "pexels_query": "MacBook Air M3 midnight keyboard close up", "alt": "تفاصيل لوحة مفاتيح ماك بوك إير M3 لون ميدنايت" },
+                        { "pexels_query": "MacBook Air M3 midnight laptop side profile", "alt": "جانب ماك بوك إير M3 لون ميدنايت" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "دِل XPS 13 Plus",
+                  "description": "لابتوب فائق النحافة بتصميم معدني وأداء قوي للمهام الاحترافية.",
+                  "brand": "دِل",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "13.4 بوصة FHD+",
+                    "المعالج": "Intel Core i7",
+                    "البطارية": "حتى 14 ساعة",
+                    "الوزن": "حوالي 1.2 كجم"
+                  },
+                  "attributes": [
+                    { "name": "الرام", "type": 1 },
+                    { "name": "التخزين", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "XPS13P-A",
+                      "price": 1199.00,
+                      "compare_at_price": 1349.00,
+                      "quantity": 35,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الرام": { "value": "8 جيجابايت" },
+                        "التخزين": { "value": "256 جيجابايت" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" }
+                      },
+                      "images": [
+                        { "pexels_query": "Dell XPS 13 Plus silver laptop open on desk", "alt": "دِل XPS 13 Plus فضي مفتوح على مكتب" },
+                        { "pexels_query": "Dell XPS 13 Plus silver keyboard close up", "alt": "تفاصيل لوحة مفاتيح دِل XPS 13 Plus فضي" },
+                        { "pexels_query": "Dell XPS 13 Plus silver laptop side profile", "alt": "جانب دِل XPS 13 Plus فضي" }
+                      ]
+                    },
+                    {
+                      "sku": "XPS13P-B",
+                      "price": 1399.00,
+                      "compare_at_price": 1549.00,
+                      "quantity": 35,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الرام": { "value": "16 جيجابايت" },
+                        "التخزين": { "value": "512 جيجابايت" },
+                        "اللون": { "value": "رمادي فضائي", "color_code": "#4B4B4B" }
+                      },
+                      "images": [
+                        { "pexels_query": "Dell XPS 13 Plus space gray laptop open on desk", "alt": "دِل XPS 13 Plus رمادي فضائي مفتوح على مكتب" },
+                        { "pexels_query": "Dell XPS 13 Plus space gray keyboard close up", "alt": "تفاصيل لوحة مفاتيح دِل XPS 13 Plus رمادي فضائي" },
+                        { "pexels_query": "Dell XPS 13 Plus space gray laptop side profile", "alt": "جانب دِل XPS 13 Plus رمادي فضائي" }
+                      ]
+                    },
+                    {
+                      "sku": "XPS13P-C",
+                      "price": 1599.00,
+                      "compare_at_price": 1749.00,
+                      "quantity": 35,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الرام": { "value": "32 جيجابايت" },
+                        "التخزين": { "value": "1 تيرابايت" },
+                        "اللون": { "value": "ميدنايت", "color_code": "#1C1C1C" }
+                      },
+                      "images": [
+                        { "pexels_query": "Dell XPS 13 Plus midnight laptop open on desk", "alt": "دِل XPS 13 Plus لون ميدنايت مفتوح على مكتب" },
+                        { "pexels_query": "Dell XPS 13 Plus midnight keyboard close up", "alt": "تفاصيل لوحة مفاتيح دِل XPS 13 Plus لون ميدنايت" },
+                        { "pexels_query": "Dell XPS 13 Plus midnight laptop side profile", "alt": "جانب دِل XPS 13 Plus لون ميدنايت" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "لينوفو ThinkPad X1 Carbon Gen 11",
+                  "description": "لابتوب أعمال خفيف بمتانة عالية ولوحة مفاتيح مريحة.",
+                  "brand": "لينوفو",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "14 بوصة WUXGA",
+                    "المعالج": "Intel Core i7",
+                    "الأمان": "قارئ بصمة",
+                    "الوزن": "حوالي 1.12 كجم"
+                  },
+                  "attributes": [
+                    { "name": "الرام", "type": 1 },
+                    { "name": "التخزين", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "TPX1C11-A",
+                      "price": 1499.00,
+                      "compare_at_price": 1649.00,
+                      "quantity": 30,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الرام": { "value": "8 جيجابايت" },
+                        "التخزين": { "value": "256 جيجابايت" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" }
+                      },
+                      "images": [
+                        { "pexels_query": "ThinkPad X1 Carbon silver laptop open on desk", "alt": "لينوفو ThinkPad X1 Carbon فضي مفتوح على مكتب" },
+                        { "pexels_query": "ThinkPad X1 Carbon silver keyboard close up", "alt": "تفاصيل لوحة مفاتيح لينوفو ThinkPad X1 Carbon فضي" },
+                        { "pexels_query": "ThinkPad X1 Carbon silver laptop side profile", "alt": "جانب لينوفو ThinkPad X1 Carbon فضي" }
+                      ]
+                    },
+                    {
+                      "sku": "TPX1C11-B",
+                      "price": 1699.00,
+                      "compare_at_price": 1849.00,
+                      "quantity": 30,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الرام": { "value": "16 جيجابايت" },
+                        "التخزين": { "value": "512 جيجابايت" },
+                        "اللون": { "value": "رمادي فضائي", "color_code": "#4B4B4B" }
+                      },
+                      "images": [
+                        { "pexels_query": "ThinkPad X1 Carbon space gray laptop open on desk", "alt": "لينوفو ThinkPad X1 Carbon رمادي فضائي مفتوح على مكتب" },
+                        { "pexels_query": "ThinkPad X1 Carbon space gray keyboard close up", "alt": "تفاصيل لوحة مفاتيح لينوفو ThinkPad X1 Carbon رمادي فضائي" },
+                        { "pexels_query": "ThinkPad X1 Carbon space gray laptop side profile", "alt": "جانب لينوفو ThinkPad X1 Carbon رمادي فضائي" }
+                      ]
+                    },
+                    {
+                      "sku": "TPX1C11-C",
+                      "price": 1899.00,
+                      "compare_at_price": 2049.00,
+                      "quantity": 30,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الرام": { "value": "32 جيجابايت" },
+                        "التخزين": { "value": "1 تيرابايت" },
+                        "اللون": { "value": "ميدنايت", "color_code": "#1C1C1C" }
+                      },
+                      "images": [
+                        { "pexels_query": "ThinkPad X1 Carbon midnight laptop open on desk", "alt": "لينوفو ThinkPad X1 Carbon لون ميدنايت مفتوح على مكتب" },
+                        { "pexels_query": "ThinkPad X1 Carbon midnight keyboard close up", "alt": "تفاصيل لوحة مفاتيح لينوفو ThinkPad X1 Carbon لون ميدنايت" },
+                        { "pexels_query": "ThinkPad X1 Carbon midnight laptop side profile", "alt": "جانب لينوفو ThinkPad X1 Carbon لون ميدنايت" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "سامسونج Galaxy Book4 Pro 14",
+                  "description": "لابتوب أنيق بشاشة AMOLED وأداء قوي للتنقل والعمل.",
+                  "brand": "سامسونج",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "14 بوصة AMOLED",
+                    "المعالج": "Intel Core Ultra",
+                    "المنافذ": "USB-C + HDMI",
+                    "الوزن": "حوالي 1.23 كجم"
+                  },
+                  "attributes": [
+                    { "name": "الرام", "type": 1 },
+                    { "name": "التخزين", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "GB4P14-A",
+                      "price": 1299.00,
+                      "compare_at_price": 1449.00,
+                      "quantity": 32,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الرام": { "value": "8 جيجابايت" },
+                        "التخزين": { "value": "256 جيجابايت" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Book4 Pro 14 silver laptop open on desk", "alt": "سامسونج جالكسي بوك4 برو فضي مفتوح على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Book4 Pro silver keyboard close up", "alt": "تفاصيل لوحة مفاتيح سامسونج جالكسي بوك4 برو فضي" },
+                        { "pexels_query": "Samsung Galaxy Book4 Pro silver laptop side profile", "alt": "جانب سامسونج جالكسي بوك4 برو فضي" }
+                      ]
+                    },
+                    {
+                      "sku": "GB4P14-B",
+                      "price": 1499.00,
+                      "compare_at_price": 1649.00,
+                      "quantity": 32,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الرام": { "value": "16 جيجابايت" },
+                        "التخزين": { "value": "512 جيجابايت" },
+                        "اللون": { "value": "رمادي فضائي", "color_code": "#4B4B4B" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Book4 Pro 14 space gray laptop open on desk", "alt": "سامسونج جالكسي بوك4 برو رمادي فضائي مفتوح على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Book4 Pro space gray keyboard close up", "alt": "تفاصيل لوحة مفاتيح سامسونج جالكسي بوك4 برو رمادي فضائي" },
+                        { "pexels_query": "Samsung Galaxy Book4 Pro space gray laptop side profile", "alt": "جانب سامسونج جالكسي بوك4 برو رمادي فضائي" }
+                      ]
+                    },
+                    {
+                      "sku": "GB4P14-C",
+                      "price": 1699.00,
+                      "compare_at_price": 1849.00,
+                      "quantity": 32,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الرام": { "value": "32 جيجابايت" },
+                        "التخزين": { "value": "1 تيرابايت" },
+                        "اللون": { "value": "ميدنايت", "color_code": "#1C1C1C" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Book4 Pro 14 midnight laptop open on desk", "alt": "سامسونج جالكسي بوك4 برو لون ميدنايت مفتوح على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Book4 Pro midnight keyboard close up", "alt": "تفاصيل لوحة مفاتيح سامسونج جالكسي بوك4 برو لون ميدنايت" },
+                        { "pexels_query": "Samsung Galaxy Book4 Pro midnight laptop side profile", "alt": "جانب سامسونج جالكسي بوك4 برو لون ميدنايت" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "دِل Latitude 9440 2‑in‑1",
+                  "description": "لابتوب أعمال قابل للتحول مع شاشة لمس وهيكل معدني.",
+                  "brand": "دِل",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "14 بوصة لمس",
+                    "المعالج": "Intel Core i7",
+                    "الهيكل": "ألمنيوم",
+                    "المفصلات": "قابل للتحول"
+                  },
+                  "attributes": [
+                    { "name": "الرام", "type": 1 },
+                    { "name": "التخزين", "type": 1 },
+                    { "name": "اللون", "type": 2 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "DL9440-A",
+                      "price": 1099.00,
+                      "compare_at_price": 1249.00,
+                      "quantity": 28,
+                      "is_default": true,
+                      "attribute_values": {
+                        "الرام": { "value": "8 جيجابايت" },
+                        "التخزين": { "value": "256 جيجابايت" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" }
+                      },
+                      "images": [
+                        { "pexels_query": "Dell Latitude 9440 2 in 1 silver laptop open on desk", "alt": "دِل Latitude 9440 فضي مفتوح على مكتب" },
+                        { "pexels_query": "Dell Latitude 9440 silver keyboard close up", "alt": "تفاصيل لوحة مفاتيح دِل Latitude 9440 فضي" },
+                        { "pexels_query": "Dell Latitude 9440 silver laptop side profile", "alt": "جانب دِل Latitude 9440 فضي" }
+                      ]
+                    },
+                    {
+                      "sku": "DL9440-B",
+                      "price": 1299.00,
+                      "compare_at_price": 1449.00,
+                      "quantity": 28,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الرام": { "value": "16 جيجابايت" },
+                        "التخزين": { "value": "512 جيجابايت" },
+                        "اللون": { "value": "رمادي فضائي", "color_code": "#4B4B4B" }
+                      },
+                      "images": [
+                        { "pexels_query": "Dell Latitude 9440 2 in 1 space gray laptop open on desk", "alt": "دِل Latitude 9440 رمادي فضائي مفتوح على مكتب" },
+                        { "pexels_query": "Dell Latitude 9440 space gray keyboard close up", "alt": "تفاصيل لوحة مفاتيح دِل Latitude 9440 رمادي فضائي" },
+                        { "pexels_query": "Dell Latitude 9440 space gray laptop side profile", "alt": "جانب دِل Latitude 9440 رمادي فضائي" }
+                      ]
+                    },
+                    {
+                      "sku": "DL9440-C",
+                      "price": 1499.00,
+                      "compare_at_price": 1649.00,
+                      "quantity": 28,
+                      "is_default": false,
+                      "attribute_values": {
+                        "الرام": { "value": "32 جيجابايت" },
+                        "التخزين": { "value": "1 تيرابايت" },
+                        "اللون": { "value": "ميدنايت", "color_code": "#1C1C1C" }
+                      },
+                      "images": [
+                        { "pexels_query": "Dell Latitude 9440 2 in 1 midnight laptop open on desk", "alt": "دِل Latitude 9440 لون ميدنايت مفتوح على مكتب" },
+                        { "pexels_query": "Dell Latitude 9440 midnight keyboard close up", "alt": "تفاصيل لوحة مفاتيح دِل Latitude 9440 لون ميدنايت" },
+                        { "pexels_query": "Dell Latitude 9440 midnight laptop side profile", "alt": "جانب دِل Latitude 9440 لون ميدنايت" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "أجهزة مكتبية الكل‑في‑واحد",
+              "description": "أجهزة مكتبية مدمجة لشاشات نظيفة بدون كابلات كثيرة.",
+              "status": 1,
+              "image": {
+                "pexels_query": "all-in-one desktop computer on desk",
+                "alt": "كمبيوتر مكتبي كل في واحد على مكتب"
+              },
+              "products": [
+                {
+                  "name": "آبل iMac 24 بوصة M3",
+                  "description": "حاسوب مكتبي أنيق بشاشة كبيرة وأداء قوي للمنزل والعمل.",
+                  "brand": "آبل",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "24 بوصة 4.5K",
+                    "المعالج": "Apple M3",
+                    "الكاميرا": "1080p",
+                    "الصوت": "مكبرات ستيريو"
+                  },
+                  "attributes": [
+                    { "name": "المعالج", "type": 1 },
+                    { "name": "الرام", "type": 1 },
+                    { "name": "التخزين", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "IMAC24M3-A",
+                      "price": 1299.00,
+                      "compare_at_price": 1419.00,
+                      "quantity": 25,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i5" },
+                        "الرام": { "value": "8 جيجابايت" },
+                        "التخزين": { "value": "512 جيجابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "iMac 24 inch desktop on desk front view", "alt": "آي ماك 24 بوصة على مكتب - أمامي" },
+                        { "pexels_query": "iMac desktop display close up", "alt": "تفاصيل شاشة آي ماك" },
+                        { "pexels_query": "iMac desktop side profile", "alt": "جانب آي ماك" }
+                      ]
+                    },
+                    {
+                      "sku": "IMAC24M3-B",
+                      "price": 1499.00,
+                      "compare_at_price": 1619.00,
+                      "quantity": 25,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i7" },
+                        "الرام": { "value": "16 جيجابايت" },
+                        "التخزين": { "value": "1 تيرابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "iMac 24 inch desktop on desk clean setup", "alt": "آي ماك 24 بوصة على مكتب مرتب" },
+                        { "pexels_query": "iMac desktop keyboard and mouse close up", "alt": "تفاصيل لوحة مفاتيح وماوس آي ماك" },
+                        { "pexels_query": "iMac desktop side view", "alt": "منظر جانبي لآي ماك" }
+                      ]
+                    },
+                    {
+                      "sku": "IMAC24M3-C",
+                      "price": 1699.00,
+                      "compare_at_price": 1819.00,
+                      "quantity": 25,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i9" },
+                        "الرام": { "value": "32 جيجابايت" },
+                        "التخزين": { "value": "2 تيرابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "iMac desktop workstation creative studio", "alt": "آي ماك في استديو عمل إبداعي" },
+                        { "pexels_query": "iMac desktop screen close up", "alt": "لقطة مقرّبة لشاشة آي ماك" },
+                        { "pexels_query": "iMac desktop angled view", "alt": "آي ماك بزاوية مائلة" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "دِل Inspiron 24 AIO",
+                  "description": "حاسوب مكتبي متكامل مناسب للدراسة والاستخدام المنزلي.",
+                  "brand": "دِل",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "24 بوصة FHD",
+                    "الكاميرا": "HD",
+                    "اللاسلكي": "Wi‑Fi 6",
+                    "الصوت": "ستيريو"
+                  },
+                  "attributes": [
+                    { "name": "المعالج", "type": 1 },
+                    { "name": "الرام", "type": 1 },
+                    { "name": "التخزين", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "DLIN24-A",
+                      "price": 899.00,
+                      "compare_at_price": 1019.00,
+                      "quantity": 25,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i5" },
+                        "الرام": { "value": "8 جيجابايت" },
+                        "التخزين": { "value": "512 جيجابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "Dell Inspiron 24 all in one desktop on desk", "alt": "دِل Inspiron 24 على مكتب" },
+                        { "pexels_query": "Dell all in one desktop display close up", "alt": "تفاصيل شاشة دِل الكل في واحد" },
+                        { "pexels_query": "Dell all in one desktop side view", "alt": "جانب دِل الكل في واحد" }
+                      ]
+                    },
+                    {
+                      "sku": "DLIN24-B",
+                      "price": 1099.00,
+                      "compare_at_price": 1219.00,
+                      "quantity": 25,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i7" },
+                        "الرام": { "value": "16 جيجابايت" },
+                        "التخزين": { "value": "1 تيرابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "Dell Inspiron all in one desktop clean workspace", "alt": "دِل Inspiron على مكتب مرتب" },
+                        { "pexels_query": "Dell all in one keyboard and mouse", "alt": "لوحة مفاتيح وماوس دِل" },
+                        { "pexels_query": "Dell all in one desktop angled view", "alt": "دِل الكل في واحد بزاوية" }
+                      ]
+                    },
+                    {
+                      "sku": "DLIN24-C",
+                      "price": 1249.00,
+                      "compare_at_price": 1369.00,
+                      "quantity": 25,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i9" },
+                        "الرام": { "value": "32 جيجابايت" },
+                        "التخزين": { "value": "2 تيرابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "all in one desktop computer professional office", "alt": "كمبيوتر كل في واحد في مكتب احترافي" },
+                        { "pexels_query": "all in one desktop screen close up", "alt": "لقطة مقرّبة لشاشة كمبيوتر كل في واحد" },
+                        { "pexels_query": "all in one desktop side profile", "alt": "الجانب الجانبي لكمبيوتر كل في واحد" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "لينوفو IdeaCentre AIO 5 27",
+                  "description": "حاسوب مكتبي متكامل بشاشة كبيرة يناسب الأعمال المنزلية.",
+                  "brand": "لينوفو",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "27 بوصة IPS",
+                    "الكاميرا": "1080p",
+                    "اللاسلكي": "Wi‑Fi 6",
+                    "الصوت": "ستيريو"
+                  },
+                  "attributes": [
+                    { "name": "المعالج", "type": 1 },
+                    { "name": "الرام", "type": 1 },
+                    { "name": "التخزين", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "LVAIO527-A",
+                      "price": 999.00,
+                      "compare_at_price": 1119.00,
+                      "quantity": 20,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i5" },
+                        "الرام": { "value": "8 جيجابايت" },
+                        "التخزين": { "value": "512 جيجابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "Lenovo IdeaCentre all in one desktop on desk", "alt": "لينوفو IdeaCentre على مكتب" },
+                        { "pexels_query": "Lenovo all in one desktop display close up", "alt": "تفاصيل شاشة لينوفو الكل في واحد" },
+                        { "pexels_query": "Lenovo all in one desktop side view", "alt": "جانب لينوفو الكل في واحد" }
+                      ]
+                    },
+                    {
+                      "sku": "LVAIO527-B",
+                      "price": 1199.00,
+                      "compare_at_price": 1319.00,
+                      "quantity": 20,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i7" },
+                        "الرام": { "value": "16 جيجابايت" },
+                        "التخزين": { "value": "1 تيرابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "Lenovo all in one desktop clean workspace", "alt": "لينوفو الكل في واحد على مكتب مرتب" },
+                        { "pexels_query": "Lenovo all in one keyboard and mouse", "alt": "لوحة مفاتيح وماوس لينوفو" },
+                        { "pexels_query": "Lenovo all in one desktop angled view", "alt": "لينوفو الكل في واحد بزاوية" }
+                      ]
+                    },
+                    {
+                      "sku": "LVAIO527-C",
+                      "price": 1399.00,
+                      "compare_at_price": 1519.00,
+                      "quantity": 20,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i9" },
+                        "الرام": { "value": "32 جيجابايت" },
+                        "التخزين": { "value": "2 تيرابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "all in one desktop computer large screen office", "alt": "كمبيوتر كل في واحد بشاشة كبيرة في مكتب" },
+                        { "pexels_query": "all in one desktop screen close up", "alt": "لقطة مقرّبة لشاشة كمبيوتر كل في واحد" },
+                        { "pexels_query": "all in one desktop side profile", "alt": "جانب كمبيوتر كل في واحد" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "سامسونج All‑in‑One Pro 27",
+                  "description": "جهاز مكتبي متكامل بشاشة واسعة للعمل والترفيه.",
+                  "brand": "سامسونج",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "27 بوصة IPS",
+                    "الكاميرا": "1080p",
+                    "اللاسلكي": "Wi‑Fi 6",
+                    "الصوت": "ستيريو"
+                  },
+                  "attributes": [
+                    { "name": "المعالج", "type": 1 },
+                    { "name": "الرام", "type": 1 },
+                    { "name": "التخزين", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "SMAIO27-A",
+                      "price": 949.00,
+                      "compare_at_price": 1069.00,
+                      "quantity": 20,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i5" },
+                        "الرام": { "value": "8 جيجابايت" },
+                        "التخزين": { "value": "512 جيجابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung all in one desktop on desk", "alt": "سامسونج الكل في واحد على مكتب" },
+                        { "pexels_query": "Samsung all in one desktop display close up", "alt": "تفاصيل شاشة سامسونج الكل في واحد" },
+                        { "pexels_query": "Samsung all in one desktop side view", "alt": "جانب سامسونج الكل في واحد" }
+                      ]
+                    },
+                    {
+                      "sku": "SMAIO27-B",
+                      "price": 1149.00,
+                      "compare_at_price": 1269.00,
+                      "quantity": 20,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i7" },
+                        "الرام": { "value": "16 جيجابايت" },
+                        "التخزين": { "value": "1 تيرابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung all in one desktop clean workspace", "alt": "سامسونج الكل في واحد على مكتب مرتب" },
+                        { "pexels_query": "Samsung all in one keyboard and mouse", "alt": "لوحة مفاتيح وماوس سامسونج" },
+                        { "pexels_query": "Samsung all in one desktop angled view", "alt": "سامسونج الكل في واحد بزاوية" }
+                      ]
+                    },
+                    {
+                      "sku": "SMAIO27-C",
+                      "price": 1349.00,
+                      "compare_at_price": 1469.00,
+                      "quantity": 20,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i9" },
+                        "الرام": { "value": "32 جيجابايت" },
+                        "التخزين": { "value": "2 تيرابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "all in one desktop computer modern office", "alt": "كمبيوتر كل في واحد في مكتب حديث" },
+                        { "pexels_query": "all in one desktop screen close up", "alt": "لقطة مقرّبة لشاشة كمبيوتر كل في واحد" },
+                        { "pexels_query": "all in one desktop side profile", "alt": "جانب كمبيوتر كل في واحد" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "دِل OptiPlex 7410 AIO",
+                  "description": "حاسوب مكتبي احترافي مناسب للشركات والمكاتب.",
+                  "brand": "دِل",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "24 بوصة FHD",
+                    "الأمان": "TPM",
+                    "اللاسلكي": "Wi‑Fi 6",
+                    "الصوت": "ستيريو"
+                  },
+                  "attributes": [
+                    { "name": "المعالج", "type": 1 },
+                    { "name": "الرام", "type": 1 },
+                    { "name": "التخزين", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "DLOPT7410-A",
+                      "price": 1049.00,
+                      "compare_at_price": 1169.00,
+                      "quantity": 18,
+                      "is_default": true,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i5" },
+                        "الرام": { "value": "8 جيجابايت" },
+                        "التخزين": { "value": "512 جيجابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "Dell OptiPlex all in one desktop on desk", "alt": "دِل OptiPlex الكل في واحد على مكتب" },
+                        { "pexels_query": "Dell OptiPlex all in one display close up", "alt": "تفاصيل شاشة دِل OptiPlex" },
+                        { "pexels_query": "Dell OptiPlex all in one side view", "alt": "جانب دِل OptiPlex الكل في واحد" }
+                      ]
+                    },
+                    {
+                      "sku": "DLOPT7410-B",
+                      "price": 1249.00,
+                      "compare_at_price": 1369.00,
+                      "quantity": 18,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i7" },
+                        "الرام": { "value": "16 جيجابايت" },
+                        "التخزين": { "value": "1 تيرابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "Dell OptiPlex all in one clean office setup", "alt": "دِل OptiPlex في مكتب مرتب" },
+                        { "pexels_query": "Dell OptiPlex keyboard and mouse", "alt": "لوحة مفاتيح وماوس دِل OptiPlex" },
+                        { "pexels_query": "Dell OptiPlex all in one angled view", "alt": "دِل OptiPlex بزاوية" }
+                      ]
+                    },
+                    {
+                      "sku": "DLOPT7410-C",
+                      "price": 1449.00,
+                      "compare_at_price": 1569.00,
+                      "quantity": 18,
+                      "is_default": false,
+                      "attribute_values": {
+                        "المعالج": { "value": "Intel Core i9" },
+                        "الرام": { "value": "32 جيجابايت" },
+                        "التخزين": { "value": "2 تيرابايت SSD" }
+                      },
+                      "images": [
+                        { "pexels_query": "all in one desktop computer corporate office", "alt": "كمبيوتر كل في واحد في مكتب شركات" },
+                        { "pexels_query": "all in one desktop screen close up", "alt": "لقطة مقرّبة لشاشة كمبيوتر كل في واحد" },
+                        { "pexels_query": "all in one desktop side profile", "alt": "جانب كمبيوتر كل في واحد" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "أجهزة لوحية أندرويد",
+              "description": "أجهزة لوحية مرنة للدراسة والترفيه والرسم.",
+              "status": 1,
+              "image": {
+                "pexels_query": "android tablet on desk stylus",
+                "alt": "جهاز لوحي أندرويد مع قلم"
+              },
+              "products": [
+                {
+                  "name": "سامسونج Galaxy Tab S9",
+                  "description": "تابلت رائد بشاشة رائعة وقلم للكتابة والرسم.",
+                  "brand": "سامسونج",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "11 بوصة AMOLED",
+                    "القلم": "يدعم قلم S Pen",
+                    "البطارية": "حتى 14 ساعة",
+                    "السماعات": "رباعية"
+                  },
+                  "attributes": [
+                    { "name": "التخزين", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "الاتصال", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "TABS9-A",
+                      "price": 699.00,
+                      "compare_at_price": 779.00,
+                      "quantity": 60,
+                      "is_default": true,
+                      "attribute_values": {
+                        "التخزين": { "value": "128 جيجابايت" },
+                        "اللون": { "value": "جرافيت", "color_code": "#2F2F2F" },
+                        "الاتصال": { "value": "Wi‑Fi" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Tab S9 graphite tablet on desk", "alt": "جالكسي تاب S9 جرافيت على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 graphite tablet with stylus", "alt": "جالكسي تاب S9 جرافيت مع قلم" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 graphite tablet in hands", "alt": "جالكسي تاب S9 جرافيت في اليد" }
+                      ]
+                    },
+                    {
+                      "sku": "TABS9-B",
+                      "price": 799.00,
+                      "compare_at_price": 879.00,
+                      "quantity": 60,
+                      "is_default": false,
+                      "attribute_values": {
+                        "التخزين": { "value": "256 جيجابايت" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                        "الاتصال": { "value": "Wi‑Fi + 5G" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Tab S9 silver tablet on desk", "alt": "جالكسي تاب S9 فضي على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 silver tablet with stylus close up", "alt": "تفاصيل تابلت جالكسي تاب S9 فضي مع قلم" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 silver tablet in hands", "alt": "جالكسي تاب S9 فضي في اليد" }
+                      ]
+                    },
+                    {
+                      "sku": "TABS9-C",
+                      "price": 899.00,
+                      "compare_at_price": 979.00,
+                      "quantity": 60,
+                      "is_default": false,
+                      "attribute_values": {
+                        "التخزين": { "value": "512 جيجابايت" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                        "الاتصال": { "value": "Wi‑Fi + 5G" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Tab S9 blue tablet on desk", "alt": "جالكسي تاب S9 أزرق على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 blue tablet with stylus close up", "alt": "تفاصيل تابلت جالكسي تاب S9 أزرق مع قلم" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 blue tablet in hands", "alt": "جالكسي تاب S9 أزرق في اليد" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "لينوفو Tab P12 Pro",
+                  "description": "تابلت قوي مناسب للعمل والترفيه مع شاشة كبيرة.",
+                  "brand": "لينوفو",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "12.6 بوصة OLED",
+                    "القلم": "يدعم قلم",
+                    "البطارية": "حتى 14 ساعة",
+                    "السماعات": "رباعية"
+                  },
+                  "attributes": [
+                    { "name": "التخزين", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "الاتصال", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "LVP12P-A",
+                      "price": 599.00,
+                      "compare_at_price": 679.00,
+                      "quantity": 55,
+                      "is_default": true,
+                      "attribute_values": {
+                        "التخزين": { "value": "128 جيجابايت" },
+                        "اللون": { "value": "جرافيت", "color_code": "#2F2F2F" },
+                        "الاتصال": { "value": "Wi‑Fi" }
+                      },
+                      "images": [
+                        { "pexels_query": "Lenovo Tab P12 Pro graphite tablet on desk", "alt": "لينوفو Tab P12 Pro جرافيت على مكتب" },
+                        { "pexels_query": "Lenovo Tab P12 Pro graphite tablet with stylus", "alt": "لينوفو Tab P12 Pro جرافيت مع قلم" },
+                        { "pexels_query": "Lenovo Tab P12 Pro graphite tablet in hands", "alt": "لينوفو Tab P12 Pro جرافيت في اليد" }
+                      ]
+                    },
+                    {
+                      "sku": "LVP12P-B",
+                      "price": 699.00,
+                      "compare_at_price": 779.00,
+                      "quantity": 55,
+                      "is_default": false,
+                      "attribute_values": {
+                        "التخزين": { "value": "256 جيجابايت" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                        "الاتصال": { "value": "Wi‑Fi + 5G" }
+                      },
+                      "images": [
+                        { "pexels_query": "Lenovo Tab P12 Pro silver tablet on desk", "alt": "لينوفو Tab P12 Pro فضي على مكتب" },
+                        { "pexels_query": "Lenovo Tab P12 Pro silver tablet with stylus close up", "alt": "تفاصيل لينوفو Tab P12 Pro فضي مع قلم" },
+                        { "pexels_query": "Lenovo Tab P12 Pro silver tablet in hands", "alt": "لينوفو Tab P12 Pro فضي في اليد" }
+                      ]
+                    },
+                    {
+                      "sku": "LVP12P-C",
+                      "price": 799.00,
+                      "compare_at_price": 879.00,
+                      "quantity": 55,
+                      "is_default": false,
+                      "attribute_values": {
+                        "التخزين": { "value": "512 جيجابايت" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                        "الاتصال": { "value": "Wi‑Fi + 5G" }
+                      },
+                      "images": [
+                        { "pexels_query": "Lenovo Tab P12 Pro blue tablet on desk", "alt": "لينوفو Tab P12 Pro أزرق على مكتب" },
+                        { "pexels_query": "Lenovo Tab P12 Pro blue tablet with stylus close up", "alt": "تفاصيل لينوفو Tab P12 Pro أزرق مع قلم" },
+                        { "pexels_query": "Lenovo Tab P12 Pro blue tablet in hands", "alt": "لينوفو Tab P12 Pro أزرق في اليد" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "سامسونج Galaxy Tab S9 FE",
+                  "description": "تابلت متوازن بسعر مناسب مع أداء ثابت للدراسة.",
+                  "brand": "سامسونج",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "10.9 بوصة",
+                    "القلم": "يدعم قلم S Pen",
+                    "البطارية": "حتى 13 ساعة",
+                    "السماعات": "ستيريو"
+                  },
+                  "attributes": [
+                    { "name": "التخزين", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "الاتصال", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "TABS9FE-A",
+                      "price": 549.00,
+                      "compare_at_price": 629.00,
+                      "quantity": 60,
+                      "is_default": true,
+                      "attribute_values": {
+                        "التخزين": { "value": "128 جيجابايت" },
+                        "اللون": { "value": "جرافيت", "color_code": "#2F2F2F" },
+                        "الاتصال": { "value": "Wi‑Fi" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Tab S9 FE graphite tablet on desk", "alt": "جالكسي تاب S9 FE جرافيت على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 FE graphite tablet with stylus", "alt": "جالكسي تاب S9 FE جرافيت مع قلم" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 FE graphite tablet in hands", "alt": "جالكسي تاب S9 FE جرافيت في اليد" }
+                      ]
+                    },
+                    {
+                      "sku": "TABS9FE-B",
+                      "price": 649.00,
+                      "compare_at_price": 729.00,
+                      "quantity": 60,
+                      "is_default": false,
+                      "attribute_values": {
+                        "التخزين": { "value": "256 جيجابايت" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                        "الاتصال": { "value": "Wi‑Fi + 5G" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Tab S9 FE silver tablet on desk", "alt": "جالكسي تاب S9 FE فضي على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 FE silver tablet with stylus close up", "alt": "تفاصيل جالكسي تاب S9 FE فضي مع قلم" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 FE silver tablet in hands", "alt": "جالكسي تاب S9 FE فضي في اليد" }
+                      ]
+                    },
+                    {
+                      "sku": "TABS9FE-C",
+                      "price": 749.00,
+                      "compare_at_price": 829.00,
+                      "quantity": 60,
+                      "is_default": false,
+                      "attribute_values": {
+                        "التخزين": { "value": "512 جيجابايت" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                        "الاتصال": { "value": "Wi‑Fi + 5G" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Tab S9 FE blue tablet on desk", "alt": "جالكسي تاب S9 FE أزرق على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 FE blue tablet with stylus close up", "alt": "تفاصيل جالكسي تاب S9 FE أزرق مع قلم" },
+                        { "pexels_query": "Samsung Galaxy Tab S9 FE blue tablet in hands", "alt": "جالكسي تاب S9 FE أزرق في اليد" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "سامسونج Galaxy Tab A9+",
+                  "description": "تابلت عملي للاستخدام اليومي والمحتوى التعليمي.",
+                  "brand": "سامسونج",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "11 بوصة",
+                    "البطارية": "حتى 12 ساعة",
+                    "السماعات": "ستيريو",
+                    "الذاكرة": "قابل للتوسعة"
+                  },
+                  "attributes": [
+                    { "name": "التخزين", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "الاتصال", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "TABA9P-A",
+                      "price": 329.00,
+                      "compare_at_price": 409.00,
+                      "quantity": 70,
+                      "is_default": true,
+                      "attribute_values": {
+                        "التخزين": { "value": "128 جيجابايت" },
+                        "اللون": { "value": "جرافيت", "color_code": "#2F2F2F" },
+                        "الاتصال": { "value": "Wi‑Fi" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Tab A9 Plus graphite tablet on desk", "alt": "جالكسي تاب A9+ جرافيت على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Tab A9 Plus graphite tablet close up", "alt": "تفاصيل جالكسي تاب A9+ جرافيت" },
+                        { "pexels_query": "Samsung Galaxy Tab A9 Plus graphite tablet in hands", "alt": "جالكسي تاب A9+ جرافيت في اليد" }
+                      ]
+                    },
+                    {
+                      "sku": "TABA9P-B",
+                      "price": 429.00,
+                      "compare_at_price": 509.00,
+                      "quantity": 70,
+                      "is_default": false,
+                      "attribute_values": {
+                        "التخزين": { "value": "256 جيجابايت" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                        "الاتصال": { "value": "Wi‑Fi + 5G" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Tab A9 Plus silver tablet on desk", "alt": "جالكسي تاب A9+ فضي على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Tab A9 Plus silver tablet close up", "alt": "تفاصيل جالكسي تاب A9+ فضي" },
+                        { "pexels_query": "Samsung Galaxy Tab A9 Plus silver tablet in hands", "alt": "جالكسي تاب A9+ فضي في اليد" }
+                      ]
+                    },
+                    {
+                      "sku": "TABA9P-C",
+                      "price": 529.00,
+                      "compare_at_price": 609.00,
+                      "quantity": 70,
+                      "is_default": false,
+                      "attribute_values": {
+                        "التخزين": { "value": "512 جيجابايت" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                        "الاتصال": { "value": "Wi‑Fi + 5G" }
+                      },
+                      "images": [
+                        { "pexels_query": "Samsung Galaxy Tab A9 Plus blue tablet on desk", "alt": "جالكسي تاب A9+ أزرق على مكتب" },
+                        { "pexels_query": "Samsung Galaxy Tab A9 Plus blue tablet close up", "alt": "تفاصيل جالكسي تاب A9+ أزرق" },
+                        { "pexels_query": "Samsung Galaxy Tab A9 Plus blue tablet in hands", "alt": "جالكسي تاب A9+ أزرق في اليد" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "لينوفو Tab M11",
+                  "description": "تابلت خفيف للاستخدام اليومي والمذاكرة.",
+                  "brand": "لينوفو",
+                  "status": 1,
+                  "featured": false,
+                  "specifications": {
+                    "الشاشة": "11 بوصة",
+                    "البطارية": "حتى 12 ساعة",
+                    "السماعات": "ستيريو",
+                    "الذاكرة": "قابل للتوسعة"
+                  },
+                  "attributes": [
+                    { "name": "التخزين", "type": 1 },
+                    { "name": "اللون", "type": 2 },
+                    { "name": "الاتصال", "type": 1 }
+                  ],
+                  "variants": [
+                    {
+                      "sku": "LVM11-A",
+                      "price": 349.00,
+                      "compare_at_price": 429.00,
+                      "quantity": 65,
+                      "is_default": true,
+                      "attribute_values": {
+                        "التخزين": { "value": "128 جيجابايت" },
+                        "اللون": { "value": "جرافيت", "color_code": "#2F2F2F" },
+                        "الاتصال": { "value": "Wi‑Fi" }
+                      },
+                      "images": [
+                        { "pexels_query": "Lenovo Tab M11 graphite tablet on desk", "alt": "لينوفو Tab M11 جرافيت على مكتب" },
+                        { "pexels_query": "Lenovo Tab M11 graphite tablet close up", "alt": "تفاصيل لينوفو Tab M11 جرافيت" },
+                        { "pexels_query": "Lenovo Tab M11 graphite tablet in hands", "alt": "لينوفو Tab M11 جرافيت في اليد" }
+                      ]
+                    },
+                    {
+                      "sku": "LVM11-B",
+                      "price": 449.00,
+                      "compare_at_price": 529.00,
+                      "quantity": 65,
+                      "is_default": false,
+                      "attribute_values": {
+                        "التخزين": { "value": "256 جيجابايت" },
+                        "اللون": { "value": "فضي", "color_code": "#C0C0C0" },
+                        "الاتصال": { "value": "Wi‑Fi + 5G" }
+                      },
+                      "images": [
+                        { "pexels_query": "Lenovo Tab M11 silver tablet on desk", "alt": "لينوفو Tab M11 فضي على مكتب" },
+                        { "pexels_query": "Lenovo Tab M11 silver tablet close up", "alt": "تفاصيل لينوفو Tab M11 فضي" },
+                        { "pexels_query": "Lenovo Tab M11 silver tablet in hands", "alt": "لينوفو Tab M11 فضي في اليد" }
+                      ]
+                    },
+                    {
+                      "sku": "LVM11-C",
+                      "price": 549.00,
+                      "compare_at_price": 629.00,
+                      "quantity": 65,
+                      "is_default": false,
+                      "attribute_values": {
+                        "التخزين": { "value": "512 جيجابايت" },
+                        "اللون": { "value": "أزرق", "color_code": "#1E4ED8" },
+                        "الاتصال": { "value": "Wi‑Fi + 5G" }
+                      },
+                      "images": [
+                        { "pexels_query": "Lenovo Tab M11 blue tablet on desk", "alt": "لينوفو Tab M11 أزرق على مكتب" },
+                        { "pexels_query": "Lenovo Tab M11 blue tablet close up", "alt": "تفاصيل لينوفو Tab M11 أزرق" },
+                        { "pexels_query": "Lenovo Tab M11 blue tablet in hands", "alt": "لينوفو Tab M11 أزرق في اليد" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }]
+    }
+}
+        
+  

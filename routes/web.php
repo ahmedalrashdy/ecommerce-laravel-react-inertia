@@ -26,6 +26,7 @@ use App\Http\Controllers\Store\Support\SupportController;
 use App\Http\Controllers\Store\Wishlist\WishlistController;
 use App\Http\Middleware\EnsureIdempotencyKey;
 use App\Http\Middleware\HandleInertiaRequests;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 // store
@@ -127,7 +128,10 @@ use Illuminate\Support\Facades\Route;
             Route::get('/returns/{returnOrder}', [ReturnDetailsController::class, 'show'])->name('returns.show');
         });
     });
-
+Route::get('test', function () {
+    // Product::query()->doesntHave('defaultVariant')->forceDelete();
+    return 'done';
+});
 Route::post('/payments/webhook/stripe', StripeWebhookController::class)
     ->middleware('throttle:60,1')
     ->name('stripe.webhook');

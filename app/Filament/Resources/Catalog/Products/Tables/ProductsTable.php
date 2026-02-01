@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Catalog\Products\Tables;
 
 use App\Enums\ProductStatus;
+use App\Models\Product;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
@@ -14,13 +15,22 @@ use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 class ProductsTable
 {
     public static function configure(Table $table): Table
     {
         return $table
-            ->modifyQueryUsing(fn ($query) => $query->with(['category', 'brand', 'defaultVariant.defaultImage']))
+            ->modifyQueryUsing(function (Builder $query, $livewire): Builder {
+                $search = trim((string) ($livewire->tableSearch ?? ''));
+                $with = ['category', 'brand', 'defaultVariant.defaultImage'];
+                if ($search !== '') {
+                    $with[] = 'variants';
+                }
+
+                return $query->with($with);
+            })
             ->columns([
                 ImageColumn::make('defaultVariant.defaultImage.path')
                     ->label(__('validation.attributes.image'))
@@ -35,6 +45,31 @@ class ProductsTable
                     ->weight('bold')
                     ->copyable()
                     ->copyMessage(__('filament.messages.slug_copied')),
+
+                TextColumn::make('display_variant_sku')
+                    ->label(__('validation.attributes.sku'))
+                    ->getStateUsing(function (Product $record): ?string {
+                        $search = trim((string) (\Livewire\Livewire::current()?->tableSearch ?? ''));
+                        if ($search !== '' && $record->relationLoaded('variants')) {
+                            $variant = $record->variants
+                                ->filter(fn ($v) => str_contains(strtolower($v->sku), strtolower($search)))
+                                ->sortByDesc('is_default')
+                                ->sortBy('id')
+                                ->first();
+
+                            return $variant?->sku ?? $record->defaultVariant?->sku;
+                        }
+
+                        return $record->defaultVariant?->sku;
+                    })
+                    ->searchable(query: fn (Builder $query, string $search): Builder => $query->whereHas(
+                        'variants',
+                        fn (Builder $q): Builder => $q->where('sku', 'like', "%{$search}%")
+                    ))
+                    ->badge()
+                    ->color('gray')
+                    ->placeholder('—')
+                    ->toggleable(),
 
                 TextColumn::make('category.name')
                     ->label(__('validation.attributes.category_id'))

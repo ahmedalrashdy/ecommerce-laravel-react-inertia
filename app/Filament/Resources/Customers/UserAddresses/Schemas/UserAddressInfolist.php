@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Customers\UserAddresses\Schemas;
 
+use App\Filament\Schemas\Components\TimestampsSection;
 use Filament\Infolists\Components\IconEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Grid;
@@ -78,25 +79,8 @@ class UserAddressInfolist
                     ])
                     ->columnSpanFull(),
 
-                Section::make(__('validation.attributes.timestamps'))
-                    ->schema([
-                        Grid::make(2)
-                            ->schema([
-                                TextEntry::make('created_at')
-                                    ->label(__('validation.attributes.created_at'))
-                                    ->dateTime('d/m/Y H:i')
-                                    ->placeholder('—')
-                                    ->columnSpan(1),
-
-                                TextEntry::make('updated_at')
-                                    ->label(__('validation.attributes.updated_at'))
-                                    ->dateTime('d/m/Y H:i')
-                                    ->placeholder('—')
-                                    ->columnSpan(1),
-                            ]),
-                    ])
-                    ->columnSpanFull()
-                    ->collapsible(),
+                TimestampsSection::make()
+                    ->columnSpanFull(),
             ]);
     }
 }

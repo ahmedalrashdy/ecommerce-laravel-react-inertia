@@ -6,18 +6,28 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\ViewAction;
+use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\DB;
 
 class CartsTable
 {
     public static function configure(Table $table): Table
     {
         return $table
-            ->modifyQueryUsing(fn ($query) => $query->with(['user', 'items.productVariant.product']))
+            ->modifyQueryUsing(function (Builder $query): Builder {
+                $query->with(['user', 'items.productVariant.product'])
+                    ->withSum('items', 'quantity')
+                    ->addSelect([
+                        DB::raw('(SELECT COALESCE(SUM(ci.quantity * pv.price), 0) FROM cart_items ci INNER JOIN product_variants pv ON ci.product_variant_id = pv.id WHERE ci.cart_id = carts.id) as cart_total_price'),
+                    ]);
+
+                return $query;
+            })
             ->columns([
                 TextColumn::make('user.name')
                     ->label(__('validation.attributes.user'))
@@ -42,26 +52,16 @@ class CartsTable
                     ->badge()
                     ->color('primary'),
 
-                TextColumn::make('total_quantity')
+                TextColumn::make('items_sum_quantity')
                     ->label(__('filament.carts.total_quantity'))
-                    ->getStateUsing(function ($record) {
-                        return $record->items()->sum('quantity');
-                    })
                     ->numeric()
                     ->sortable()
                     ->badge()
-                    ->color('success'),
+                    ->color('success')
+                    ->default(0),
 
-                TextColumn::make('total_price')
+                TextColumn::make('cart_total_price')
                     ->label(__('filament.carts.total_price'))
-                    ->getStateUsing(function ($record) {
-                        return $record->items()
-                            ->with('productVariant')
-                            ->get()
-                            ->sum(function ($item) {
-                                return $item->productVariant->price * $item->quantity;
-                            });
-                    })
                     ->formatStateUsing(fn ($state): ?string => \App\Data\Casts\MoneyCast::format($state))
                     ->sortable()
                     ->badge()
@@ -80,6 +80,28 @@ class CartsTable
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
+                Filter::make('user_or_guest')
+                    ->label(__('filament.carts.user_or_guest'))
+                    ->form([
+                        Select::make('user_or_guest')
+                            ->options([
+                                'user' => __('filament.filters.user_only'),
+                                'guest' => __('filament.filters.guest_only'),
+                            ])
+                            ->placeholder(__('filament.filters.all')),
+                    ])
+                    ->query(function (Builder $query, array $data): Builder {
+                        $v = $data['user_or_guest'] ?? null;
+                        if ($v === 'user') {
+                            return $query->whereNotNull('user_id');
+                        }
+                        if ($v === 'guest') {
+                            return $query->whereNull('user_id');
+                        }
+
+                        return $query;
+                    }),
+
                 SelectFilter::make('user_id')
                     ->label(__('validation.attributes.user'))
                     ->relationship('user', 'name')

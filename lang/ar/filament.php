@@ -118,6 +118,8 @@ return [
         'non_admin_only' => 'غير مديرين فقط',
         'active_only' => 'نشط فقط',
         'inactive_only' => 'غير نشط فقط',
+        'user_only' => 'مستخدم',
+        'guest_only' => 'ضيف',
     ],
     'products' => [
         'variants_count' => 'عدد الخيارات',
@@ -285,6 +287,7 @@ HTML,
     'carts' => [
         'cart_info' => 'معلومات السلة',
         'statistics' => 'الإحصائيات',
+        'user_or_guest' => 'مستخدم أو ضيف',
         'items_count' => 'عدد العناصر',
         'total_quantity' => 'إجمالي الكمية',
         'total_price' => 'إجمالي السعر',

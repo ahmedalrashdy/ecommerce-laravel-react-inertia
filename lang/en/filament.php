@@ -112,6 +112,8 @@ return [
         'non_admin_only' => 'Non-Admins Only',
         'active_only' => 'Active Only',
         'inactive_only' => 'Inactive Only',
+        'user_only' => 'User',
+        'guest_only' => 'Guest',
     ],
     'products' => [
         'variants_count' => 'Variants Count',
@@ -294,6 +296,7 @@ HTML,
     'carts' => [
         'cart_info' => 'Cart Information',
         'statistics' => 'Statistics',
+        'user_or_guest' => 'User or Guest',
         'items_count' => 'Items Count',
         'total_quantity' => 'Total Quantity',
         'total_price' => 'Total Price',

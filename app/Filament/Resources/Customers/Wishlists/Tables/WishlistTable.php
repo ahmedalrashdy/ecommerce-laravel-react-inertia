@@ -117,7 +117,7 @@ class WishlistTable
                     ->label(__('validation.attributes.product'))
                     ->icon(\Filament\Support\Icons\Heroicon::OutlinedArrowTopRightOnSquare)
                     ->url(fn ($record) => $record->productVariant?->product?->slug
-                        ? route('filament.admin.resources.products.view', $record->productVariant->product->slug)
+                        ? route('filament.admin.resources.catalog.products.view', $record->productVariant->product->slug)
                         : null)
                     ->visible(fn ($record) => $record->productVariant?->product?->slug !== null),
                 DeleteAction::make()

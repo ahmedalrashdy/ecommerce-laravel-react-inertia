@@ -5,6 +5,7 @@ namespace App\Filament\Resources\OrdersManagement\Orders\Schemas;
 use App\Enums\OrderStatus;
 use App\Enums\PaymentMethod;
 use App\Enums\PaymentStatus;
+use App\Filament\Schemas\Components\TimestampsSection;
 use App\Models\Order;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Grid;
@@ -146,22 +147,7 @@ class OrderInfolist
                     ])
                     ->columnSpanFull(),
 
-                Section::make(__('validation.attributes.timestamps'))
-                    ->schema([
-                        Grid::make(2)
-                            ->schema([
-                                TextEntry::make('created_at')
-                                    ->label(__('validation.attributes.created_at'))
-                                    ->dateTime('d/m/Y H:i')
-                                    ->placeholder('—'),
-
-                                TextEntry::make('updated_at')
-                                    ->label(__('validation.attributes.updated_at'))
-                                    ->dateTime('d/m/Y H:i')
-                                    ->placeholder('—'),
-                            ]),
-                    ])
-                    ->collapsible(),
+                TimestampsSection::make(),
             ]);
     }
 

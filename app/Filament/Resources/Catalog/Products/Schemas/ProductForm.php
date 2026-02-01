@@ -6,6 +6,7 @@ use App\Enums\ProductStatus;
 use App\Models\Attribute;
 use App\Models\AttributeValue;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -86,7 +87,7 @@ class ProductForm
                             ->options(ProductStatus::class)
                             ->default(ProductStatus::Draft)
                             ->required()
-                            ->helperText(fn() => new \Illuminate\Support\HtmlString(__('filament.products.status_helper_html'))),
+                            ->helperText(fn () => new \Illuminate\Support\HtmlString(__('filament.products.status_helper_html'))),
                     ]),
             ]);
     }
@@ -98,20 +99,13 @@ class ProductForm
             ->schema([
                 Section::make()
                     ->schema([
-                        Repeater::make('specifications')
-                            ->label(__('filament.products.specifications'))
-                            ->schema([
-                                TextInput::make('key')
-                                    ->label(__('filament.products.specification_key'))
-                                    ->required()
-                                    ->maxLength(255),
-                                TextInput::make('value')
-                                    ->label(__('filament.products.specification_value'))
-                                    ->required()
-                                    ->maxLength(255),
-                            ])
-                            ->columns(2)
-                            ->defaultItems(0)
+                        KeyValue::make('specifications')
+                            ->label('مواصفات المنتج')
+                            ->keyLabel('الخاصية')
+                            ->valueLabel('القيمة')
+                            ->addActionLabel('إضافة خاصية')
+                            ->editableKeys()
+                            ->editableValues()
                             ->columnSpanFull(),
                     ])
                     ->columnSpanFull(),
@@ -169,7 +163,7 @@ class ProductForm
                                     ->label(__('filament.products.default_variant'))
                                     ->disabled()
                                     ->dehydrated(true)
-                                    ->afterStateHydrated(fn($component) => $component->state(true))
+                                    ->afterStateHydrated(fn ($component) => $component->state(true))
                                     ->required()
                                     ->helperText(__('filament.products.default_variant_helper')),
                                 static::attributeValues(),
@@ -187,7 +181,7 @@ class ProductForm
             ->schema([
                 Select::make('attribute_id')
                     ->label(__('validation.attributes.attribute'))
-                    ->options(fn() => Attribute::pluck('name', 'id'))
+                    ->options(fn () => Attribute::pluck('name', 'id'))
                     ->required()
                     ->distinct()
                     ->live()
@@ -196,7 +190,7 @@ class ProductForm
                     ->label(__('validation.attributes.value'))
                     ->options(function (Get $get) {
                         $attributeId = $get('attribute_id');
-                        if (!$attributeId) {
+                        if (! $attributeId) {
                             return [];
                         }
 
@@ -209,7 +203,7 @@ class ProductForm
             ->columns(2)
             ->minItems(1)
             ->defaultItems(1)
-            ->itemLabel(fn($state) => Attribute::find($state['attribute_id'] ?? null)?->name ?? __('filament.products.attribute'))
+            ->itemLabel(fn ($state) => Attribute::find($state['attribute_id'] ?? null)?->name ?? __('filament.products.attribute'))
             ->columnSpanFull()
             ->helperText(__('filament.products.attribute_values_helper'));
     }
@@ -229,7 +223,7 @@ class ProductForm
             ])->columns(3)
             ->minItems(1)
             ->defaultItems(1)
-            ->itemLabel(fn($state) => __('filament.products.image') . ' ' . (($state['display_order'] ?? 0) + 1))
+            ->itemLabel(fn ($state) => __('filament.products.image').' '.(($state['display_order'] ?? 0) + 1))
             ->columnSpanFull()->helperText(__('filament.products.variant_images_helper'))
             ->orderable('display_order');
     }

@@ -15,8 +15,6 @@ class CategoryForm
 {
     public static function configure(Schema $schema): Schema
     {
-        $isEdit = $schema->getOperation() == 'edit';
-
         return $schema
             ->components([
                 Section::make()

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Contracts\Payments\PaymentGatewayInterface;
 use App\Listeners\MergeSessionCart;
+use App\Listeners\SendWelcomeEmail;
 use App\Models\Attribute;
 use App\Models\Review;
 use App\Models\Wishlist;
@@ -15,6 +16,7 @@ use Faker\Factory as FakerFactory;
 use Faker\Generator as FakerGenerator;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Foundation\Support\Providers\EventServiceProvider as BaseEventServiceProvider;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\URL;
@@ -28,6 +30,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        BaseEventServiceProvider::disableEventDiscovery();
+
         $this->app->bind(PaymentGatewayInterface::class, function ($app): PaymentGatewayInterface {
             return match (config('payments.gateway')) {
                 'stripe' => $app->make(StripePaymentGateway::class),
@@ -51,7 +55,8 @@ class AppServiceProvider extends ServiceProvider
         Wishlist::observe(WishlistObserver::class);
         Event::listen(Login::class, MergeSessionCart::class);
         Event::listen(Registered::class, MergeSessionCart::class);
-
+        Event::listen(Login::class, SendWelcomeEmail::class);
+        Event::listen(Registered::class, SendWelcomeEmail::class);
         if (app()->environment('production')) {
             URL::forceScheme('https');
         }

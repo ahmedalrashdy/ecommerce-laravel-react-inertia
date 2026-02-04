@@ -89,7 +89,6 @@ class ReturnDetailsTest extends TestCase
         $response->assertInertia(
             fn (Assert $page) => $page
                 ->component('store/returns/show')
-                ->where('returnOrder.id', $returnOrder->id)
                 ->where('returnOrder.returnNumber', $returnOrder->return_number)
                 ->has('returnOrder.items', 1)
                 ->has('returnOrder.timeline', 1)

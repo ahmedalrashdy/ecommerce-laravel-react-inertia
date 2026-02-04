@@ -8,6 +8,7 @@ use App\Enums\PaymentMethod;
 use App\Enums\PaymentStatus;
 use App\Enums\TransactionStatus;
 use App\Enums\TransactionType;
+use App\Events\Orders\OrderPaymentSucceeded;
 use App\Models\Order;
 use App\Models\Transaction;
 use Brick\Money\Money;
@@ -110,6 +111,8 @@ class StripeWebhookService
                     'actor_type' => get_class($order->user),
                     'actor_id' => $order->user_id,
                 ]);
+
+                event(new OrderPaymentSucceeded($order));
             }
         });
     }

@@ -18,7 +18,7 @@ class ReturnRequestService
 {
     public function createRequest(ReturnCreationData $data, $user): ReturnOrder
     {
-        $order = Order::findOrFail($data->orderId);
+        $order = Order::findOrFail($data->getOrderId());
 
         // 1. التحقق من الأهلية
         // يجب أن يكون الطلب قد تم توصيله (Delivered)

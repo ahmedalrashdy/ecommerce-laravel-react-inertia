@@ -8,7 +8,6 @@ import { Link } from '@inertiajs/react';
 import { CalendarDays } from 'lucide-react';
 
 export type OrderSummary = {
-    id: number;
     orderNumber: string;
     status: number;
     statusLabel: string;
@@ -40,7 +39,7 @@ const statusTone: Record<number, string> = {
 };
 
 export function OrderCard({ order }: { order: OrderSummary }) {
-    const orderDetailsUrl = ordersRoutes.show(order.id).url;
+    const orderDetailsUrl = ordersRoutes.show(order.orderNumber).url;
 
     return (
         <Card className="group relative overflow-hidden border-border/60 bg-card/80 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
@@ -118,8 +117,8 @@ export function OrderCard({ order }: { order: OrderSummary }) {
                                         src={storageUrl(item.image)}
                                         alt={item.name}
                                         className="h-full w-full object-cover"
-                                           loading="lazy"
-                    decoding="async"
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 ) : (
                                     <div className="flex h-full w-full items-center justify-center text-xs font-semibold text-muted-foreground">
@@ -158,7 +157,11 @@ export function OrderCard({ order }: { order: OrderSummary }) {
                             asChild
                             size="sm"
                         >
-                            <Link href={paymentsRoutes.start(order.id).url}>
+                            <Link
+                                href={
+                                    paymentsRoutes.start(order.orderNumber).url
+                                }
+                            >
                                 إكمال الدفع
                             </Link>
                         </Button>
@@ -189,7 +192,7 @@ export function OrderCard({ order }: { order: OrderSummary }) {
                         <Link
                             method="post"
                             as="button"
-                            href={ordersRoutes.reorder(order.id).url}
+                            href={ordersRoutes.reorder(order.orderNumber).url}
                         >
                             إعادة الطلب
                         </Link>

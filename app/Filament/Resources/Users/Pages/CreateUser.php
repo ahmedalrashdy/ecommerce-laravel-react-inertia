@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\Users\Pages;
 
 use App\Filament\Resources\Users\UserResource;
-use App\Notifications\ForcedPasswordReset;
+use App\Notifications\Auth\ForcedPasswordReset;
 use Filament\Resources\Pages\CreateRecord;
 use Illuminate\Support\Facades\Password;
 

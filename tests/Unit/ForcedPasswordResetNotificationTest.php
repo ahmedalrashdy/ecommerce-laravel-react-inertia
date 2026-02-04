@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use App\Models\User;
-use App\Notifications\ForcedPasswordReset;
+use App\Notifications\Auth\ForcedPasswordReset;
 use Illuminate\Support\Facades\Lang;
 use Tests\TestCase;
 

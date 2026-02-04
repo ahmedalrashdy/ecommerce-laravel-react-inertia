@@ -86,6 +86,11 @@ class Order extends Model
         return $this->hasMany(OrderHistory::class);
     }
 
+    public function getRouteKeyName(): string
+    {
+        return 'order_number';
+    }
+
     public function stockMovements(): MorphMany
     {
         return $this->morphMany(StockMovement::class, 'sourceable');

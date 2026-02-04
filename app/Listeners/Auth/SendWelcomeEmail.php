@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Listeners;
+namespace App\Listeners\Auth;
 
-use App\Notifications\WelcomeEmailNotification;
+use App\Notifications\Auth\WelcomeEmailNotification;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Registered;
 

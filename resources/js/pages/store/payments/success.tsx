@@ -33,8 +33,8 @@ export default function PaymentSuccess() {
                         <Card className="border-emerald-200/60 bg-white/85 shadow-2xl shadow-emerald-500/10 backdrop-blur">
                             <CardHeader className="items-center gap-4 text-center">
                                 <div className="relative flex h-20 w-20 items-center justify-center">
-                                    <span className="absolute inset-0 rounded-full bg-emerald-400/30 motion-reduce:animate-none animate-ping" />
-                                    <span className="absolute inset-0 rounded-full bg-emerald-500/15 motion-reduce:animate-none animate-pulse" />
+                                    <span className="absolute inset-0 animate-ping rounded-full bg-emerald-400/30 motion-reduce:animate-none" />
+                                    <span className="absolute inset-0 animate-pulse rounded-full bg-emerald-500/15 motion-reduce:animate-none" />
                                     <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500 text-white shadow-lg shadow-emerald-500/40">
                                         <svg
                                             viewBox="0 0 24 24"
@@ -55,7 +55,8 @@ export default function PaymentSuccess() {
                                         تم استلام عملية الدفع بنجاح
                                     </CardTitle>
                                     <p className="text-sm text-muted-foreground">
-                                        جاري تأكيد العملية من مزود الدفع. سنرسل لك إشعارًا فور اكتمال التأكيد.
+                                        جاري تأكيد العملية من مزود الدفع. سنرسل
+                                        لك إشعارًا فور اكتمال التأكيد.
                                     </p>
                                 </div>
                             </CardHeader>
@@ -72,8 +73,17 @@ export default function PaymentSuccess() {
                                 </div>
 
                                 <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                    <Button asChild className="sm:min-w-[160px]">
-                                        <Link href={ordersRoutes.show(order.id).url}>
+                                    <Button
+                                        asChild
+                                        className="sm:min-w-[160px]"
+                                    >
+                                        <Link
+                                            href={
+                                                ordersRoutes.show(
+                                                    order.orderNumber,
+                                                ).url
+                                            }
+                                        >
                                             عرض الطلب
                                         </Link>
                                     </Button>

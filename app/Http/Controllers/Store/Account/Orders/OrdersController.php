@@ -55,6 +55,7 @@ class OrdersController extends Controller
                 ->get();
 
             $orders = OrderListItemData::collect($orders);
+
         }
 
         if ($tab === 'returns') {

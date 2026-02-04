@@ -20,9 +20,11 @@ use App\Models\OrderItem;
 use App\Models\Product;
 use App\Models\ProductVariant;
 use App\Models\User;
+use App\Notifications\Orders\CustomerOrderPaymentSucceededNotification;
 use App\Services\Payments\StripeWebhookService;
 use Brick\Money\Money;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Stripe\Event;
 use Tests\TestCase;
@@ -126,7 +128,6 @@ class PaymentFlowTest extends TestCase
         $response->assertInertia(
             fn ($page) => $page
                 ->component('store/payments/success')
-                ->where('order.id', $order->id)
                 ->where('order.orderNumber', $order->order_number)
         );
     }
@@ -169,6 +170,8 @@ class PaymentFlowTest extends TestCase
 
     public function test_webhook_success_updates_order_and_records_transaction(): void
     {
+        Notification::fake();
+
         $user = User::factory()->create();
         $order = $this->createOrderWithItem($user, '100.00');
 
@@ -206,6 +209,16 @@ class PaymentFlowTest extends TestCase
             'status' => TransactionStatus::Success->value,
             'event_id' => 'evt_test_123',
         ]);
+
+        Notification::assertSentTo(
+            $user,
+            CustomerOrderPaymentSucceededNotification::class,
+            function (CustomerOrderPaymentSucceededNotification $notification, array $channels) use ($order): bool {
+                return $notification->order->id === $order->id
+                    && in_array('database', $channels, true)
+                    && in_array('mail', $channels, true);
+            }
+        );
     }
 
     private function createOrderWithItem(

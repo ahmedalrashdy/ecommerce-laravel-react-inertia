@@ -3,9 +3,13 @@
 namespace App\Filament\Resources\OrdersManagement\Returns\Pages;
 
 use App\Enums\ReturnStatus;
+use App\Events\Returns\ReturnApproved;
+use App\Events\Returns\ReturnReceived;
+use App\Events\Returns\ReturnShippedBack;
 use App\Filament\Resources\OrdersManagement\Returns\ReturnOrderResource;
 use App\Models\ReturnOrder;
 use Filament\Actions\Action;
+use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
@@ -25,11 +29,17 @@ class ViewReturnOrder extends ViewRecord
                 ->color('success')
                 ->visible(fn (ReturnOrder $record): bool => $record->status === ReturnStatus::REQUESTED)
                 ->requiresConfirmation()
-                ->action(function (ReturnOrder $record): void {
+                ->form([
+                    Checkbox::make('notify_customer')
+                        ->label(__('filament.orders.notify_customer'))
+                        ->default(true),
+                ])
+                ->action(function (ReturnOrder $record, array $data): void {
                     $this->handleTransition(
                         $record,
                         ReturnStatus::APPROVED,
-                        __('filament.returns.history_approved')
+                        __('filament.returns.history_approved'),
+                        notifyCustomer: (bool) ($data['notify_customer'] ?? true)
                     );
                 }),
 
@@ -43,13 +53,17 @@ class ViewReturnOrder extends ViewRecord
                         ->label(__('validation.attributes.tracking_number'))
                         ->required()
                         ->maxLength(255),
+                    Checkbox::make('notify_customer')
+                        ->label(__('filament.orders.notify_customer'))
+                        ->default(true),
                 ])
                 ->action(function (ReturnOrder $record, array $data): void {
                     $this->handleTransition(
                         $record,
                         ReturnStatus::SHIPPED_BACK,
                         __('filament.returns.history_shipped_back'),
-                        ['tracking_number' => $data['tracking_number']]
+                        ['tracking_number' => $data['tracking_number']],
+                        (bool) ($data['notify_customer'] ?? true)
                     );
                 }),
 
@@ -59,11 +73,17 @@ class ViewReturnOrder extends ViewRecord
                 ->color('primary')
                 ->visible(fn (ReturnOrder $record): bool => $record->status === ReturnStatus::SHIPPED_BACK)
                 ->requiresConfirmation()
-                ->action(function (ReturnOrder $record): void {
+                ->form([
+                    Checkbox::make('notify_customer')
+                        ->label(__('filament.orders.notify_customer'))
+                        ->default(true),
+                ])
+                ->action(function (ReturnOrder $record, array $data): void {
                     $this->handleTransition(
                         $record,
                         ReturnStatus::RECEIVED,
-                        __('filament.returns.history_received')
+                        __('filament.returns.history_received'),
+                        notifyCustomer: (bool) ($data['notify_customer'] ?? true)
                     );
                 }),
 
@@ -102,14 +122,31 @@ class ViewReturnOrder extends ViewRecord
         ];
     }
 
-    private function handleTransition(ReturnOrder $returnOrder, ReturnStatus $status, string $comment, array $attributes = []): void
-    {
+    private function handleTransition(
+        ReturnOrder $returnOrder,
+        ReturnStatus $status,
+        string $comment,
+        array $attributes = [],
+        bool $notifyCustomer = true
+    ): void {
         try {
             $returnOrder->update(array_merge($attributes, [
                 'status' => $status,
             ]));
 
             $this->logHistory($returnOrder, $status, $comment);
+
+            if ($notifyCustomer && $status === ReturnStatus::APPROVED) {
+                event(new ReturnApproved($returnOrder));
+            }
+
+            if ($notifyCustomer && $status === ReturnStatus::SHIPPED_BACK) {
+                event(new ReturnShippedBack($returnOrder));
+            }
+
+            if ($notifyCustomer && $status === ReturnStatus::RECEIVED) {
+                event(new ReturnReceived($returnOrder));
+            }
 
             Notification::make()
                 ->title(__('filament.returns.status_changed', ['status' => $status->getLabel()]))

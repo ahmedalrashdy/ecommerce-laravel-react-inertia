@@ -33,7 +33,6 @@ use Illuminate\Support\Facades\Route;
 \Route::prefix('/')
     ->middleware([HandleInertiaRequests::class])
     ->name('store.')
-
     ->group(function () {
         Route::get('/', [HomeController::class, 'index'])->name('home');
         Route::get('/about', [SupportController::class, 'about'])->name('about');

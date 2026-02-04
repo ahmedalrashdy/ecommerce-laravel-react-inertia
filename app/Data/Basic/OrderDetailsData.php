@@ -10,6 +10,7 @@ use App\Models\Review;
 use App\Models\User;
 use Illuminate\Support\Collection;
 use Spatie\LaravelData\Attributes\DataCollectionOf;
+use Spatie\LaravelData\Attributes\Hidden;
 use Spatie\LaravelData\Data;
 use Spatie\TypeScriptTransformer\Attributes\LiteralTypeScriptType;
 use Spatie\TypeScriptTransformer\Attributes\TypeScript;
@@ -19,7 +20,8 @@ class OrderDetailsData extends Data
 {
     /** @param  array<string, string|null>  $shippingAddress */
     public function __construct(
-        public int $id,
+        #[Hidden]
+        public int $orderId,
         public string $orderNumber,
         public int $status,
         public string $statusLabel,
@@ -40,8 +42,14 @@ class OrderDetailsData extends Data
         public Collection $items,
     ) {}
 
+    public function getOrderId(): int
+    {
+        return $this->orderId;
+    }
+
     public static function fromModel(Order $order, User $user): self
     {
+
         $order->loadMissing('items');
 
         $deliveredAt = $order->history()
@@ -77,7 +85,7 @@ class OrderDetailsData extends Data
         });
 
         return self::from([
-            'id' => $order->id,
+            'orderId' => $order->id,
             'orderNumber' => $order->order_number,
             'status' => $order->status->value,
             'statusLabel' => $order->status->getLabel(),

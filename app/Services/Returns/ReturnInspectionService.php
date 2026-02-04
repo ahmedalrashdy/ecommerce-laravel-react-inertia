@@ -4,6 +4,7 @@ namespace App\Services\Returns;
 
 use App\Data\Returns\InspectionResultData;
 use App\Enums\ReturnStatus;
+use App\Events\Returns\ReturnInspected;
 use App\Models\ReturnItemInspection;
 use App\Models\ReturnOrder;
 use Exception;
@@ -49,6 +50,8 @@ class ReturnInspectionService
                 'actor_type' => get_class($inspectorUser),
                 'actor_id' => $inspectorUser->id,
             ]);
+
+            event(new ReturnInspected($returnOrder));
         });
     }
 }

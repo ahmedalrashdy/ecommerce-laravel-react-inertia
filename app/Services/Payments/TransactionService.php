@@ -10,7 +10,7 @@ class TransactionService
     public function record(TransactionEntryData $data): Transaction
     {
         return Transaction::create([
-            'order_id' => $data->order_id,
+            'order_id' => $data->getOrderId(),
             'user_id' => $data->user_id,
             'type' => $data->type, // Casted to Enum automatically
             'payment_method' => $data->payment_method,

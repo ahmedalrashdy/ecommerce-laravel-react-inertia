@@ -11,6 +11,7 @@ use App\Models\ReturnItem;
 use App\Services\Returns\ReturnInspectionWorkflowService;
 use Brick\Money\Money;
 use Filament\Actions\Action;
+use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Repeater;
@@ -88,6 +89,7 @@ class InspectReturnOrder extends Page
             'items' => $items,
             'replacement_items' => [],
             'transaction_reference' => null,
+            'notify_customer' => true,
         ]);
     }
 
@@ -314,6 +316,9 @@ class InspectReturnOrder extends Page
                         ])
                         ->visible(fn (Get $get): bool => $this->hasFinancialDifference($get('items'), $get('replacement_items'))),
                 ])->submitAction(new HtmlString('')),
+                Checkbox::make('notify_customer')
+                    ->label(__('filament.orders.notify_customer'))
+                    ->default(true),
             ]);
     }
 

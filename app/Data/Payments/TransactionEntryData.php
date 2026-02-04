@@ -5,11 +5,13 @@ namespace App\Data\Payments;
 use App\Enums\PaymentMethod;
 use App\Enums\TransactionStatus;
 use App\Enums\TransactionType;
+use Spatie\LaravelData\Attributes\Hidden;
 use Spatie\LaravelData\Data;
 
 class TransactionEntryData extends Data
 {
     public function __construct(
+        #[Hidden]
         public int $order_id,
         public ?int $user_id, // من قام بالدفع؟
         public TransactionType $type, // PAYMENT / REFUND
@@ -28,4 +30,8 @@ class TransactionEntryData extends Data
         public ?string $payment_intent_id = null,
     ) {}
 
+    public function getOrderId(): int
+    {
+        return $this->order_id;
+    }
 }

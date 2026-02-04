@@ -9,6 +9,7 @@ use Brick\Money\Money;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Spatie\LaravelData\Attributes\DataCollectionOf;
+use Spatie\LaravelData\Attributes\Hidden;
 use Spatie\LaravelData\Data;
 use Spatie\TypeScriptTransformer\Attributes\LiteralTypeScriptType;
 use Spatie\TypeScriptTransformer\Attributes\TypeScript;
@@ -17,7 +18,8 @@ use Spatie\TypeScriptTransformer\Attributes\TypeScript;
 class OrderListItemData extends Data
 {
     public function __construct(
-        public int $id,
+        #[Hidden()]
+        public int $orderId,
         public string $orderNumber,
         public int $status,
         public string $statusLabel,
@@ -39,19 +41,21 @@ class OrderListItemData extends Data
         public string $searchText,
     ) {}
 
+    public function getOrderId(): int
+    {
+        return $this->orderId;
+    }
+
     public static function fromModel(Order $order): self
     {
         $total = Money::of($order->grand_total, 'USD');
         $itemsPreview = $order->items
             ->take(3)
             ->map(function (OrderItem $item) {
-                return [
-                    'id' => $item->id,
-                    'name' => $item->product_name,
-                    'image' => $item->product_variant_snapshot['variant']['default_image'] ?? null,
-                ];
+                return OrderItemPreviewData::fromModel($item);
             })
             ->values();
+
         $searchTokens = $order->items
             ->flatMap(function (OrderItem $item) {
                 return [
@@ -65,7 +69,7 @@ class OrderListItemData extends Data
             ->values();
 
         return self::from([
-            'id' => $order->id,
+            'orderId' => $order->id,
             'orderNumber' => $order->order_number,
             'status' => $order->status->value,
             'statusLabel' => $order->status->getLabel(),

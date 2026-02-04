@@ -50,7 +50,6 @@ class ReturnPageTest extends TestCase
         $response->assertInertia(
             fn ($page) => $page
                 ->component('store/orders/return')
-                ->where('order.id', $order->id)
                 ->has('items', 1)
         );
     }

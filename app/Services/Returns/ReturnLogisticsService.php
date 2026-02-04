@@ -3,6 +3,8 @@
 namespace App\Services\Returns;
 
 use App\Enums\ReturnStatus;
+use App\Events\Returns\ReturnApproved;
+use App\Events\Returns\ReturnReceived;
 use App\Models\ReturnOrder;
 use Illuminate\Support\Str;
 
@@ -25,6 +27,8 @@ class ReturnLogisticsService
         ]);
 
         $this->logHistory($returnOrder, ReturnStatus::APPROVED, 'تمت الموافقة وإصدار البوليصة', $adminUser);
+
+        event(new ReturnApproved($returnOrder));
     }
 
     /**
@@ -38,6 +42,8 @@ class ReturnLogisticsService
         ]);
 
         $this->logHistory($returnOrder, ReturnStatus::RECEIVED, 'وصلت الشحنة للمستودع - بانتظار الفحص', $adminUser);
+
+        event(new ReturnReceived($returnOrder));
     }
 
     protected function logHistory($returnOrder, $status, $comment, $actor)

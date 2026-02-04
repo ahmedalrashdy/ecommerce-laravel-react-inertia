@@ -1,12 +1,16 @@
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+} from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import returnsRoutes from '@/routes/store/account/returns';
 import { Link } from '@inertiajs/react';
 import { Calendar, Package, RotateCcw } from 'lucide-react';
 
 export type ReturnSummary = {
-    id: number;
     returnNumber: string;
     orderNumber: string | null;
     status: number;
@@ -36,7 +40,9 @@ export function ReturnCard({ returnOrder }: { returnOrder: ReturnSummary }) {
                             رقم المرتجع
                         </p>
                         <Link
-                            href={returnsRoutes.show(returnOrder.id).url}
+                            href={
+                                returnsRoutes.show(returnOrder.returnNumber).url
+                            }
                             className="text-lg font-semibold text-foreground hover:text-primary"
                         >
                             {returnOrder.returnNumber}
@@ -69,7 +75,9 @@ export function ReturnCard({ returnOrder }: { returnOrder: ReturnSummary }) {
             </CardHeader>
             <CardContent>
                 <div className="flex items-center justify-between rounded-lg bg-muted/40 px-3 py-2 text-sm">
-                    <span className="text-muted-foreground">المبلغ المتوقع</span>
+                    <span className="text-muted-foreground">
+                        المبلغ المتوقع
+                    </span>
                     <span className="font-semibold">
                         {returnOrder.formattedRefundAmount}
                     </span>

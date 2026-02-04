@@ -12,6 +12,7 @@ use App\Enums\ReturnStatus;
 use App\Enums\StockMovementType;
 use App\Enums\TransactionStatus;
 use App\Enums\TransactionType;
+use App\Events\Returns\ReturnInspected;
 use App\Models\Order;
 use App\Models\OrderHistory;
 use App\Models\OrderItem;
@@ -46,12 +47,13 @@ class ReturnInspectionWorkflowService
         $items = $data['items'] ?? [];
         $replacementItems = $data['replacement_items'] ?? [];
         $transactionReference = $data['transaction_reference'] ?? null;
+        $notifyCustomer = (bool) ($data['notify_customer'] ?? true);
 
         if ($items === []) {
             throw new Exception('يجب إدخال نتائج الفحص قبل المتابعة.');
         }
 
-        return DB::transaction(function () use ($returnOrder, $items, $replacementItems, $transactionReference, $adminUser): ReturnOrder {
+        return DB::transaction(function () use ($returnOrder, $items, $replacementItems, $transactionReference, $adminUser, $notifyCustomer): ReturnOrder {
             $returnOrder->load('items.orderItem.productVariant.product', 'order');
 
             $inspections = $this->collectInspections($returnOrder, $items);
@@ -86,6 +88,10 @@ class ReturnInspectionWorkflowService
                 'actor_type' => $adminUser->getMorphClass(),
                 'actor_id' => $adminUser->getKey(),
             ]);
+
+            if ($notifyCustomer) {
+                event(new ReturnInspected($returnOrder));
+            }
 
             $hasReplacement = $inspections->contains(fn (array $inspection): bool => $inspection['resolution'] === ReturnResolution::REPLACEMENT);
             $hasRejected = $inspections->contains(fn (array $inspection): bool => $inspection['resolution'] === ReturnResolution::REJECT);

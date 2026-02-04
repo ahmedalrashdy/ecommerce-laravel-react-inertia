@@ -3,8 +3,22 @@
 namespace App\Providers;
 
 use App\Contracts\Payments\PaymentGatewayInterface;
-use App\Listeners\MergeSessionCart;
-use App\Listeners\SendWelcomeEmail;
+use App\Events\Orders\OrderDelivered;
+use App\Events\Orders\OrderPaymentSucceeded;
+use App\Events\Orders\OrderShipped;
+use App\Events\Returns\ReturnApproved;
+use App\Events\Returns\ReturnInspected;
+use App\Events\Returns\ReturnReceived;
+use App\Events\Returns\ReturnShippedBack;
+use App\Listeners\Auth\MergeSessionCart;
+use App\Listeners\Auth\SendWelcomeEmail;
+use App\Listeners\Orders\NotifyCustomerOfOrderDelivery;
+use App\Listeners\Orders\NotifyCustomerOfOrderPaymentSuccess;
+use App\Listeners\Orders\SendOrderShippedNotification;
+use App\Listeners\Returns\NotifyCustomerOfReturnApproval;
+use App\Listeners\Returns\NotifyCustomerOfReturnInspection;
+use App\Listeners\Returns\NotifyCustomerOfReturnReceived;
+use App\Listeners\Returns\NotifyCustomerOfReturnShippedBack;
 use App\Models\Attribute;
 use App\Models\Review;
 use App\Models\Wishlist;
@@ -57,8 +71,15 @@ class AppServiceProvider extends ServiceProvider
         Event::listen(Registered::class, MergeSessionCart::class);
         Event::listen(Login::class, SendWelcomeEmail::class);
         Event::listen(Registered::class, SendWelcomeEmail::class);
-        if (app()->environment('production')) {
-            URL::forceScheme('https');
-        }
+        Event::listen(OrderPaymentSucceeded::class, NotifyCustomerOfOrderPaymentSuccess::class);
+        Event::listen(OrderDelivered::class, NotifyCustomerOfOrderDelivery::class);
+        Event::listen(OrderShipped::class, SendOrderShippedNotification::class);
+        Event::listen(ReturnApproved::class, NotifyCustomerOfReturnApproval::class);
+        Event::listen(ReturnShippedBack::class, NotifyCustomerOfReturnShippedBack::class);
+        Event::listen(ReturnReceived::class, NotifyCustomerOfReturnReceived::class);
+        Event::listen(ReturnInspected::class, NotifyCustomerOfReturnInspection::class);
+        // if (app()->environment('production')) {
+        //     URL::forceScheme('https');
+        // }
     }
 }

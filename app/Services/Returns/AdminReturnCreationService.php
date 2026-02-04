@@ -18,7 +18,7 @@ class AdminReturnCreationService
 {
     public function create(AdminReturnCreationData $data, User $admin): ReturnOrder
     {
-        $order = Order::findOrFail($data->orderId);
+        $order = Order::findOrFail($data->getOrderId());
 
         if ($order->status !== OrderStatus::DELIVERED) {
             throw new Exception('لا يمكن استرجاع طلب لم يتم توصيله بعد.');

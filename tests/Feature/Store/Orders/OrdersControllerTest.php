@@ -53,7 +53,6 @@ class OrdersControllerTest extends TestCase
         $response->assertInertia(
             fn ($page) => $page
                 ->component('store/account/orders/show')
-                ->where('order.id', $order->id)
                 ->where('order.orderNumber', $order->order_number)
                 ->where('order.canReturn', true)
                 ->has('order.items', 1)

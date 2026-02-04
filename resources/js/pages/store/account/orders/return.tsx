@@ -25,7 +25,6 @@ type ReturnItem = {
 
 type ReturnPageProps = {
     order: {
-        id: number;
         orderNumber: string;
         returnWindowEndsAt: string | null;
     };
@@ -137,7 +136,7 @@ function OrderReturnPage() {
                         asChild
                         variant="outline"
                     >
-                        <Link href={ordersRoutes.show(order.id).url}>
+                        <Link href={ordersRoutes.show(order.orderNumber).url}>
                             <ArrowLeft className="h-4 w-4" />
                             الرجوع للطلب
                         </Link>
@@ -166,9 +165,7 @@ function OrderReturnPage() {
                     <Card className="p-6">
                         <ReturnReasonField
                             value={form.data.reason}
-                            onChange={(value) =>
-                                form.setData('reason', value)
-                            }
+                            onChange={(value) => form.setData('reason', value)}
                             error={form.errors.reason}
                             helper="يجب كتابة سبب واضح قبل إرسال طلب الإرجاع الكامل."
                         />
@@ -203,9 +200,12 @@ function OrderReturnPage() {
                                     ? returnItemsPayload
                                     : [],
                             );
-                            form.post(ordersRoutes.returns(order.id).url, {
-                                preserveScroll: true,
-                            });
+                            form.post(
+                                ordersRoutes.returns(order.orderNumber).url,
+                                {
+                                    preserveScroll: true,
+                                },
+                            );
                         }}
                     >
                         إرسال طلب الاسترجاع

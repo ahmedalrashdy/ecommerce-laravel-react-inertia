@@ -2,12 +2,14 @@
 
 namespace App\Filament\Resources\OrdersManagement\Orders\Pages;
 
+use App\Data\Orders\OrderStatusTransitionData;
 use App\Enums\OrderStatus;
 use App\Enums\PaymentStatus;
 use App\Filament\Resources\OrdersManagement\Orders\OrderResource;
 use App\Models\Order;
 use App\Services\Orders\OrderStatusService;
 use Filament\Actions\Action;
+use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ViewRecord;
@@ -28,7 +30,11 @@ class ViewOrder extends ViewRecord
                 ->disabled(fn (Order $record): bool => $record->payment_status !== PaymentStatus::PAID)
                 ->requiresConfirmation()
                 ->action(function (Order $record): void {
-                    $this->handleTransition($record, OrderStatus::PROCESSING);
+                    $this->handleTransition($record, new OrderStatusTransitionData(
+                        nextStatus: OrderStatus::PROCESSING,
+                        comment: __('filament.orders.status_changed', ['status' => OrderStatus::PROCESSING->getLabel()]),
+                        actor: auth()->user(),
+                    ));
                 }),
 
             Action::make('mark_shipped')
@@ -43,13 +49,18 @@ class ViewOrder extends ViewRecord
                         ->default(fn (Order $record): ?string => $record->tracking_number)
                         ->maxLength(255)
                         ->required(),
+                    Checkbox::make('notify_customer')
+                        ->label(__('filament.orders.notify_customer'))
+                        ->default(true),
                 ])
                 ->action(function (Order $record, array $data): void {
-                    $this->handleTransition(
-                        $record,
-                        OrderStatus::SHIPPED,
-                        attributes: ['tracking_number' => $data['tracking_number']],
-                    );
+                    $this->handleTransition($record, new OrderStatusTransitionData(
+                        nextStatus: OrderStatus::SHIPPED,
+                        comment: __('filament.orders.status_changed', ['status' => OrderStatus::SHIPPED->getLabel()]),
+                        actor: auth()->user(),
+                        trackingNumber: $data['tracking_number'] ?? null,
+                        notifyCustomer: (bool) ($data['notify_customer'] ?? true),
+                    ));
                 }),
 
             Action::make('mark_delivered')
@@ -59,8 +70,18 @@ class ViewOrder extends ViewRecord
                 ->visible(fn (Order $record): bool => $record->status === OrderStatus::SHIPPED)
                 ->disabled(fn (Order $record): bool => $record->payment_status !== PaymentStatus::PAID)
                 ->requiresConfirmation()
-                ->action(function (Order $record): void {
-                    $this->handleTransition($record, OrderStatus::DELIVERED);
+                ->form([
+                    Checkbox::make('notify_customer')
+                        ->label(__('filament.orders.notify_customer'))
+                        ->default(true),
+                ])
+                ->action(function (Order $record, array $data): void {
+                    $this->handleTransition($record, new OrderStatusTransitionData(
+                        nextStatus: OrderStatus::DELIVERED,
+                        comment: __('filament.orders.status_changed', ['status' => OrderStatus::DELIVERED->getLabel()]),
+                        actor: auth()->user(),
+                        notifyCustomerOnDelivery: (bool) ($data['notify_customer'] ?? true),
+                    ));
                 }),
 
             Action::make('cancel_order')
@@ -85,19 +106,13 @@ class ViewOrder extends ViewRecord
         ];
     }
 
-    private function handleTransition(Order $order, OrderStatus $status, array $attributes = []): void
+    private function handleTransition(Order $order, OrderStatusTransitionData $data): void
     {
         try {
-            app(OrderStatusService::class)->transition(
-                $order,
-                $status,
-                comment: __('filament.orders.status_changed', ['status' => $status->getLabel()]),
-                actor: auth()->user(),
-                attributes: $attributes,
-            );
+            app(OrderStatusService::class)->transition($order, $data);
 
             Notification::make()
-                ->title(__('filament.orders.status_changed', ['status' => $status->getLabel()]))
+                ->title(__('filament.orders.status_changed', ['status' => $data->nextStatus->getLabel()]))
                 ->success()
                 ->send();
         } catch (Throwable $exception) {

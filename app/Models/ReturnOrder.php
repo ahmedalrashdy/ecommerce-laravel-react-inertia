@@ -28,6 +28,11 @@ class ReturnOrder extends Model
         'refund_amount' => 'string',
     ];
 
+    public function getRouteKeyName(): string
+    {
+        return 'return_number';
+    }
+
     public function order(): BelongsTo
     {
         return $this->belongsTo(Order::class);

@@ -14,7 +14,7 @@ class OrderDetailsItemData extends Data
     /** @param  array<int, array<string, string>>  $attributes */
     public function __construct(
         public int $id,
-        public int $productId,
+        public ?int $productId,
         public string $name,
         public ?string $image,
         public array $attributes,

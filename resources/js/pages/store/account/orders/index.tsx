@@ -230,7 +230,7 @@ function OrdersPage() {
                         <div className="grid gap-5">
                             {returns.map((returnOrder) => (
                                 <ReturnCard
-                                    key={returnOrder.id}
+                                    key={returnOrder.returnNumber}
                                     returnOrder={returnOrder}
                                 />
                             ))}
@@ -242,7 +242,7 @@ function OrdersPage() {
                     <div className="grid gap-5">
                         {filteredOrders.map((order) => (
                             <OrderCard
-                                key={order.id}
+                                key={order.orderNumber}
                                 order={order}
                             />
                         ))}

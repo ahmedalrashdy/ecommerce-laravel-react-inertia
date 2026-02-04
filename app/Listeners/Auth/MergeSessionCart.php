@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners;
+namespace App\Listeners\Auth;
 
 use App\Services\Cart\CartService;
 use Illuminate\Auth\Events\Login;

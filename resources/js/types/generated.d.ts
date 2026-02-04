@@ -36,7 +36,7 @@ altText: string | null;
 displayOrder: number;
 };
 export type OrderDetailsData = {
-id: number;
+orderId: number;
 orderNumber: string;
 status: number;
 statusLabel: string;
@@ -56,7 +56,7 @@ items: OrderDetailsItemData[];
 };
 export type OrderDetailsItemData = {
 id: number;
-productId: number;
+productId: number | null;
 name: string;
 image: string | null;
 attributes: Array<any>;
@@ -74,7 +74,7 @@ name: string;
 image: string | null;
 };
 export type OrderListItemData = {
-id: number;
+orderId: number;
 orderNumber: string;
 status: number;
 statusLabel: string;
@@ -84,12 +84,14 @@ itemsCount: number;
 grandTotal: string;
 formattedGrandTotal: string;
 createdAt: string;
+createdAtIso: string;
 expectedDelivery: string;
 shippingName: string;
 trackingNumber: string | null;
 itemsPreview: OrderItemPreviewData[];
 moreItemsCount: number;
 canPay: boolean;
+searchText: string;
 };
 export type OrderSummaryData = {
 formattedSubtotal: string;
@@ -159,7 +161,7 @@ defaultImage: ImageData[]|undefined;
 images: ImageData[]|undefined;
 };
 export type ReturnDetailsData = {
-id: number;
+returnId: number;
 returnNumber: string;
 status: number;
 statusLabel: string;
@@ -197,7 +199,7 @@ inspectionStatus: string;
 inspections: ReturnInspectionData[];
 };
 export type ReturnSummaryData = {
-id: number;
+returnId: number;
 returnNumber: string;
 orderNumber: string | null;
 status: number;
@@ -262,7 +264,7 @@ export enum CategoryStatus { Draft = 0, Published = 1, Archived = 2 };
 export enum ItemCondition { SEALED = 1, OPEN_BOX = 2, DAMAGED = 3, WRONG_ITEM = 4 };
 export enum OrderStatus { PENDING = 0, PROCESSING = 2, SHIPPED = 3, DELIVERED = 4, CANCELLED = 5, RETURNED = 6 };
 export enum OrderType { NORMAL = 1, REPLACEMENT = 2, RETURN_SHIPMENT = 3 };
-export enum PaymentMethod { CREDIT_CARD = 0, MADA = 1, APPLE_PAY = 2, BANK_TRANSFER = 3 };
+export enum PaymentMethod { PENDING = 0, CREDIT_CARD = 1, MADA = 2, APPLE_PAY = 3, BANK_TRANSFER = 4 };
 export enum PaymentStatus { PENDING = 0, PAID = 1, FAILED = 2, REFUNDED = 3, REFUND_PENDING = 4, PARTIALLY_REFUNDED = 5 };
 export enum ProductStatus { Draft = 0, Published = 1, Archived = 2 };
 export enum RefundMethod { ORIGINAL = 1, WALLET = 2, BANK_TRANSFER = 3 };

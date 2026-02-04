@@ -2,40 +2,44 @@
 
 namespace App\Services\Orders;
 
+use App\Data\Orders\OrderStatusTransitionData;
 use App\Enums\OrderStatus;
+use App\Events\Orders\OrderDelivered;
+use App\Events\Orders\OrderShipped;
 use App\Models\Order;
 use App\Models\OrderHistory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use RuntimeException;
 
 class OrderStatusService
 {
-    public function transition(
-        Order $order,
-        OrderStatus $nextStatus,
-        ?string $comment = null,
-        ?Model $actor = null,
-        bool $visibleToUser = true,
-        array $attributes = [],
-    ): Order {
-        if (! $this->canTransition($order->status, $nextStatus)) {
+    public function transition(Order $order, OrderStatusTransitionData $data): Order
+    {
+        if (! $this->canTransition($order->status, $data->nextStatus)) {
             throw new RuntimeException(__('validation.invalid_status_transition'));
         }
 
-        return DB::transaction(function () use ($order, $nextStatus, $comment, $actor, $visibleToUser, $attributes): Order {
-            $order->update(array_merge($attributes, [
-                'status' => $nextStatus,
+        return DB::transaction(function () use ($order, $data): Order {
+            $order->update(array_merge($data->updateAttributes(), [
+                'status' => $data->nextStatus,
             ]));
 
             OrderHistory::create([
                 'order_id' => $order->id,
-                'status' => $nextStatus,
-                'comment' => $comment,
-                'is_visible_to_user' => $visibleToUser,
-                'actor_type' => $actor?->getMorphClass(),
-                'actor_id' => $actor?->getKey(),
+                'status' => $data->nextStatus,
+                'comment' => $data->comment,
+                'is_visible_to_user' => $data->visibleToUser,
+                'actor_type' => $data->actor?->getMorphClass(),
+                'actor_id' => $data->actor?->getKey(),
             ]);
+
+            if ($data->nextStatus === OrderStatus::SHIPPED && $data->notifyCustomer) {
+                event(new OrderShipped($order));
+            }
+
+            if ($data->nextStatus === OrderStatus::DELIVERED && $data->notifyCustomerOnDelivery) {
+                event(new OrderDelivered($order));
+            }
 
             return $order;
         });

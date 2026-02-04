@@ -43,7 +43,6 @@ class OrderDetailsTest extends TestCase
         $response->assertInertia(
             fn ($page) => $page
                 ->component('store/orders/show')
-                ->where('order.id', $order->id)
                 ->where('order.orderNumber', $order->order_number)
                 ->where('order.items.0.id', $orderItem->id)
                 ->where('order.items.0.name', $variant->product->name)

@@ -91,6 +91,11 @@ return [
 
     ],
 
+    'queues' => [
+        'orders_notifications' => env('ORDERS_NOTIFICATIONS_QUEUE', 'orders-notifications-high'),
+        'newsletters' => env('NEWSLETTERS_QUEUE', 'newsletters'),
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Job Batching

@@ -90,8 +90,9 @@ export default function PaymentFailed() {
                                     >
                                         <Link
                                             href={
-                                                paymentsRoutes.start(order.id)
-                                                    .url
+                                                paymentsRoutes.start(
+                                                    order.orderNumber,
+                                                ).url
                                             }
                                         >
                                             إعادة المحاولة
@@ -104,7 +105,9 @@ export default function PaymentFailed() {
                                     >
                                         <Link
                                             href={
-                                                ordersRoutes.show(order.id).url
+                                                ordersRoutes.show(
+                                                    order.orderNumber,
+                                                ).url
                                             }
                                         >
                                             عرض الطلب

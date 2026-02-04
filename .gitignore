@@ -35,3 +35,6 @@ yarn-error.log
 **/caddy
 frankenphp
 frankenphp-worker.php
+
+/temp.txt
+/phpunit copy.xml

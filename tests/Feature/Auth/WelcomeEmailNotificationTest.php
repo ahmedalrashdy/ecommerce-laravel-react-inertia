@@ -1,8 +1,9 @@
 <?php
 
 namespace Tests\Feature\Auth;
+
 use App\Models\User;
-use App\Notifications\WelcomeEmailNotification;
+use App\Notifications\Auth\WelcomeEmailNotification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Notification;
 use Tests\TestCase;
@@ -29,7 +30,7 @@ class WelcomeEmailNotificationTest extends TestCase
         Notification::assertSentTo(
             $user,
             WelcomeEmailNotification::class,
-            fn(WelcomeEmailNotification $notification): bool => $notification->context() === WelcomeEmailNotification::CONTEXT_REGISTRATION
+            fn (WelcomeEmailNotification $notification): bool => $notification->context() === WelcomeEmailNotification::CONTEXT_REGISTRATION
         );
     }
 
@@ -47,7 +48,7 @@ class WelcomeEmailNotificationTest extends TestCase
         Notification::assertSentTo(
             $user,
             WelcomeEmailNotification::class,
-            fn(WelcomeEmailNotification $notification): bool => $notification->context() === WelcomeEmailNotification::CONTEXT_LOGIN
+            fn (WelcomeEmailNotification $notification): bool => $notification->context() === WelcomeEmailNotification::CONTEXT_LOGIN
         );
     }
 }

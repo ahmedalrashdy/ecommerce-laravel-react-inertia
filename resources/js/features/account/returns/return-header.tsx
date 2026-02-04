@@ -45,7 +45,9 @@ export function ReturnHeader({
                     asChild
                     variant="outline"
                 >
-                    <Link href={returnsRoutes.show(returnOrder.id).url}>
+                    <Link
+                        href={returnsRoutes.show(returnOrder.returnNumber).url}
+                    >
                         تحديث الصفحة
                     </Link>
                 </Button>

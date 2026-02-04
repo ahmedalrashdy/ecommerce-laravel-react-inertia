@@ -4,7 +4,7 @@ namespace App\Filament\Resources\Users\Tables;
 
 use App\Filament\Resources\Users\UserResource;
 use App\Models\User;
-use App\Notifications\ForcedPasswordReset;
+use App\Notifications\Auth\ForcedPasswordReset;
 use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;

@@ -4,6 +4,7 @@ namespace App\Data\Basic;
 
 use App\Models\ReturnOrder;
 use Brick\Money\Money;
+use Spatie\LaravelData\Attributes\Hidden;
 use Spatie\LaravelData\Data;
 use Spatie\TypeScriptTransformer\Attributes\TypeScript;
 
@@ -11,7 +12,8 @@ use Spatie\TypeScriptTransformer\Attributes\TypeScript;
 class ReturnSummaryData extends Data
 {
     public function __construct(
-        public int $id,
+        #[Hidden]
+        public int $returnId,
         public string $returnNumber,
         public ?string $orderNumber,
         public int $status,
@@ -22,12 +24,17 @@ class ReturnSummaryData extends Data
         public string $createdAt,
     ) {}
 
+    public function getReturnId(): int
+    {
+        return $this->returnId;
+    }
+
     public static function fromModel(ReturnOrder $returnOrder): self
     {
         $refundAmount = Money::of($returnOrder->refund_amount ?? '0', 'USD');
 
         return self::from([
-            'id' => $returnOrder->id,
+            'returnId' => $returnOrder->id,
             'returnNumber' => $returnOrder->return_number,
             'orderNumber' => $returnOrder->order?->order_number,
             'status' => $returnOrder->status->value,

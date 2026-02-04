@@ -6,6 +6,7 @@ use App\Models\ReturnOrder;
 use Brick\Money\Money;
 use Illuminate\Support\Collection;
 use Spatie\LaravelData\Attributes\DataCollectionOf;
+use Spatie\LaravelData\Attributes\Hidden;
 use Spatie\LaravelData\Data;
 use Spatie\TypeScriptTransformer\Attributes\LiteralTypeScriptType;
 use Spatie\TypeScriptTransformer\Attributes\TypeScript;
@@ -14,7 +15,8 @@ use Spatie\TypeScriptTransformer\Attributes\TypeScript;
 class ReturnDetailsData extends Data
 {
     public function __construct(
-        public int $id,
+        #[Hidden]
+        public int $returnId,
         public string $returnNumber,
         public int $status,
         public string $statusLabel,
@@ -34,12 +36,17 @@ class ReturnDetailsData extends Data
         public Collection $timeline,
     ) {}
 
+    public function getReturnId(): int
+    {
+        return $this->returnId;
+    }
+
     public static function fromModel(ReturnOrder $returnOrder): self
     {
         $refundAmount = Money::of($returnOrder->refund_amount ?? '0', 'USD');
 
         return self::from([
-            'id' => $returnOrder->id,
+            'returnId' => $returnOrder->id,
             'returnNumber' => $returnOrder->return_number,
             'status' => $returnOrder->status->value,
             'statusLabel' => $returnOrder->status->getLabel(),
